@@ -1,0 +1,54 @@
+// global colors
+$c-primary--50: hsla(30, 100%, 97%, 1);
+$c-primary--500: hsla(30, 100%, 48%, 1);
+$c-primary--600: hsla(30, 100%, 42%, 1);
+$c-primary--700: hsla(30, 100%, 30%, 1);
+
+$c-secondary--700: hsla(207, 44%, 26%, 1);
+$c-secondary--800: hsla(207, 44%, 21%, 1);
+$c-secondary--900: hsla(207, 44%, 14%, 1);
+
+$c-gray--50: hsla(207, 12%, 98%, 1);
+$c-gray--100: hsla(207, 12%, 96%, 1);
+$c-gray--200: hsla(207, 12%, 88%, 1);
+$c-gray--300: hsla(207, 12%, 72%, 1);
+$c-gray--400: hsla(207, 12%, 64%, 1);
+$c-gray--500: hsla(207, 12%, 48%, 1);
+$c-gray--600: hsla(207, 12%, 32%, 1);
+$c-gray--700: hsla(207, 12%, 24%, 1);
+$c-gray--800: hsla(207, 12%, 16%, 1);
+$c-gray--900: hsla(207, 12%, 8%, 1);
+
+$c-white: hsla(0, 0%, 100%, 1);
+$c-black: hsla(0, 0%, 0%, 1);
+
+// background gradients
+$gradient--1: radial-gradient(50% 50% at 50% 50%, hsla(207, 44%, 26%, 1) 0%, hsla(207, 44%, 21%, 1) 100%);
+$gradient--2: linear-gradient(180deg, hsla(207, 44%, 26%, 1) 0%, hsla(207, 44%, 21%, 1) 100%);
+$gradient--3: linear-gradient(90deg, hsla(207, 44%, 26%, 1) 0%, hsla(207, 44%, 21%, 1) 100%);
+$gradient--4: linear-gradient(90deg, hsla(207, 44%, 21%, 1) 0%, hsla(207, 44%, 26%, 1) 50.52%, hsla(207, 44%, 21%, 1) 100%);
+
+// alerts
+// message - danger
+
+$c-danger--border: hsla(4, 100%, 72%, 1);
+$c-danger--background-light: hsla(4, 80%, 96%, 1);
+$c-danger--background-dark: hsla(4, 80%, 88%, 1);
+$c-danger--icon: hsla(4, 100%, 40%, 1);
+$c-danger--text: hsla(4, 100%, 32%, 1);
+
+// message - info
+$c-info--background-light: hsla(198, 62%, 96%, 1);
+$c-info--background-dark: hsla(200, 65%, 80%, 1);
+$c-info--border: hsla(200, 64%, 64%, 1);
+$c-info--icon: hsla(200, 64%, 32%, 1);
+$c-info--text: hsla(200, 64%, 24%, 1);
+
+// message - neutral
+$c-message--background-light: $c-gray--100;
+$c-message--border: hsla(200, 64%, 64%, 1);
+$c-message--text: $c-gray--700;
+
+// basic layout
+$c-font--base: $c-gray--600;
+$c-body--bg: $c-gray--50;

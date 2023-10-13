@@ -1,0 +1,134 @@
+$s-underline-size: .125rem;
+
+.nav-main {
+
+  @include breakpoint(#{$bp--mobile}) {
+    grid-area: mainbar;
+
+    display: block;
+  }
+
+  // mobile
+  @include breakpoint(#{$bp--mobile}, max) {
+    position: fixed;
+    top: 7rem;
+    bottom: 0;
+    left: -100%;
+    z-index: 50;
+
+    display: flex;
+    grid-area: mainbar;
+
+    margin-inline-start: auto;
+
+    width: 100%;
+
+    background: $c-gray--50;
+    transition: left $t-animation--fast $s-animation--fkt;
+  }
+
+  @include breakpoint(lg, max) {
+    top: 13.375rem;
+  }
+
+  @include breakpoint(sm, max) {
+    top: 11.375rem;
+  }
+
+  @include breakpoint(xs, max) {
+    top: 5.0625rem;
+  }
+
+  .show-nav-mobile & {
+    @include breakpoint(#{$bp--mobile}, max) {
+      left: 0;
+      overflow-y: auto;
+    }
+  }
+
+  // general linkformat
+  a, strong {
+    @include set-font-size(text--lg);
+
+    position: relative;
+
+    display: block;
+
+    transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
+
+    color: $c-secondary--700;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: .125rem;
+    text-decoration-color: transparent;
+    text-underline-offset: .35em;
+
+    @include breakpoint(#{$bp--mobile}, max) {
+      display: inline-block;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    color: $c-primary--500;
+    text-decoration-color: currentColor;
+  }
+
+  a.trail,
+  strong {
+    color: $c-secondary--900;
+    text-decoration-color: $c-primary--500;;
+  }
+
+  ul {
+    display: flex;
+
+    @include breakpoint(#{$bp--mobile}) {
+      flex-wrap: wrap;
+    }
+
+    @include breakpoint(#{$bp--mobile}, max) {
+      width: 100%;
+    }
+  }
+
+  li {
+    @include breakpoint(#{$bp--mobile}, max) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .level_1 {
+    gap: $header--item-inline-gap;
+    justify-content: flex-end;
+    align-items: center;
+
+    // mobile
+    @include breakpoint(#{$bp--mobile}, max) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      overflow-y: auto;
+
+      padding: 1.5rem;
+    }
+  }
+
+  .level_2 {
+    display: none;
+    flex-direction: column;
+
+    @include breakpoint(#{$bp--mobile}, max) {
+      display: flex;
+      gap: 1rem;
+
+      padding: 1rem 0 0 1.5rem;
+    }
+
+    a, strong {
+      @include set-font-size(text--md);
+    }
+  }
+}

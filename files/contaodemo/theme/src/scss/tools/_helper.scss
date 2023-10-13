@@ -1,0 +1,281 @@
+// divider for contents
+.divider {
+  &--top {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      height: .0625rem;
+      left: 0;
+      right: 0;
+      top: calc(-1 * (2.5rem - (.5 * #{$s-divider--size})));
+
+      background: $c-gray--200;
+
+      content: '';
+    }
+  }
+}
+
+// backgrounds
+.background {
+  &--gray-light {
+    background: $c-gray--100;
+  }
+}
+
+// colored boxes
+.box {
+  &--white {
+    padding: 1rem;
+
+    background: $c-white;
+    border: $s-border--size solid $c-gray--200;
+    border-radius:$s-border--radius;
+  }
+
+  &--gray-light {
+    padding: 1.5rem;
+
+    background: $c-gray--100;
+    border: .0625rem solid $c-gray--200;
+    border-radius: $s-border--radius;
+
+    @include breakpoint(md) {
+      padding: 2rem;
+    }
+
+    .more {
+      a {
+        @extend .button-secondary;
+        @extend .button--md;
+      }
+    }
+  }
+
+  &--blue {
+    padding: 2rem;
+
+    background: $c-secondary--700;
+    border: .0625rem solid $c-secondary--700;
+    border-radius: $s-border--radius;
+
+    color: $c-gray--300;
+
+    h2, h3, h4 {
+      color: $c-white;
+    }
+  }
+}
+
+// visualize HTML-Block
+.my-code-element {
+  display: inline-block;
+
+  min-width: 20rem;
+}
+
+// grid helper
+.grid {
+  // stretch element to full grid width
+  &-column--full-width {
+    grid-column: 1 / -1;
+  }
+
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 1rem;
+
+    h2, h3 {
+      margin-block-end: 1rem;
+    }
+
+    .ce_text + & {
+      margin-block-start: 2rem;
+    }
+
+    [class*="col-"] & {
+      flex-grow: 1;
+    }
+  }
+}
+
+.col {
+  &--center {
+    &.col-6 {
+      @include breakpoint(lg) {
+        grid-column: 3 / 11;
+      }
+    }
+
+    &.col-8 {
+      @include breakpoint(lg) {
+        grid-column: 2 / 12;
+      }
+    }
+  }
+}
+
+// alerts & messages
+%alert-message {
+  @include set-font-size(text--sm);
+
+  padding: $s-message--padding;
+
+  background: $c-message--background-light;
+  border: $s-message--border solid $c-info--border;
+  border-radius: $s-message--border-radius;
+
+  color: $c-message--text;
+
+  strong:first-child {
+    @include set-font-size(text--md);
+
+    font-weight: 700;
+  }
+}
+
+.message-info {
+  @extend %alert-message;
+
+  padding-inline-start: $s-message--icon-padding;
+
+  background: $c-info--background-light url('#{$img-path}/icons/info--blue.svg') #{$s-message--padding} #{$s-message--padding} no-repeat;
+  border-color: $c-info--border;
+
+
+  color: $c-info--text;
+}
+
+.message-error {
+  @extend %alert-message;
+
+  padding-inline-start: $s-message--icon-padding;
+
+  background: $c-danger--background-light url('#{$img-path}/icons/warning-red.svg') #{$s-message--padding} #{$s-message--padding} no-repeat;
+  border-color: $c-danger--border;
+
+
+  color: $c-danger--text;
+}
+
+
+.confirm {
+  @extend .message-info;
+  @include set-font-size(text--md);
+
+  font-weight: 700;
+}
+
+
+// aspect-ratio options
+.ratio {
+  &-32 {
+    aspect-ratio: 3/2;
+  }
+
+  &-43 {
+    aspect-ratio: 4/3;
+  }
+
+  &-169 {
+    aspect-ratio: 16/9;
+  }
+  &-1610 {
+    aspect-ratio: 16/10;
+  }
+
+  &-219 {
+    aspect-ratio: 21/9;
+  }
+
+}
+
+// navigation-icons
+strong,
+a {
+  &[class*="nav-icon-"] {
+    display: flex;
+    align-items: center;
+    gap: 0 $icon-gap--link;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:before {
+      display: block;
+
+      width: 1.5rem;
+      height: 1.5rem;
+
+      content: '';
+    }
+  }
+
+  &.nav-icon {
+
+    &--rss {
+      &:before {
+        background-image: url('#{$img-path}/icons/rss.svg');
+      }
+    }
+
+    &--github {
+      &:before {
+        background-image: url('#{$img-path}/icons/github--white.svg');
+      }
+    }
+  }
+}
+
+// navigation
+%nav-list-helper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  ul {
+    @extend %nav-list-helper;
+  }
+}
+
+%container-base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: $s-grid-outer-gutter--large;
+}
+
+%container-base--inner {
+  width: 100%;
+  max-width: $s-content--max-width;
+}
+
+// do not scroll if overlay is visible
+.prevent-scrolling {
+  position: fixed;
+  overflow: hidden;
+}
+
+%table-overflow {
+  @include breakpoint(sm, max) {
+    position: relative;
+
+    overflow-x: scroll;
+  }
+}
+
+.img {
+  &--width-auto {
+    width: auto;
+  }
+
+  &--full-width {
+    max-width: none;
+    width: 100%;
+  }
+}

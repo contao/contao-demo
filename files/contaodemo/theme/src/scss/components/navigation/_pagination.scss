@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  gap: .5rem 2rem;
+
+  margin-block-start: 1.5rem;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+  }
+
+  a {
+    @extend .link;
+  }
+
+  strong {
+    display: inline-flex;
+
+    color: $c-secondary--700;
+    transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
+
+    text-decoration: underline $c-primary--500 .0625rem;
+    text-underline-offset: .4em;
+  }
+}

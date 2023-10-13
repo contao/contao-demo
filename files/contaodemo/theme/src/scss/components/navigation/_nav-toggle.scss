@@ -1,0 +1,135 @@
+$c-toggle--text: $c-secondary--700;
+$s-toggle--text-size: text--lg;
+$s-toggle--text-size-mobile: text--md;
+$s-toggle--text-gap: .5rem;
+
+$s-toggle--icon-size: 3rem;
+$c-toggle--icon: $c-primary--500;
+
+$s-toggle--line-width: 2.25rem;
+$s-toggle--line-size: .25rem;
+$s-toggle--line-size-radius: 3rem;
+$s-toggle--line-gap: .375rem;
+
+
+.nav-toggle {
+  $parent: &;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  @include breakpoint(#{$bp--mobile}, max) {
+    @include set-font-size(#{$s-toggle--text-size});
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: $s-toggle--text-gap;
+
+    font-weight: 600;
+    color: $c-toggle--text;
+  }
+
+  @include breakpoint(xs, max) {
+    @include set-font-size(#{$s-toggle--text-size-mobile});
+  }
+
+  // set button position
+  &__box {
+    display: none;
+
+    @include breakpoint(#{$bp--mobile}, max) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      grid-area: mainbar;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: $s-toggle--icon-size;
+    height: $s-toggle--icon-size;
+
+    color: $c-toggle--icon;
+
+    @include breakpoint(xs, max) {
+      width: calc(#{$s-toggle--icon-size} * .5);
+      height: calc(#{$s-toggle--icon-size} * .5);
+    }
+  }
+
+  .icon-line {
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    transition: background-color $t-animation--fast $s-animation--fkt;
+
+    &,
+    &:before,
+    &:after {
+      position: absolute;
+      left: 50%;
+      height: $s-toggle--line-size;
+      width: $s-toggle--line-width;
+
+      background: $c-toggle--icon;
+      border-radius: $s-toggle--line-size-radius;
+      transform: translateX(-50%);
+
+      @include breakpoint(xs, max) {
+        height: calc(#{$s-toggle--line-size} * .5);
+        width: calc(#{$s-toggle--line-width} * .5);
+      }
+    }
+
+    &:before,
+    &:after {
+      z-index: 2;
+
+      transition: transform $t-animation--fast $s-animation--fkt, top $t-animation--fast $s-animation--fkt, bottom $t-animation--fast $s-animation--fkt;
+
+      content: '';
+    }
+
+    &:before {
+      top: calc(-1 * (#{$s-toggle--line-size} + #{$s-toggle--line-gap}));
+
+      @include breakpoint(xs, max) {
+        top: calc(-1 * (#{$s-toggle--line-size} + (#{$s-toggle--line-gap} * .5)));
+      }
+    }
+
+    &:after {
+      bottom: calc(-1 * (#{$s-toggle--line-size} + #{$s-toggle--line-gap}));
+
+      @include breakpoint(xs, max) {
+        bottom: calc(-1 * (#{$s-toggle--line-size} + (#{$s-toggle--line-gap} *.5)));
+      }
+    }
+  }
+
+  &.is-active {
+    .icon-line {
+      background: transparent;
+
+      &:before {
+        top: 0;
+        transform: translateX(-50%) rotate(45deg);
+      }
+
+      &:after {
+        bottom: 0;
+        transform: translateX(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

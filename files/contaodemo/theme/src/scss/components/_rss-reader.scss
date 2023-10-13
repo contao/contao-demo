@@ -1,0 +1,40 @@
+.mod_rssReader {
+  display: flex;
+  flex-direction: column;
+
+  .mod_article__inner > &:not([class*='col-']) {
+    @include breakpoint(xl) {
+      grid-column: 1 / 10;
+    }
+  }
+}
+
+.rss {
+
+  &_default_header {
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &_default,
+  &_items_only {
+    @extend .box--gray-light;
+
+    h1, h2, h3 {
+      @extend .title-3;
+
+      margin-block-end: 1rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_items_only + &_items_only,
+  &_default + &_default {
+    margin-block-start: 4rem;
+  }
+}

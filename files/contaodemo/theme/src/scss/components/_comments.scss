@@ -1,0 +1,70 @@
+.ce_comments {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-block-start: 0;
+  padding-block-start: $c-content-element--spacer;
+
+  border-top: $s-border--size solid $c-gray--200;
+
+  h2 {
+    // module headline
+    @extend .title-2--regular;
+
+    margin: 0;
+
+    // formular headline
+    &:nth-of-type(2) {
+      @extend .title-3;
+
+      margin-block-end: 0;
+
+      font-weight: 400;
+    }
+  }
+
+  .reply {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    margin-block: .5rem;
+    padding-inline-start: 3rem;
+
+    .comment {
+      background: $c-primary--50;
+    }
+  }
+}
+
+.comment {
+  @extend .box--white;
+  @include set-font-size(text--sm);
+
+  padding: 1rem;
+
+  border-radius: 0 1rem 1rem 1rem;
+
+  &_default {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .info {
+      margin: 0;
+
+      font-style: normal;
+    }
+
+    time {
+      font-style: italic;
+      color: $c-gray--500;
+    }
+
+    + .form,
+    + h2 {
+      margin-block-start: 3rem;
+    }
+  }
+}

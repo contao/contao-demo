@@ -1,0 +1,29 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('headline'); ?><?php $this->endblock(); ?>
+
+<?php $this->block('content'); ?>
+
+  <?php if (!$this->addBefore): ?>
+    <div class="text-wrapper">
+      <?php if ($this->headline): ?>
+        <<?= $this->hl ?> class="title"><?= $this->headline ?></<?= $this->hl ?>>
+      <?php endif; ?>
+      <?= $this->text ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($this->addImage): ?>
+    <?php $this->insert('image', $this->arrData); ?>
+  <?php endif; ?>
+
+  <?php if ($this->addBefore): ?>
+    <div class="text-wrapper">
+      <?php if ($this->headline): ?>
+        <<?= $this->hl ?> class="title"><?= $this->headline ?></<?= $this->hl ?>>
+      <?php endif; ?>
+      <?= $this->text ?>
+    </div>
+  <?php endif; ?>
+
+<?php $this->endblock(); ?>

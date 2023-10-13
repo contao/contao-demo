@@ -1,0 +1,5 @@
+.mod_newsmenu {
+  ul {
+    @extend %nav-list-helper;
+  }
+}

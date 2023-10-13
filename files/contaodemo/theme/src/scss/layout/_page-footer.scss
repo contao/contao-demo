@@ -1,0 +1,120 @@
+[id="footer"] {
+  @extend %container-base;
+
+  padding-block: 5rem;
+
+  background: $gradient--1;
+
+  color: $c-gray--300;
+
+  .inside {
+    @extend %container-base--inner;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem 2rem;
+  }
+
+  a:not([class]) {
+    color: $c-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $c-white;
+  }
+}
+
+.logo--footer {
+  margin-block-end: 2.5rem;
+
+  @include breakpoint(xs, max) {
+    max-width: 11rem;
+  }
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 3rem $grid--gap-small;
+
+  margin: 0 auto;
+  max-width: $s-content--max-width + 3rem;
+
+  @include breakpoint(sm) {
+    grid-gap: 5rem $grid--gap-large;
+  }
+
+  > * {
+    grid-column: 1 / -1;
+
+    @include breakpoint(md) {
+      grid-column: 3 / 9;
+    }
+
+    @include breakpoint(xl) {
+      grid-column: 5 / 9;
+    }
+  }
+
+  *:nth-child(1)  {
+    grid-column: 1 / -1;
+
+    @include breakpoint(md) {
+      grid-column: 1 / 7;
+    }
+
+    @include breakpoint(lg) {
+      grid-column: 2 / 7;
+    }
+
+    @include breakpoint(xxl) {
+      grid-column: 3 / 7;
+    }
+  }
+
+  *:nth-child(2) {
+    grid-column: 1 / -1;
+
+    @include breakpoint(md) {
+      grid-column: 7 / 13;
+    }
+
+    @include breakpoint(md) {
+      grid-column: 7 / 12;
+    }
+
+    @include breakpoint(xxl) {
+      grid-column: 7 / 11;
+    }
+  }
+}
+
+.prefooter {
+  @extend .background--gray-light;
+
+  padding-block: .5rem;
+
+  border-top: $s-border--size solid $c-gray--200;
+
+  .mod_newslist,
+  .mod_eventlist {
+    h2 {
+      margin-block-start: 0;
+    }
+  }
+}
+
+.footer-claim {
+  @include set-font-size(text--lg);
+  display: block;
+
+  margin-block-start: 2.5rem;
+
+  color: $c-gray--200;
+  text-align: center;
+
+  a {
+    font-weight: 600;
+  }
+}

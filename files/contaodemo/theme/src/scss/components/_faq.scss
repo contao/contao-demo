@@ -1,0 +1,9 @@
+.mod_faqpage {
+  section {
+    @extend .box--gray-light;
+
+    + section {
+      margin-block-start: 4rem;
+    }
+  }
+}

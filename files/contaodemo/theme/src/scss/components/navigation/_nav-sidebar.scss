@@ -1,0 +1,67 @@
+.nav-sidebar {
+  a, strong {
+    display: flex;
+    align-items: center;
+    gap: 0 $icon-gap--link;
+    flex-shrink: 0;
+
+    padding: 1rem 1.5rem;
+
+    background: $c-white;
+    border-bottom: .0625rem solid $c-gray--100;
+    color: $c-secondary--700;
+    transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt, border-color $t-animation--fast $s-animation--fkt;
+
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a {
+
+    &:after {
+      display: block;
+
+      width: 1.5rem;
+      height: 1.5rem;
+
+      margin-left: auto;
+
+      transition: opacity $t-animation--fast $s-animation--fkt;
+      background: transparent url('#{$img-path}/icons/arrow-right--orange.svg') center center no-repeat;
+      opacity: 0;
+
+      content: '';
+    }
+
+    &:hover,
+    &:focus {
+      color: $c-primary--500;
+      border-bottom-color: $c-primary--500;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  // hide nav-icon
+  a,
+  strong {
+    &[class*="nav-icon-"] {
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  a.trail,
+  strong {
+    background: $c-secondary--700;
+    border-bottom-color: $c-secondary--700;
+    color: $c-white;
+
+    text-decoration: underline $c-primary--500 .0625rem;
+    text-decoration-thickness: 0.125em;
+    text-underline-offset: .4em;
+  }
+}

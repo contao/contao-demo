@@ -1,0 +1,391 @@
+// headline title layout
+
+.display-title {
+  letter-spacing: $s-title--letter-spacing;
+
+  &-1 {
+    @include set-font-size(display-title-1--xs);
+
+    @include breakpoint(sm) {
+      @include set-font-size(display-title-1--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(display-title-1--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(display-title-1);
+    }
+  }
+
+  &-2 {
+    @include set-font-size(display-title-2--xs);
+
+    @include breakpoint(sm) {
+      @include set-font-size(display-title-2--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(display-title-3--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(display-title-2);
+    }
+  }
+}
+
+.title {
+  &-1,
+  &-2,
+  &-3,
+  &-4,
+  &-5,
+  &-6 {
+    margin-block-end: 2rem;
+
+    &:first-child {
+      margin-block-start: 0;
+    }
+
+    font-weight: 600;
+    color: $c-secondary--700;
+  }
+
+
+  &-1 {
+    @include set-font-size(title-1--xs);
+
+    font-weight: 700;
+    letter-spacing: $s-title--letter-spacing;
+
+    @include breakpoint(sm) {
+      @include set-font-size(title-1--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(title-1--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(title-1);
+    }
+  }
+
+  &-2 {
+    @include set-font-size(title-2--xs);
+
+    letter-spacing: $s-title--letter-spacing;
+
+
+    @include breakpoint(sm) {
+      @include set-font-size(title-2--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(title-2--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(title-2);
+    }
+
+    &--regular {
+      @extend .title-2;
+
+      font-weight: 400;
+    }
+  }
+
+  &-3 {
+    @include set-font-size(title-3--xs);
+
+    margin-block-end: 1rem;
+
+    letter-spacing: $s-text--letter-spacing;
+
+
+    @include breakpoint(sm) {
+      @include set-font-size(title-3--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(title-3--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(title-3);
+    }
+
+
+    &--regular {
+      @extend .title-3;
+
+      font-weight: 400;
+    }
+  }
+
+  &-4 {
+    @include set-font-size(title-4--xs);
+
+    @include breakpoint(sm) {
+      @include set-font-size(title-4--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(title-4--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(title-4);
+    }
+
+    &--regular {
+      @extend .title-4;
+
+      font-weight: 400;
+    }
+  }
+
+  &-5 {
+    @include set-font-size(title-4--xs);
+
+    @include breakpoint(sm) {
+      @include set-font-size(title-4--sm);
+    }
+
+    @include breakpoint(md) {
+      @include set-font-size(title-4--md);
+    }
+
+    @include breakpoint(xl) {
+      @include set-font-size(title-4);
+    }
+
+    &--regular {
+      @extend .title-5;
+
+      font-weight: 400;
+    }
+  }
+
+  &-6 {
+    @include set-font-size(title-6);
+
+    margin-block-end: 1rem;
+
+    letter-spacing: $s-title--letter-spacing;
+
+    &--regular {
+      @extend .title-6;
+
+      font-weight: 400;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &:first-child {
+    margin-block-start: 0;
+  }
+}
+
+h1 {
+  @extend .title-1;
+}
+
+h2 {
+  @extend .title-2;
+}
+
+h3 {
+  @extend .title-3;
+}
+
+h4 {
+  @extend .title-4;
+}
+
+h5 {
+  @extend .title-5;
+}
+
+h6 {
+  @extend .title-6;
+}
+
+// text-layout classes
+.text {
+  &--xs {
+    @include set-font-size(text--xs);
+
+    letter-spacing: .01em;
+  }
+
+  &--sm {
+    @include set-font-size(text--sm);
+  }
+
+  &--md {
+    @include set-font-size(text--md);
+
+    letter-spacing: -.01em;
+  }
+
+  &--lg {
+    @include set-font-size(text--lg);
+
+    letter-spacing: -.01em;
+  }
+}
+
+
+// basic contents
+.image_container {
+  margin: 0;
+
+  &.float {
+    &_left {
+      margin: 0 0 2rem 0;
+
+      @include breakpoint(xs, max) {
+        margin-block-end: $grid--gap-large;
+      }
+    }
+
+    &_right {
+      margin: 0 0 2rem 0;
+
+      @include breakpoint(xs, max) {
+        margin-block-sstart: $grid--gap-large;
+      }
+    }
+
+    &_above {
+      margin-block-end: 2rem;
+    }
+
+    &_below {
+      margin-block-start: 2rem;
+    }
+  }
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  @include set-font-size(text--sm);
+
+  margin-block-start: 1rem;
+
+  font-style: italic;
+}
+
+// link
+
+a {
+  display: flex;
+  align-items: center;
+  gap: 0 $icon-gap--link;
+}
+
+.link,
+.hyperlink_txt,
+.external-link,
+a:not([class]) {
+  display: inline-flex;
+
+  color: $c-secondary--700;
+  transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
+
+  text-decoration: underline currentColor .0625rem;
+  text-underline-offset: .4em;
+
+  &:hover,
+  &:focus {
+    color: $c-primary--500;
+  }
+}
+
+p, ul, ol {
+  margin: 1rem 0;
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  &:last-child {
+    margin-block-end: 0;
+  }
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding-inline-start: 1rem;
+
+  border-left: .0625rem solid $c-gray--200;
+
+  font-style: italic;
+}
+
+dl {
+  margin-block: 0;
+}
+
+dd {
+  margin-inline-start: 0;
+  padding-inline-start: 1rem;
+
+  border-left: $s-border--size solid $c-gray--200;
+}
+
+
+/** */
+.ce_headline + * {
+
+  .mod_article__inner & {
+    margin-block-start: 0;
+  }
+}
+
+
+.ce_text {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-block-start: 0;
+    }
+  }
+}
+
+
+// ce_code
+.hljs {
+
+  padding: 2rem;
+
+  border-radius: $s-border--radius;
+  background: $c-secondary--700;
+
+  color: $c-white;
+
+  &-string,
+  &-regexp {
+    background: transparent;
+    color: $c-primary--500
+  }
+}

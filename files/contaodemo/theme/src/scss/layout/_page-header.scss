@@ -1,0 +1,79 @@
+[id="header"] {
+  @extend %container-base;
+
+  background: $c-white;
+  border-bottom: .0625rem solid $c-gray--200;
+
+  .inside {
+    @extend %container-base--inner;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem 1rem;
+
+    @include breakpoint(xs) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "logo logo mainbar"
+        "metabar metabar metabar";
+    }
+
+    @include breakpoint(md) {
+      grid-template-areas:
+        "metabar metabar metabar"
+        "logo . mainbar";
+    }
+
+    @include breakpoint(lg) {
+      grid-template-areas:
+        "logo metabar metabar"
+        "logo mainbar mainbar";
+    }
+
+    padding-block: 1.5rem;
+
+    @include breakpoint(sm) {
+      padding-block: 2rem;
+    }
+  }
+}
+
+.header-top-bar {
+  display: block;
+  grid-area: metabar;
+
+  .inner {
+    display: flex;
+    gap: 1rem $header--item-inline-gap;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @include breakpoint(xs, max) {
+    display: none;
+  }
+}
+
+
+.logo {
+  grid-area: logo;
+
+  display: flex;
+  align-items: center;
+
+  max-width: 7.25rem;
+
+  @include breakpoint(xs) {
+    max-width: 11rem;
+  }
+
+  @include breakpoint(md) {
+    max-width: 14.625rem;
+  }
+
+  img {
+    display: block;
+  }
+}

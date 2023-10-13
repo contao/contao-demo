@@ -1,0 +1,26 @@
+.ce_download {}
+.ce_downloads {
+  ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+  }
+}
+
+.download-element {
+  a {
+    padding-left: 2rem;
+
+    &:before {
+
+      margin-inline-start: -2rem;
+
+      width: 1.5rem;
+      height: 1.5rem;
+
+      background: transparent url('#{$img-path}/icons/file-arrow-down.svg') center center no-repeat;
+
+      content: '';
+    }
+  }
+}

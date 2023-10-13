@@ -1,0 +1,73 @@
+.breadcrumb {
+  display: flex;
+
+  width: 100%;
+  max-width: $s-content--max-width;
+
+  margin: 2.5rem auto 0;
+
+  @include breakpoint(sm, max) {
+    display: none;
+  }
+
+  a {
+
+    transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
+
+    color: $c-secondary--700;
+    font-weight: 400;
+    text-decoration: none;
+
+    text-decoration: underline transparent .0625rem;
+    text-underline-offset: .4em;
+  }
+
+  a:hover,
+  a:focus {
+    color: $c-primary--500;
+    text-decoration-color: currentColor;
+  }
+
+  ul {
+    @include set-font-size(text--sm);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
+
+    margin: 0;
+    padding: .5rem 1rem;
+
+    border-radius: 4rem;
+    background: $c-white;
+
+    list-style: none;
+  }
+
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    // active element
+    font-weight: 600;
+    color: $c-gray--600;
+
+    // divider
+    + li {
+      &:before {
+        display: block;
+
+        width: 1rem;
+        height: 1rem;
+
+        margin-inline-start: -1.25rem;
+
+        background: transparent url('#{$img-path}/icons/caret-right--gray.svg') center center no-repeat;
+
+        content: '';
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+// searchbar inside header
+.searchbar {
+
+  .formbody {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .text {
+    border-radius: 5rem;
+
+    padding-inline: 1.5rem 3.5rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include breakpoint(lg, max) {
+      padding-block: .75rem;
+    }
+  }
+
+  .widget-text {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 1.5rem;
+      z-index: 5;
+      transform: translateY(-50%);
+
+      width: 1.5rem;
+      height: 1.5rem;
+
+      background: $c-white url('#{$img-path}/icons/search.svg') center center no-repeat;
+
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  .widget-radio {
+    width: 100%;
+  }
+
+  .widget-submit {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    z-index: 5;
+    transform: translateY(-50%);
+
+    overflow: hidden;
+
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .submit {
+    position: relative;
+
+    display: flex;
+    gap: .5rem;
+
+    width: 1.5rem;
+
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+
+
+
+    &:focus,
+    &:hover {
+      background: transparent;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // searchfield inside header
+  &--simple {
+
+    @include breakpoint(xs, max) {
+      display: none;
+    }
+
+    &,
+    .widget-text {
+
+      @include breakpoint(md, max) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  // searchform
+  &--extended {
+    .widget-text {
+      max-width: 32rem;
+    }
+
+    .radio_container {
+      flex-direction: row;
+    }
+
+    .header {
+      margin-top: 2.5rem;
+    }
+  }
+}

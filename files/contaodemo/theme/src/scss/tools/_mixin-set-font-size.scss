@@ -1,0 +1,20 @@
+/// Mixin to manage flexible font-sizes
+/// @author Sascha Mueller (smueller@borowiakziehe.de)
+/// @param {String} $size-set - Set font-size and hl
+/// @require $font-sizes-map
+
+// @include set-font-size(text-size)
+@mixin set-font-size($size-set, $map: $font-sizes-map) {
+
+   // if $size-set is key in $map, use it
+   @if map-has-key($map, $size-set) {
+      $firstlevel: map-get($map, $size-set);
+
+      // Generate the Declaration
+      font-size: map-get($firstlevel, 'fs'); // set font-size
+      line-height: map-get($firstlevel, 'lh'); // set line-height
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$size-set}`. "
+        + "Please make sure it is defined in `$font-sizes-map`.";
+   }
+}

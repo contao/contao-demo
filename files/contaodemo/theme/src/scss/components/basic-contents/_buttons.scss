@@ -1,0 +1,213 @@
+// sizes
+
+/** TODO: remove outdated
+$s-button--text--lg: 1.25rem;
+$s-button--line-heigt--lg: 1.2;
+
+$s-button--text--md: 1rem;
+$s-button--line-heigt--md: 1.25;
+
+$s-button--text--sm: 1.25rem;
+$s-button--line-heigt--sm: 1.14285;
+*/
+
+
+$s-button--border-size: .0625rem;
+
+$s-button--border-radius-lg: .5rem;
+$s-button--border-radius-md: .375rem;
+$s-button--border-radius-sm: .25rem;
+
+
+$s-btn-space--inner-lg: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+$s-btn-space--inner-md: calc(1rem - #{$s-button--border-size}) calc(1.25rem - #{$s-button--border-size});
+$s-btn-space--inner-sm: calc(.75rem - #{$s-button--border-size}) calc(1rem - #{$s-button--border-size});
+
+  // btn primary colors
+$c-btn-primary--text: $c-white;
+$c-btn-primary--text-hover: $c-white;
+$c-btn-primary--text-active: $c-white;
+
+$c-btn-primary--background: $c-primary--500;
+$c-btn-primary--background-hover: $c-primary--600;
+$c-btn-primary--background-active: $c-primary--500;
+
+$c-btn-primary--text-disabled: $c-gray--500;
+$c-btn-primary--background-disabled: $c-gray--200;
+
+$c-btn-primary--border: transparent;
+$c-btn-primary--border-hover: transparent;
+$c-btn-primary--border-active: transparent;
+
+$c-btn-primary--text-disabled: $c-gray--400;
+$c-btn-primary--background-disabled: $c-gray--100;
+$c-btn-primary--border-disabled: $c-gray--300;
+
+// btn secondary colors
+$c-btn-secondary--text: $c-secondary--700;
+$c-btn-secondary--text-hover: $c-primary--500;
+$c-btn-secondary--text-active: $c-primary--500;
+$c-btn-secondary--text-disabled: $c-gray--400;
+
+$c-btn-secondary--background: $c-white;
+$c-btn-secondary--background-hover: $c-white;
+$c-btn-secondary--background-active: $c-white;
+$c-btn-secondary--background-disabled: $c-gray--100;
+
+$c-btn-secondary--border: $c-gray--200;
+$c-btn-secondary--border-hover: $c-primary--500;
+$c-btn-secondary--border-active: $c-primary--500;
+
+$c-btn-secondary--text-disabled: $c-gray--400;
+$c-btn-secondary--background-disabled: $c-gray--100;
+$c-btn-secondary--border-disabled: $c-gray--300;
+
+
+%button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  border: $s-button--border-size solid transparent;
+
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active {}
+
+  &:disabled,
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.button {
+  // layout
+  &-primary {
+    @extend %button;
+
+    background: $c-btn-primary--background;
+    transition: background $t-animation--fast $s-animation--fkt;
+    border: $s-button--border-size solid transparent;
+
+    color: $c-btn-primary--text;
+
+    &:hover,
+    &:focus {
+      background: $c-btn-primary--background-hover;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background: $c-gray--200;
+
+      color: $c-btn-primary--text-disabled;
+    }
+  }
+
+  &-secondary {
+    @extend %button;
+
+    background: $c-btn-secondary--background;
+    transition: background $t-animation--fast $s-animation--fkt, border-color $t-animation--fast $s-animation--fkt, color $t-animation--fast $s-animation--fkt;
+    border: $s-button--border-size solid $c-gray--200;
+
+    color: $c-btn-secondary--text;
+
+    &:hover,
+    &:focus {
+      background: $c-btn-secondary--background-hover;
+      border-color: $c-btn-secondary--border-hover;
+
+      color: $c-btn-secondary--text-hover;
+
+    }
+
+    &:disabled,
+    &[disabled] {
+      background: $c-gray--200;
+
+      color: $c-btn-secondary--text-disabled;
+    }
+  }
+
+  // sizes
+  &--lg {
+
+    padding: calc(.875rem - #{$s-button--border-size}) calc(.75rem - #{$s-button--border-size});
+
+    border-radius: $s-button--border-radius-lg;
+
+    font-size: 1rem;
+    line-height:1.25rem;
+
+    @include breakpoint(md) {
+      padding: calc(1rem - #{$s-button--border-size}) calc(1.25rem - #{$s-button--border-size});
+    }
+
+    @include breakpoint(xl) {
+      padding: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+
+      font-size: 1.25rem;
+      line-height:1.5rem;
+    }
+  }
+
+  &--md {
+    padding: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+
+    border-radius: $s-button--border-radius-md;
+
+    font-size: .875rem;
+    line-height: 1rem;
+
+    @include breakpoint(md) {
+      padding: calc(1rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+    }
+
+    @include breakpoint(xl) {
+      padding: calc(1rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
+
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &--sm {
+    padding: calc(.5rem - #{$s-button--border-size}) calc(.75rem - #{$s-button--border-size});
+
+    border-radius: $s-button--border-radius-sm;
+
+    font-size: .75rem;
+    line-height: .875rem;
+
+    @include breakpoint(md) {
+      padding: calc(.625rem - #{$s-button--border-size}) calc(.875rem - #{$s-button--border-size});
+    }
+
+    @include breakpoint(xl) {
+      padding: calc(.75rem - #{$s-button--border-size}) calc(1rem - #{$s-button--border-size});
+
+      font-size: .875rem;
+      line-height: 1rem;
+    }
+  }
+
+  // wrapper
+  &-group {
+    display: flex;
+
+    margin-block: 2rem;
+
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,172 @@
+// list views
+
+.mod_newsarchive,
+.mod_newslist,
+.mod_eventlist {
+
+  .mod_article__inner > &:not([class*='col-']) {
+    @include breakpoint(xl) {
+      grid-column: 1 / 10;
+    }
+  }
+}
+
+// detail view
+.mod_newsreader {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  > * {
+
+    &:not(.ce_headline) {
+      margin-block: calc(.5 * #{$c-content-element--spacer});
+    }
+
+    &.spacer--bottom-2 {
+      margin-block-end: 2rem;
+
+      + * {
+        margin-block-start: 0;
+      }
+    }
+  }
+
+  .layout_full {
+    margin-block: 0;
+  }
+
+  .back {
+    margin-block-start: 2.5rem;
+  }
+}
+
+.mod_eventreader {
+  .info time {
+    @extend .text--lg;
+
+    font-weight: 600;
+  }
+}
+
+.layout {
+
+  &_simple,
+  &_upcoming {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem .5rem;
+
+    padding: 1rem 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    time {
+      @include set-font-size(text--sm);
+    }
+  }
+
+  &_short,
+  &_latest {
+    @extend .box--gray-light;
+
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      @extend .title-3;
+
+      margin-block: 0 1rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &_latest {
+
+    .image_container {
+      order: -2;
+
+      margin-block-end: 2rem;
+    }
+  }
+
+  &_upcoming {
+    & + & {
+      border-top: $s-border--size solid $c-gray--200;
+    }
+  }
+
+  &_simple {
+    & + & {
+      border-top: $s-border--size solid $c-gray--200;
+    }
+  }
+
+  &_full {
+    h1 {margin-block-end: 1rem;}
+
+    .info {
+      position: relative;
+
+      margin-bottom: 5rem;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calc(-1 * (2.5rem + #{$s-border--size}));
+        z-index: 5;
+
+        height: $s-border--size;
+
+        background: $c-gray--200;
+
+        content: '';
+      }
+    }
+
+    .enclosure {
+      margin-block-start: 2rem;
+      padding: 0;
+
+      list-style: none;
+    }
+  }
+}
+
+.info {
+  @include set-font-size(text--sm);
+
+  font-style: italic;
+
+  time {
+    font-style: normal;
+  }
+
+  &.recurring {
+    @extend .message-info;
+    @include set-font-size(text--md);
+
+    margin-block-start: 1.5rem;
+    margin-block-end: 2.5rem;
+
+    font-weight: 700;
+    font-style: normal;
+
+    &:after {
+      content: none;
+    }
+  }
+}

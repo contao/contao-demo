@@ -1,0 +1,100 @@
+$table--switch-mobile: sm;
+$table--inline-cell-content: xs;
+$table--inline-attr-length: 12ch;
+
+$s-table--border-size: $s-border--size;
+$s-table--padding: 1rem 1.25rem;
+
+$c-table--border: $c-gray--200;
+
+.ce_table {
+
+  &:not(.mod_listing) {
+    // @extend %table-overflow;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  caption {
+    @include set-font-size(text--sm);
+    width: 100%;
+    margin-bottom: .5rem;
+
+    text-align: left;
+  }
+}
+
+th, td {
+  padding: $s-table--padding;
+
+  text-align: left;
+  vertical-align: top;
+
+  border: $s-table--border-size solid $c-table--border;
+}
+
+th {
+
+  border-bottom-color: $c-gray--500;
+  background: $c-gray--100;
+
+  font-weight: 600;
+  color: $c-secondary--700;
+
+  @include breakpoint(#{$table--switch-mobile}, max) {
+    display: none;
+  }
+}
+
+td {
+  background: $c-white;
+
+  @include breakpoint(#{$table--switch-mobile}, max) {
+    display: grid;
+  }
+
+  @include breakpoint(#{$table--inline-cell-content}) {
+    grid-template-columns: #{$table--inline-attr-length} auto;
+  }
+
+
+  &:not(:first-child) {
+    @include breakpoint(#{$table--switch-mobile}, max) {
+      border-top: none;
+    }
+  }
+
+  // add extra space
+  &:first-child {
+    @include breakpoint(#{$table--switch-mobile}, max) {
+      padding-block-start: 2rem;
+    }
+  }
+
+  &:last-child {
+    @include breakpoint(#{$table--switch-mobile}, max) {
+      padding-block-end: 2rem;
+    }
+  }
+
+  // show th content from data-attribute
+  &::before {
+    @include breakpoint(#{$table--switch-mobile}, max) {
+
+      font-weight: 600;
+
+      content: attr(data-cellheadline) ': ';
+    }
+  }
+}
+
+tr {
+  &:nth-child(even):not([class*="week_"]) {
+    td {
+      background: $c-gray--50;
+    }
+  }
+}

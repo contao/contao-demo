@@ -1,0 +1,9 @@
+<?php $this->extend('mod_article'); ?>
+
+<?php if (!$this->noMarkup): ?>
+    <?php $this->block('content'); ?>
+        <div class="mod_article__inner">
+            <?= $this->parent(); ?>
+        </div>
+    <?php $this->endblock(); ?>
+<?php endif; ?>

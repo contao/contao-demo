@@ -1,0 +1,160 @@
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+:target {
+  // scroll-margin: ;
+
+}
+
+::selection {
+  background: $c-primary--500;
+  color: $c-white;
+  text-shadow: none;
+}
+
+body {
+  @include set-font-size(text--md);
+
+  background: $c-body--bg;
+
+  font-family: $ff-body;
+
+  color: $c-font--base;
+  letter-spacing: $s-text--letter-spacing;
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-y: auto;
+}
+
+[id="wrapper"] {
+  margin: 0 auto;
+  max-width: $s-page--max-width;
+}
+
+[id="sub-header"] {
+  @extend %container-base;
+
+  .inside {
+    @extend %container-base--inner;
+  }
+}
+
+[id="container"] {
+  padding-block: 1rem 1rem;
+
+  @include breakpoint(lg) {
+    padding-block-end: 4rem;
+  }
+}
+
+
+.layout--1-column {
+  .mod_article {
+    @extend %container-base;
+
+    &__inner {
+      @extend %container-base--inner;
+    }
+  }
+}
+
+.layout--1-column-8-12 {
+
+  [id="container"] {
+    @extend %container-base;
+    @extend %container-base--inner;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 $grid--gap-small;
+
+    margin: 0 auto;
+    max-width: $s-content--max-width + 3rem;
+
+    @include breakpoint(sm) {
+      grid-gap: 0 $grid--gap-large;
+    }
+
+    [id="main"] {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+
+      @include breakpoint(md) {
+        grid-column: 2 / 12;
+      }
+
+      @include breakpoint(lg) {
+        grid-column: 3 / 11;
+      }
+    }
+  }
+}
+
+.layout--2-column {
+
+  [id="container"] {
+    @extend %container-base;
+    @extend %container-base--inner;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 $grid--gap-small;
+
+    margin: 0 auto;
+    max-width: $s-content--max-width + 3rem;
+
+    @include breakpoint(sm) {
+      grid-gap: 0 $grid--gap-large;
+    }
+  }
+
+
+  [id="main"] {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+
+    @include breakpoint(lg) {
+      grid-column: 5 / 13;
+    }
+  }
+
+  [id="left"] {
+
+    @include breakpoint(lg, max) {
+      display: none;
+    }
+
+    @include breakpoint(lg) {
+
+      grid-column: 1 / 5;
+
+      margin-block: 4rem 8rem;
+
+    }
+
+    @include breakpoint(xl) {
+      grid-column: 1 / 4;
+    }
+  }
+}
+
+.header-image {
+
+}
+
+
+
+

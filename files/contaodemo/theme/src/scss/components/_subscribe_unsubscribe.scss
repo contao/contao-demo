@@ -1,0 +1,10 @@
+.mod_subscribe,
+.mod_unsubscribe {
+  // error message
+  .error {
+    @extend .message-error;
+    @include set-font-size(text--md);
+
+    font-weight: 700;
+  }
+}

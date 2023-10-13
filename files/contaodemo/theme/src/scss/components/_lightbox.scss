@@ -1,0 +1,83 @@
+$control--size-sm: 2.25rem;
+$control--size-lg: 3rem;
+$control--border-radius: .25rem;
+
+$c-lightbox--bg: $c-gray--900;
+$c-lightbox--txt: $c-gray--300;
+
+#cboxOverlay {
+  background: $c-lightbox--bg;
+}
+
+#cboxWrapper,
+#colorbox {
+  overflow: visible;
+}
+
+#colorbox {
+
+  [id="cboxLoadedContent"] {
+    background: $c-lightbox--bg;
+    border: none;
+  }
+
+  [id="cboxTitle"],
+  [id="cboxCurrent"] {
+    @include set-font-size(text--sm);
+
+    top: -2.25rem;
+
+    color: $c-lightbox--txt;
+  }
+
+  // controls
+  [id="cboxClose"],
+  [id="cboxPrevious"],
+  [id="cboxNext"] {
+
+    width: $control--size-sm;
+    height: $control--size-sm;
+
+    transition: background ease-in-out $t-animation--fast;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $c-primary--500;
+    }
+
+    @include breakpoint(lg) {
+      width: $control--size-lg;
+      height: $control--size-lg;
+    }
+  }
+
+  [id="cboxPrevious"],
+  [id="cboxNext"] {
+    margin-block-start: 0;
+    transform: translateY(-50%);
+  }
+
+  [id="cboxClose"] {
+    top: 0;
+    right: 0;
+
+    background: $c-secondary--900 url('#{$img-path}/icons/close-x.svg') center center no-repeat;
+  }
+
+  [id="cboxPrevious"] {
+    left: 0;
+
+    background: $c-secondary--900 url('#{$img-path}/icons/caret-left--white.svg') center center no-repeat;
+    border-top-right-radius: $control--border-radius;
+    border-bottom-right-radius: $control--border-radius;
+  }
+
+  [id="cboxNext"] {
+    right: 0;
+
+    background: $c-secondary--900 url('#{$img-path}/icons/caret-right--white.svg') center center no-repeat;
+    border-top-left-radius: $control--border-radius;
+    border-bottom-left-radius: $control--border-radius;
+  }
+}
+

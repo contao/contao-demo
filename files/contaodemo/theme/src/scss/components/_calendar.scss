@@ -1,0 +1,118 @@
+
+$calendar--switch-mobile: md;
+
+.mod_calendar {
+  @extend %table-overflow;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.minicalendar {
+  width: auto;
+}
+
+.calendar,
+.minicalendar {
+
+  th, td {
+    padding: .5rem 1rem;
+
+    width: calc(100% / 7);
+
+    border-color: $c-gray--300;
+
+    text-align: center;
+
+    @include breakpoint(xxl, max) {
+      @include set-font-size(text--sm);
+    }
+  }
+
+  th {
+    background: $c-gray--100;
+  }
+
+  // has event
+  td {
+    background: $c-white;
+
+    &.active {
+      background: $c-secondary--700;
+
+      font-weight: 700;
+      color: $c-white;
+    }
+  }
+
+  .empty {
+    background: $c-gray--200;
+  }
+
+  .event {
+    margin-block: 1rem;
+  }
+
+  a {
+    text-align: left;
+
+    color: inherit;
+    font-weight: 400;
+  }
+
+  /*
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    @include breakpoint(#{$calendar--switch-mobile}, max) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  thead  {
+
+    tr {
+      @include breakpoint(#{$calendar--switch-mobile}, max) {
+        display: flex;
+      }
+    }
+
+    th {
+      @include breakpoint(#{$calendar--switch-mobile}, max) {
+
+      }
+    }
+
+    .label {
+      @include breakpoint(#{$calendar--switch-mobile}, max) {
+        display: none;
+      }
+    }
+  }
+
+  .days:not(.active) {
+    @include breakpoint(#{$calendar--switch-mobile}, max) {
+      display: none;
+    }
+  }
+  */
+
+}
+
+.minicalendar {
+
+  th, td {
+    padding: .5rem;
+  }
+
+  .active a {
+    text-align: center;
+  }
+}
+
+

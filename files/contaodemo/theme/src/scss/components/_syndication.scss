@@ -1,0 +1,49 @@
+$s-img-size: 1.5rem;
+
+.syndication {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem 2rem;
+
+  margin-block-end: 0;
+
+  img {
+    display: none;
+  }
+
+  a {
+    position: relative;
+    width: $s-img-size;
+
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+
+    &:before {
+      position: absolute;
+      inset: 0;
+
+      content: '';
+    }
+  }
+
+  .print {
+    &:before {
+      background: transparent url('#{$img-path}/icons/printer.svg') center center no-repeat;
+    }
+  }
+
+  .facebook {
+    &:before {
+      background: transparent url('#{$img-path}/icons/facebook.svg') center center no-repeat;
+    }
+  }
+
+  .twitter {
+    &:before {
+      background: transparent url('#{$img-path}/icons/twitter-circle.svg') center center no-repeat;
+    }
+  }
+}
+

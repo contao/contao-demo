@@ -1,0 +1,13 @@
+.listing {
+  margin-block-start: 0;
+
+  .formbody {
+    display: flex;
+    gap: 1rem 2rem;
+  }
+
+  // data table
+  .all_records {
+    margin-block-start: 2rem;
+  }
+}

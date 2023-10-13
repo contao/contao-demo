@@ -1,0 +1,43 @@
+/// Mixin to manage responsive breakpoints
+/// @author Sascha Mueller (service@bytepuzzle.de)
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+
+// @include breakpoint(small, max) {}
+@mixin breakpoint($breakpoint,$min-max: min) {
+
+  // define difference between min-width/max-width
+  $min-max-width: '';
+  $bp-min-max: '';
+  $bp-min-max-diff: .001rem;
+
+  // check if min-width/max-width
+  @if $min-max == min {
+    $min-max-width: min-width;
+  } @else if $min-max == max {
+    $min-max-width: max-width;
+  }
+
+  // check if mediaquery in map
+  @if map-has-key($breakpoints, $breakpoint) {
+    $bp-min-max: map-get($breakpoints, $breakpoint);
+
+    @if $min-max == max {
+      $bp-min-max: map-get($breakpoints, $breakpoint) - $bp-min-max-diff;
+    }
+  } @else if ($breakpoint != null){
+    $bp-min-max: $breakpoint;
+
+    @if $min-max == max {
+      $bp-min-max: calc(#{$bp-min-max} - #{$bp-min-max-diff});
+    }
+  } @else {
+    @warn "Unfortunately, no breakpoint could be retrieved and #{$breakpoint} is invalid. "
+        + "Please make sure it is set.";
+  }
+
+  // set mediaquery
+  @media only screen and ($min-max-width: $bp-min-max) {
+    @content;
+  }
+}

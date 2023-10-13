@@ -1,0 +1,59 @@
+.ce_gallery {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid--gap-small;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+
+    @include breakpoint(sm) {
+      grid-gap: $grid--gap-large;
+    }
+
+    &.cols_3 {
+      li {
+        @include breakpoint(lg) {
+          grid-column: span 4;
+        }
+      }
+    }
+
+    &.cols_4 {
+      li {
+        grid-column: span 3;
+      }
+    }
+
+    &.cols_6 {
+      li {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  li {
+    grid-column: span 12;
+
+    @include breakpoint(xs) {
+      grid-column: span 6;
+    }
+  }
+
+  figure {
+    transition: border-color $t-animation--fast $s-animation--fkt;
+
+    padding: .25rem;
+
+    background: $c-white;
+    border: 1px solid $c-gray--200;
+
+    &:hover,
+    &:focus {
+      border-color: $c-primary--500;
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+/// Mixin to manage grid-layout
+/// @author Sascha Mueller (smueller@borowiakziehe.de)
+/// @param
+/// @require $grid--columns
+
+// @include grid-generator();
+@mixin grid-generator($grid-columns: $grid--columns) {
+
+  [class*="col-"] {
+    grid-column: 1 / -1
+  }
+
+  // build class without breakpoint
+  @for $i from 1 through $grid-columns - 1 {
+
+    .col-#{$i} {
+      @include breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+
+        grid-column: span #{$i};
+      }
+    }
+
+    // .col-offset-#{$i} {}
+  }
+}

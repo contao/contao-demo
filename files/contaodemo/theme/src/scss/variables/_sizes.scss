@@ -1,0 +1,241 @@
+
+// text-sizes
+$lh--title: 1.2;
+$lh--default: 1.5;
+
+$s-title--letter-spacing: -.02em;
+$s-text--letter-spacing: -.01em;
+
+$font-sizes-map: (
+
+  // display Title
+  'display-title-1': (
+    'fs': 4rem,           // 64px
+    'lh': $lh--title,     // 120%
+  ),
+  'display-title-1--md': (
+    'fs': 3.75rem,        // 60px
+    'lh': $lh--title,     // 120%
+  ),
+  'display-title-1--sm': (
+    'fs': 3.5rem, // 56px
+    'lh': $lh--title, // 120%
+  ),
+  'display-title-1--xs': (
+    'fs': 3rem, // 48px
+    'lh': $lh--title, // 120%
+  ),
+
+
+  'display-title-2': (
+    'fs': 3.5rem,         // 56px
+    'lh': $lh--title,     // 120%
+  ),
+  'display-title-2--md': (
+    'fs': 3.375rem,       // 54px
+    'lh': $lh--title,     // 120%
+  ),
+  'display-title-2--sm': (
+    'fs': 3rem, // 48px
+    'lh': $lh--title, // 120%
+  ),
+  'display-title-2--xs': (
+    'fs': 2.5rem, // 40px
+    'lh': $lh--title, // 120%
+  ),
+
+
+
+  // Headlines h1 - h6
+  'title-1': (
+    'fs': 3rem,          // 48px
+    'lh': $lh--title,    // 120%
+  ),
+  'title-1--md': (
+    'fs': 2.875rem,      // 46px
+    'lh': $lh--title,    // 120%
+  ),
+  'title-1--sm': (
+    'fs': 2.75rem,           // 44px
+    'lh': $lh--title,    // 120%
+  ),
+  'title-1--xs': (
+    'fs': 2.5rem,         // 40px
+    'lh': $lh--title,    // 120%
+  ),
+
+
+  'title-2': (
+    'fs': 2.5rem,         // 40px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-2--md': (
+    'fs': 2.5rem,         // 40px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-2--sm': (
+    'fs': 2.375rem, // 38px
+    'lh': $lh--title, // 120%
+  ),
+  'title-2--xs': (
+    'fs': 2.25rem, // 36px
+    'lh': $lh--title, // 120%
+  ),
+
+
+  'title-3': (
+    'fs': 2rem,           // 32px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-3--md': (
+    'fs': 2rem,           // 32px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-3--sm': (
+    'fs': 2rem,           // 32px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-3--xs': (
+    'fs': 1.875rem, // 30px
+    'lh': $lh--title, // 120%
+  ),
+
+
+  'title-4': (
+    'fs': 1.75rem,        // 28px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-4--md': (
+    'fs': 1.75rem,        // 28px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-4--sm': (
+    'fs': 1.625rem, // 26px
+    'lh': $lh--title, // 120%
+  ),
+  'title-4--xs': (
+    'fs': 1.625rem, // 26px
+    'lh': $lh--title, // 120%
+  ),
+
+
+  'title-5': (
+    'fs': 1.625rem,       // 26px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-5--md': (
+    'fs': 1.625rem,       // 26px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-5--sm': (
+    'fs': 1.5rem,         // 24px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-5--xs': (
+    'fs': 1.5rem,         // 24px
+    'lh': $lh--title,     // 120%
+  ),
+
+
+  'title-6': (
+    'fs': 1.375rem,       // 22px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-6--md': (
+    'fs': 1.375rem,       // 22px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-6--sm': (
+    'fs': 1.25rem,        // 20px
+    'lh': $lh--title,     // 120%
+  ),
+  'title-6--xs': (
+    'fs': 1.25rem,        // 20px
+    'lh': $lh--title,     // 120%
+  ),
+
+  // textformat
+  'text--lg': (
+    'fs': 1.25rem,        // 20px
+    'lh': $lh--default,   // 160%
+  ),
+  'text--md': (
+    'fs': 1rem,           // 16px
+    'lh': $lh--default,   // 160%
+  ),
+  'text--sm': (
+    'fs': .875rem,       // 14px
+    'lh': $lh--default,  // 160%
+  ),
+  'text--xs': (
+    'fs': .75rem, // 12px
+    'lh': $lh--default, // 160%
+  ),
+);
+// full spacing between content-elements
+$c-content-element--spacer: 5rem;
+
+// full spacing between two article-contents,
+// double of top/bottom-spacing inside article, depends $c-content-element--spacer
+$s-artice--spacer: 8rem;
+$s-artice--spacer-mobile: 3rem;
+
+// layout
+$header--item-inline-gap: 2rem;
+
+$icon-gap--link: .25rem;
+
+$s-border--size: .0625rem;
+$s-border--radius: .5rem;
+
+$s-divider--size: .0625rem;
+
+// image path
+$img-path: '../img';
+
+// grid
+$grid--columns: 12;
+$grid--gap-large: 2rem;
+$grid--gap-small: 1.5rem;
+
+$s-grid-outer-gutter--large: 1.5rem;
+
+// layout-box sizes
+$s-page--max-width: 2560px;
+$s-content--max-width: 100rem;
+
+
+//
+$breakpoints: (
+  xxs: 22.5rem, // 360px
+  xs: 30rem, // 480px
+  sm: 40rem, // 640px
+  md: 48rem, // 768px
+  lg: 64rem, // 1024px
+  xl: 75rem, // 1200px
+  xxl: 87.5rem,  // 1400px
+  xxxl: 100rem  // 1600px
+);
+
+// switch modile/desctop view
+$bp--mobile: lg;
+
+
+// workarround instead of adding div to fe_page
+$s-container--max-width: calc(#{$s-content--max-width} + (2 * #{$s-grid-outer-gutter--large}));
+
+// alerts
+$s-message--border: .125rem;
+$s-message--border-radius: .25rem;
+
+$s-message--icon: 1.5rem;
+$s-message--icon-space: .5rem;
+
+$s-message--padding: 1rem;
+$s-message--icon-padding: calc(#{$s-message--padding} + #{$s-message--icon} + #{$s-message--icon-space});
+
+
+
+
+
+
