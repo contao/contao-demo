@@ -112,7 +112,7 @@ $slider-breakpoint: lg;
     }
 
     // slider contents
-    .ce_text {
+    .content-text {
       display: flex;
 
       overflow: hidden;
@@ -121,14 +121,14 @@ $slider-breakpoint: lg;
         flex-direction: column;
       }
 
-      .image_container,
+      figure,
       .text-wrapper {
         @include breakpoint(#{$slider-breakpoint}) {
           flex: 1 1 50%;
         }
       }
 
-      .image_container {
+      figure {
         aspect-ratio: 5/3;
         @include breakpoint(#{$slider-breakpoint}) {
           order: 1;
@@ -165,10 +165,8 @@ $slider-breakpoint: lg;
       }
     }
 
-    .image_container {
+    figure {
       margin: 0;
     }
   }
 }
-
-

@@ -1,4 +1,4 @@
-.ce_gallery {
+.content-gallery {
   ul {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -11,26 +11,6 @@
 
     @include breakpoint(sm) {
       grid-gap: $grid--gap-large;
-    }
-
-    &.cols_3 {
-      li {
-        @include breakpoint(lg) {
-          grid-column: span 4;
-        }
-      }
-    }
-
-    &.cols_4 {
-      li {
-        grid-column: span 3;
-      }
-    }
-
-    &.cols_6 {
-      li {
-        grid-column: span 2;
-      }
     }
   }
 
@@ -56,4 +36,23 @@
     }
   }
 
+  &--cols-3 {
+    li {
+      @include breakpoint(lg) {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &--cols-4 {
+    li {
+      grid-column: span 3;
+    }
+  }
+
+  &--cols-6 {
+    li {
+      grid-column: span 2;
+    }
+  }
 }

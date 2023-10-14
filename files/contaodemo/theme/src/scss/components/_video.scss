@@ -1,20 +1,20 @@
-.ce_youtube,
-.ce_vimeo {
-  .video_container {
+.content-youtube,
+.content-vimeo {
+  figure {
     margin: 0;
-  }
 
-  .responsive {
-    position: relative;
-    width: 100%;
+    &.aspect {
+      position: relative;
+      width: 100%;
 
-    iframe {
-      position: absolute;
-      inset: 0;
-      z-index: 5;
+      iframe {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
 
-      width: 100% !important;
-      height: 100% !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
     }
   }
 }

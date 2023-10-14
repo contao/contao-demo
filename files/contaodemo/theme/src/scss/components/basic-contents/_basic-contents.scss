@@ -242,7 +242,7 @@ h6 {
 
 
 // basic contents
-.image_container {
+figure {
   margin: 0;
 
   &.float {
@@ -351,7 +351,7 @@ dd {
 
 
 /** */
-.ce_headline + * {
+.content-headline + * {
 
   .mod_article__inner & {
     margin-block-start: 0;
@@ -359,7 +359,7 @@ dd {
 }
 
 
-.ce_text {
+.content-text {
   h1,
   h2,
   h3,
@@ -373,19 +373,19 @@ dd {
 }
 
 
-// ce_code
+// content-code
 .hljs {
 
-  padding: 2rem;
+  padding: 2rem !important;
 
   border-radius: $s-border--radius;
-  background: $c-secondary--700;
+  background: $c-secondary--700 !important;
 
-  color: $c-white;
+  color: $c-white !important;
 
   &-string,
   &-regexp {
-    background: transparent;
-    color: $c-primary--500
+    background: transparent !important;
+    color: $c-primary--500 !important;
   }
 }

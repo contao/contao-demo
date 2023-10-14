@@ -16,7 +16,7 @@ See the [Contao release plan][releaseplan] for details. Each version has a separ
 Git repository.
 
 We also have _rolling release tags_. This means the latest commit on each branch is tagged
-with the respective Contao minor release. As an example, the branch "4.13" has a tag "4.13" on the latest commit.
+with the respective Contao minor release. As an example, the branch "5.2" has a tag "5.2" on the latest commit.
 These tags enable you to install the latest demo content for any Contao minor version.
 
 ## Installation
@@ -36,7 +36,7 @@ This repository functions as a _Composer project_. You can install a full Contao
 this demo using the `create-project` command. We're assuming here you are familiar with the
 command line and Composer and have a functioning PHP and webserver setup.
 
-1. Run `composer create-project contao/contao-demo:4.13 your-new-website`
+1. Run `composer create-project contao/contao-demo:5.2 your-new-website`
 2. Connect the database e.g. through `DATABASE_URL` in your `.env.local` file.
 2. Import the database backup using `php vendor/bin/contao-console contao:backup:restore`
 

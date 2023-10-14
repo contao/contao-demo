@@ -22,7 +22,7 @@
 
   > * {
 
-    &:not(.ce_headline) {
+    &:not(.content-headline) {
       margin-block: calc(.5 * #{$c-content-element--spacer});
     }
 
@@ -95,7 +95,7 @@
 
   &_latest {
 
-    .image_container {
+    figure {
       order: -2;
 
       margin-block-end: 2rem;

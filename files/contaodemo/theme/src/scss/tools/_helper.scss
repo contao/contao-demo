@@ -92,7 +92,7 @@
       margin-block-end: 1rem;
     }
 
-    .ce_text + & {
+    .content-text + & {
       margin-block-start: 2rem;
     }
 
@@ -171,23 +171,24 @@
 
 
 // aspect-ratio options
-.ratio {
-  &-32 {
+.aspect {
+  &--3\:2 {
     aspect-ratio: 3/2;
   }
 
-  &-43 {
+  &--4\:3 {
     aspect-ratio: 4/3;
   }
 
-  &-169 {
+  &--16\:9 {
     aspect-ratio: 16/9;
   }
-  &-1610 {
+
+  &--16\:10 {
     aspect-ratio: 16/10;
   }
 
-  &-219 {
+  &--21\:9 {
     aspect-ratio: 21/9;
   }
 

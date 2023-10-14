@@ -1,0 +1,23 @@
+{% extends "@Contao/content_element/text.html.twig" %}
+
+{% block headline_attributes %} class="title"{% endblock %}
+
+{# remove headline from inner block #}
+{%- block inner %}
+    {{ block('content') }}
+{% endblock -%}
+
+{% block content %}
+    {# add headline to text block #}
+    {% block text %}
+        {% set text_attributes = attrs(text_attributes|default).addClass('text-wrapper') %}
+        <div{% block text_attributes %}{{ text_attributes }}{% endblock %}>
+            {% if headline.text %}
+                {{ block('headline_component') }}
+            {% endif %}
+            {{ text|insert_tag|raw }}
+        </div>
+    {% endblock %}
+
+    {{ block('text_media') }}
+{% endblock %}
