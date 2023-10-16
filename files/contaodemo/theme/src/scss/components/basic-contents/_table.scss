@@ -46,6 +46,10 @@ th {
 
   @include breakpoint(#{$table--switch-mobile}, max) {
     display: none;
+
+    .mod_calendar & {
+      display: revert;
+    }
   }
 }
 
@@ -54,6 +58,10 @@ td {
 
   @include breakpoint(#{$table--switch-mobile}, max) {
     display: grid;
+
+    .mod_calendar & {
+      display: revert;
+    }
   }
 
   @include breakpoint(#{$table--inline-cell-content}) {
@@ -87,6 +95,10 @@ td {
       font-weight: 600;
 
       content: attr(data-cellheadline) ': ';
+
+      .mod_calendar & {
+        content: none;
+      }
     }
   }
 }

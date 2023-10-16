@@ -1,8 +1,8 @@
-
 $calendar--switch-mobile: md;
 
 .mod_calendar {
   @extend %table-overflow;
+  overflow: auto visible;
 }
 
 .calendar {
@@ -114,5 +114,3 @@ $calendar--switch-mobile: md;
     text-align: center;
   }
 }
-
-
