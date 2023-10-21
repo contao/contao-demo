@@ -95,7 +95,7 @@
   // header-slider
   &.header-image {
     @include breakpoint(lg, max) {
-      margin-inline: -$s-grid-outer-gutter--large;
+      padding: 0;
     }
 
     #{$parent}__inner {
