@@ -1,9 +1,6 @@
 .mod_article {
   $parent: &;
 
-  display: flex;
-  justify-content: center;
-
   &__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
