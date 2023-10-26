@@ -41,21 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // table auto data-attr setter
   const collTables = document.querySelectorAll('.ce_table table');
-  const collTableHeads = [];
-  const collTableRows = [];
-  const collTableCell = [];
   let arrHeaderTexts = [];
 
-
   //iteration through tables
-  collTables.forEach((table, index) => {
+  collTables.forEach((table) => {
 
     //truncate data
     arrHeaderTexts = [];
 
     //iteration through table headlines
     let collTableHeads = table.querySelectorAll('th');
-    collTableHeads.forEach((header, index) => {
+    collTableHeads.forEach((header) => {
       arrHeaderTexts.push(header.innerText);
     })
 
@@ -68,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
       collTableCell.forEach((cell, index) => {
         cell.setAttribute('data-cellHeadline', arrHeaderTexts[index]);
       })
+    })
+
+    // Refresh the CSS attr() data if it has already been rendered by the browser (see contao/contao-demo#6)
+    table.style.visibility = 'hidden';
+    setTimeout(() => {
+      table.style.visibility = 'visible';
     })
   })
 
