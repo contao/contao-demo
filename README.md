@@ -16,7 +16,7 @@ See the [Contao release plan][releaseplan] for details. Each version has a separ
 Git repository.
 
 We also have _rolling release tags_. This means the latest commit on each branch is tagged
-with the respective Contao minor release. As an example, the branch "5.2" has a tag "5.2" on the latest commit.
+with the respective Contao minor release. As an example, the branch "5.2.x" has a tag "5.2" on the latest commit.
 These tags enable you to install the latest demo content for any Contao minor version.
 
 ## Installation
