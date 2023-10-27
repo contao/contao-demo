@@ -1,0 +1,29 @@
+# Configuration
+/config/parameters.yaml
+/config/parameters.yml
+
+# Composer
+/composer.lock
+/vendor/
+
+# Contao Manager
+/contao-manager/
+
+# Git
+/.git
+
+# IDE
+/.idea
+/.ide
+
+# Generated folders
+/assets/
+/public/
+/system/
+/var/*
+!/var/backups/
+
+# Skip files
+/system/modules/*/.skip
+/.env
+/.env.local
