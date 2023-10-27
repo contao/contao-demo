@@ -81,7 +81,7 @@
       bottom: initial;
       height: 58px;
 
-      @media only screen and (min-width: #{(32rem + $s-grid-outer-gutter--large)}) {
+      @media only screen and (min-width: #{(32rem + (2 * $s-grid-outer-gutter--large))}) {
         right: calc(100% - 32rem);
       }
 
