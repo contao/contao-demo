@@ -23,63 +23,31 @@
     }
   }
 
-  .widget-text {
-    position: relative;
-
-    &:before {
-      position: absolute;
-      top: 50%;
-      right: 1.5rem;
-      z-index: 5;
-      transform: translateY(-50%);
-
-      width: 1.5rem;
-      height: 1.5rem;
-
-      background: $c-white url('#{$img-path}/icons/search.svg') center center no-repeat;
-
-      content: '';
-      pointer-events: none;
-    }
-  }
-
   .widget-radio {
     width: 100%;
   }
 
   .widget-submit {
-    display: none;
     position: absolute;
-    top: 50%;
-    right: 1.5rem;
-    z-index: 5;
-    transform: translateY(-50%);
 
-    overflow: hidden;
+    right: 0;
+    top: 0;
+    bottom: 0;
 
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3.5rem;
+
+    border-radius: 0 5rem 5rem 0;
   }
 
   .submit {
     position: relative;
 
-    display: flex;
-    gap: .5rem;
+    height: 100%;
+    width: 100%;
+    text-indent: -9999px;
 
-    width: 1.5rem;
-
-    padding: 0;
-
-    border: none;
-    background-color: transparent;
-
-
-
-    &:focus,
-    &:hover {
-      background: transparent;
-    }
+    background: transparent url('#{$img-path}/icons/search.svg') 7px center no-repeat !important;
+    border-radius: 0 5rem 5rem 0;
 
     &:hover {
       cursor: pointer;
@@ -107,6 +75,19 @@
   &--extended {
     .widget-text {
       max-width: 32rem;
+    }
+
+    .widget-submit {
+      bottom: initial;
+      height: 58px;
+
+      @media only screen and (min-width: #{(32rem + $s-grid-outer-gutter--large)}) {
+        right: calc(100% - 32rem);
+      }
+
+      @include breakpoint(lg, max) {
+        height: 50px;
+      }
     }
 
     .radio_container {
