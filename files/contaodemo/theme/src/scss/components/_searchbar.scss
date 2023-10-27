@@ -96,6 +96,10 @@
 
     .header {
       margin-top: 2.5rem;
+
+      ~ div {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
