@@ -1,0 +1,19 @@
+# Configuration
+/.env.local
+
+# Composer
+/composer.lock
+/vendor/
+
+# Contao Manager
+/contao-manager/
+
+# Generated folders
+/assets/
+/public/
+/system/
+/var/*
+!/var/backups/
+
+# Skip files
+/system/modules/*/.skip
