@@ -38,7 +38,8 @@ command line and Composer and have a functioning PHP and webserver setup.
 
 1. Run `composer create-project contao/contao-demo:5.2 your-new-website`
 2. Connect the database e.g. through `DATABASE_URL` in your `.env.local` file.
-2. Import the database backup using `php vendor/bin/contao-console contao:backup:restore`
+3. Import the database backup using `php vendor/bin/contao-console contao:backup:restore`
+4. Finalize the database by running `php vendor/bin/contao-console contao:migrate`
 
 
 ## Contributing
