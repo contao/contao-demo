@@ -377,22 +377,21 @@ form {
     @extend .button--lg;
   }
 
-  // error messages
-  .widget.error {
-    position: relative;
-    padding-block-end: 1.875rem;
-  }
-
   p.error {
     @include set-font-size(text--sm);
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 5;
+    @extend .box--gray-light;
 
     margin: 0;
+    padding: 1rem;
 
+    background: $c-form-field--bg;
     color: $c-form-field--text-error;
+
+    order: 9; // Last order within form-grid
+
+    // Reorder form submit to the end
+    ~ .widget-submit {
+      order: 10
+    }
   }
 }
