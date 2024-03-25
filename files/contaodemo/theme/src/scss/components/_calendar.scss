@@ -35,14 +35,16 @@ $calendar--switch-mobile: md;
   }
 
   // has event
-  td {
-    background: $c-white;
+  tr {
+    td {
+      background: $c-white;
 
-    &.active {
-      background: $c-secondary--700;
+      &.active {
+        background: $c-secondary--700;
 
-      font-weight: 700;
-      color: $c-white;
+        font-weight: 700;
+        color: $c-white;
+      }
     }
   }
 
