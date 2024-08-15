@@ -2,7 +2,7 @@
     "name": "contao/contao-demo",
     "type": "contao-theme",
     "description": "This is an example website for Contao, a powerful open source CMS that allows you to create professional websites and scalable web applications.",
-    "version": "5.3",
+    "version": "5.4",
     "license": "CC-BY-SA-4.0",
     "authors": [
         {
@@ -27,14 +27,14 @@
         "docs": "https://docs.contao.org"
     },
     "require": {
-        "contao/calendar-bundle": "5.3.*",
-        "contao/comments-bundle": "5.3.*",
+        "contao/calendar-bundle": "5.4.*",
+        "contao/comments-bundle": "5.4.*",
         "contao/conflicts": "@dev",
-        "contao/faq-bundle": "5.3.*",
-        "contao/listing-bundle": "5.3.*",
-        "contao/manager-bundle": "5.3.*",
-        "contao/news-bundle": "5.3.*",
-        "contao/newsletter-bundle": "5.3.*"
+        "contao/faq-bundle": "5.4.*",
+        "contao/listing-bundle": "5.4.*",
+        "contao/manager-bundle": "5.4.*",
+        "contao/news-bundle": "5.4.*",
+        "contao/newsletter-bundle": "5.4.*"
     },
     "extra": {
         "contao-component-dir": "assets"
