@@ -188,11 +188,9 @@ form {
   }
 
   // checkbox & radio
-  .checkbox_container,
-  .radio_container {
+  :is(.checkbox_container, .radio_container) {
     position: relative;
   }
-
 
   // input fields
   .text,
@@ -260,9 +258,9 @@ form {
 
   // general checkmark layout
 
-  input:focus-visible + label:before{
-    outline:3px dashed $c-form-field--focus-border;
-    outline-offset:2px
+  input:focus-visible + label:before {
+    outline: 3px dashed $c-form-field--focus-border;
+    outline-offset: 2px;
   }
 
   input.checkbox,
