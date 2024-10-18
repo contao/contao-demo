@@ -2,14 +2,130 @@ $s-underline-size: .125rem;
 
 .nav-main {
 
-  @include breakpoint(#{$bp--mobile}) {
-    grid-area: mainbar;
+  // general linkformat
+  :is(a, strong) {
+    @include set-font-size(text--lg);
+
+    position: relative;
 
     display: block;
+
+    transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
+
+    color: $c-secondary--700;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: .125rem;
+    text-decoration-color: transparent;
+    text-underline-offset: .35em;
   }
 
-  // mobile
-  @include breakpoint(#{$bp--mobile}, max) {
+  a:is(:hover, :focus) {
+    color: $c-primary--500;
+  }
+
+  :is(a.trail, strong) {
+    color: $c-primary--500;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+
+    &.nav-expanded {
+
+      > ul {
+        display: flex;
+      }
+
+      .btn-toggle-submenu:after {
+        height: 2px;
+      }
+    }
+  }
+
+  .level_1 {
+    gap: 0 $header--item-inline-gap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .level_2 {
+    display: none;
+    flex-direction: column;
+
+    :is(a, strong) {
+      @include set-font-size(text--md);
+    }
+  }
+}
+
+.btn-toggle-submenu {
+  all: revert;
+
+  position: absolute;
+  top: 3px;
+  right: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  background: none !important;
+  color: currentColor !important;
+
+  cursor: pointer;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: currentColor;
+  }
+
+  &:before {
+    height: 2px;
+    width: 50%;
+  }
+
+  &:after {
+    height: 50%;
+    width: 2px;
+    transition: height 0.3s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+  }
+
+  @include breakpoint(#{$bp--mobile}) {
+    margin: auto;
+    padding: 0;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 1em;
+    height: 1em;
+
+    &:before {
+      width: 75%;
+    }
+
+    &:after {
+      height: 75%;
+    }
+  }
+}
+
+// mobile
+@include breakpoint(#{$bp--mobile}, max) {
+
+  .nav-main {
     position: fixed;
     top: 7rem;
     bottom: 0;
@@ -25,87 +141,46 @@ $s-underline-size: .125rem;
 
     background: $c-gray--50;
     transition: left $t-animation--fast $s-animation--fkt;
-  }
 
-  @include breakpoint(lg, max) {
-    top: 13.375rem;
-  }
-
-  @include breakpoint(sm, max) {
-    top: 11.375rem;
-  }
-
-  @include breakpoint(xs, max) {
-    top: 5.0625rem;
-  }
-
-  .show-nav-mobile & {
-    @include breakpoint(#{$bp--mobile}, max) {
+    .show-nav-mobile & {
       left: 0;
       overflow-y: auto;
     }
-  }
 
-  // general linkformat
-  a, strong {
-    @include set-font-size(text--lg);
-
-    position: relative;
-
-    display: block;
-
-    transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
-
-    color: $c-secondary--700;
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-thickness: .125rem;
-    text-decoration-color: transparent;
-    text-underline-offset: .35em;
-
-    @include breakpoint(#{$bp--mobile}, max) {
+    :is(a, strong) {
       display: inline-block;
     }
-  }
 
-  a:hover,
-  a:focus {
-    color: $c-primary--500;
-    text-decoration-color: currentColor;
-  }
-
-  a.trail,
-  strong {
-    color: $c-secondary--900;
-    text-decoration-color: $c-primary--500;;
-  }
-
-  ul {
-    display: flex;
-
-    @include breakpoint(#{$bp--mobile}) {
-      flex-wrap: wrap;
-    }
-
-    @include breakpoint(#{$bp--mobile}, max) {
-      width: 100%;
-    }
-  }
-
-  li {
-    @include breakpoint(#{$bp--mobile}, max) {
+    li {
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
+      min-height: 30px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+
+      > :is(a, strong) {
+        padding: 10px 0;
+        width: 100%;
+      }
+
+      &.submenu {
+        position: relative;
+
+        > :is(a,strong) {
+          padding-right: 44px;
+        }
+
+        li:first-child {
+          border-top: 1px solid rgba(0,0,0,.1);
+        }
+      }
     }
-  }
 
-  .level_1 {
-    gap: $header--item-inline-gap;
-    justify-content: flex-end;
-    align-items: center;
-
-    // mobile
-    @include breakpoint(#{$bp--mobile}, max) {
+    .level_1 {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -114,21 +189,78 @@ $s-underline-size: .125rem;
 
       padding: 1.5rem;
     }
+
+    .level_2 {
+
+      li {
+        padding: 0 10px;
+      }
+    }
   }
+}
 
-  .level_2 {
-    display: none;
-    flex-direction: column;
+@include breakpoint(lg, max) {
+  .nav-main {
+    top: 13.375rem;
+  }
+}
 
-    @include breakpoint(#{$bp--mobile}, max) {
-      display: flex;
-      gap: 1rem;
+@include breakpoint(sm, max) {
+  .nav-main {
+    top: 11.375rem;
+  }
+}
 
-      padding: 1rem 0 0 1.5rem;
+@include breakpoint(xs, max) {
+  .nav-main {
+    top: 5.0625rem;
+  }
+}
+
+@include breakpoint(#{$bp--mobile}) {
+
+  .nav-main {
+    grid-area: mainbar;
+    display: block;
+
+    :is(a:hover, a:focus, a.trail, strong) {
+      color: $c-secondary--900;
+      text-decoration-color: $c-primary--500;;
     }
 
-    a, strong {
-      @include set-font-size(text--md);
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: revert;
+    }
+
+    li {
+
+      &.submenu {
+        position: relative;
+        padding-right: 18px;
+
+        &:hover {
+
+          > ul {
+            display: flex;
+          }
+
+          .btn-toggle-submenu:after {
+            height: 2px;
+          }
+        }
+      }
+    }
+
+    .level_2 {
+      position: absolute;
+      padding: 15px 10px;
+      min-width: 270px;
+      background: #fff;
+      box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
+      gap: 1rem;
+      z-index: 1;
     }
   }
 }
