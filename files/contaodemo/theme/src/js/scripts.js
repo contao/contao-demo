@@ -23,12 +23,14 @@ function navStatus() {
 function navClose() {
   document.body.classList.remove(showNavMobile, preventBodyScrolling);
   toggleNavMain.classList.remove(isActive);
+  toggleNavMain.ariaExpanded = 'false';
   navMobile.classList.remove(isActive);
 }
 
 function navOpen() {
   document.body.classList.add(showNavMobile, preventBodyScrolling);
   toggleNavMain.classList.add(isActive);
+  toggleNavMain.ariaExpanded = 'true';
   navMobile.classList.add(isActive);
 
   let headerHeight = header.offsetHeight;
