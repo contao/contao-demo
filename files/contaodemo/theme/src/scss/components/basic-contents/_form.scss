@@ -185,14 +185,12 @@ form {
     &-textarea {
       max-width: 40.5rem;
     }
-
-    // checkbox & radio
-    .checkbox_container,
-    .radio_container {
-
-    }
   }
 
+  // checkbox & radio
+  :is(.checkbox_container, .radio_container) {
+    position: relative;
+  }
 
   // input fields
   .text,
@@ -259,6 +257,12 @@ form {
   }
 
   // general checkmark layout
+
+  input:focus-visible + label:before {
+    outline: 3px dashed $c-form-field--focus-border;
+    outline-offset: 2px;
+  }
+
   input.checkbox,
   input.radio {
 
@@ -278,7 +282,6 @@ form {
       padding:0;
 
       opacity: 0;
-      visibility: hidden;
 
       line-height: 0;
 
