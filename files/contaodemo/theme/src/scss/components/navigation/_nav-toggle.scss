@@ -133,3 +133,34 @@ $s-toggle--line-gap: .375rem;
     cursor: pointer;
   }
 }
+
+@media (forced-colors) {
+
+  .nav-toggle {
+
+    &__icon {
+      color: currentColor;
+    }
+
+    .icon-line {
+
+      &,
+      &:before,
+      &:after {
+        height: 0;
+        border: 1px transparent solid;
+      }
+    }
+
+    &.is-active {
+
+      .icon-line {
+        border: 0 none;
+
+        &:after {
+          bottom: -1px;
+        }
+      }
+    }
+  }
+}
