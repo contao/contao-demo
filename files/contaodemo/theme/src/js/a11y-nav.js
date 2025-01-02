@@ -1,8 +1,8 @@
 class A11yNav {
-
     constructor(options) {
         this.options = this._merge({
             selector: 'header .nav-main',
+            toggle: 'header .nav-toggle',
             minWidth: 1024,
             classes: {
                 submenuButton: 'btn-toggle-submenu',
@@ -13,23 +13,23 @@ class A11yNav {
                 'expand': 'Expand menu: ',
                 'collapse': 'Collapse menu: '
             }
-        }, options || {});
+        }, options || {})
 
-        this.navigation = document.querySelector(this.options.selector);
+        this.navigation = document.querySelector(this.options.selector)
+        this.toggle = document.querySelector(this.options.toggle)
 
         if (!this.navigation) {
-            return;
+            return
         }
 
-        this.dropdowns = [];
-        this.active = [];
+        this.dropdowns = []
+        this.active = []
 
-        this._init();
-        this._createSubMenuButton();
+        this._init()
 
         this.dropdowns.forEach(dropdown => {
             this._initDropdown(dropdown)
-        });
+        })
     }
 
     /**
@@ -41,7 +41,7 @@ class A11yNav {
         return [...new Set([...Object.keys(a), ...Object.keys(b)])].reduce((result, key) => ({
             ...result,
             [key]: "object" === typeof (a[key]) ? Object.assign({}, a[key], b[key]) : !b[key] ? a[key] : b[key]
-        }), {});
+        }), {})
     }
 
     /**
@@ -50,10 +50,42 @@ class A11yNav {
      * @private
      */
     _createSubMenuButton() {
-        this.btn = document.createElement('button');
-        this.btn.classList.add(this.options.classes.submenuButton);
-        this.btn.ariaHasPopup = 'true';
-        this.btn.ariaExpanded = 'false';
+        this.btn = document.createElement('button')
+        this.btn.classList.add(this.options.classes.submenuButton)
+        this.btn.ariaHasPopup = 'true'
+        this.btn.ariaExpanded = 'false'
+    }
+
+    _initFocusTrapTargets() {
+        const nodes = [this.navigation.parentNode?.querySelector('a[href].logo'), ...this.navigation.querySelectorAll('a[href]:not([disabled]), button:not([disabled])')]
+
+        this.firstFocus = nodes[0] ?? []
+        this.lastFocus = nodes[nodes.length - 1] ?? []
+    }
+
+    _focusEvent(event) {
+        if (!(event.key === 'Tab' || event.keyCode === 9))
+            return
+
+        if (document.activeElement === this.lastFocus && !event.shiftKey) {
+            event.preventDefault()
+            this.firstFocus?.focus()
+        }
+
+        if (document.activeElement === this.firstFocus && event.shiftKey) {
+            event.preventDefault()
+            this.lastFocus?.focus()
+        }
+    }
+
+    _focusMenu() {
+        // consider the navigation state from scripts.js
+        const state = document.body.classList.contains('show-nav-mobile')
+
+        if (state)
+            document.addEventListener('keydown', this._focusEvent, false)
+        else
+            document.removeEventListener('keydown', this._focusEvent, false)
     }
 
     /**
@@ -63,6 +95,7 @@ class A11yNav {
      */
     _init() {
         this._createSubMenuButton()
+        this._initMobileToggleEvents()
 
         if (!this.navigation.ariaLabel) {
             this.navigation.ariaLabel = this.options.ariaLabels.main
@@ -71,24 +104,24 @@ class A11yNav {
         this.navigation.querySelectorAll('li').forEach(item => {
 
             if (item.classList.contains('submenu')) {
-                this.dropdowns.push(item);
+                this.dropdowns.push(item)
             }
 
-            const navItem = item.firstElementChild;
+            const navItem = item.firstElementChild
 
             if (navItem.classList.contains('active')) {
-                navItem.ariaCurrent = 'page';
+                navItem.ariaCurrent = 'page'
             }
 
             if (!navItem.ariaLabel && navItem.title) {
-                navItem.ariaLabel = navItem.title;
-                navItem.removeAttribute('title');
+                navItem.ariaLabel = navItem.title
+                navItem.removeAttribute('title')
             }
         })
 
         // Hide the active navigation on escape
         document.addEventListener('keyup', (e) => {
-            e.key === 'Escape' && this._hide();
+            e.key === 'Escape' && this._hideDropdown()
         })
     }
 
@@ -98,8 +131,8 @@ class A11yNav {
      * @private
      */
     _updateAriaState(dropdown, show) {
-        dropdown.btn.ariaLabel = (show ? this.options.ariaLabels.collapse : this.options.ariaLabels.expand) + dropdown.btn.dataset.label;
-        dropdown.btn.ariaExpanded = show ? 'true' : 'false';
+        dropdown.btn.ariaLabel = (show ? this.options.ariaLabels.collapse : this.options.ariaLabels.expand) + dropdown.btn.dataset.label
+        dropdown.btn.ariaExpanded = show ? 'true' : 'false'
     }
 
     /**
@@ -107,8 +140,8 @@ class A11yNav {
      *
      * @private
      */
-    _collapse(dropdown) {
-        dropdown.classList.remove(this.options.classes.expand);
+    _collapseSubmenu(dropdown) {
+        dropdown.classList.remove(this.options.classes.expand)
         this._updateAriaState(dropdown, false)
     }
 
@@ -117,31 +150,31 @@ class A11yNav {
      *
      * @private
      */
-    _hide(dropdown = null) {
-        if (0 === this.active.length) return;
+    _hideDropdown(dropdown = null) {
+        if (0 === this.active.length) return
 
         // Case 1: Leaving the previous dropdown (e.g. focus left)
         if (this.active.includes(dropdown)) {
-            this._collapse(dropdown);
-            this.active = this.active.filter(node => node !== dropdown);
+            this._collapseSubmenu(dropdown)
+            this.active = this.active.filter(node => node !== dropdown)
         }
 
         // Case 2: Not contained in the tree at all, remove everything
         else if (null === dropdown || this.active[0] !== dropdown && !this.active[0].contains(dropdown)) {
-            this.active.forEach(node => this._collapse(node));
-            this.active = [];
+            this.active.forEach(node => this._collapseSubmenu(node))
+            this.active = []
         }
 
         // Case 3: Down the drain with everything that ain't a parent node :)
         else {
             this.active.filter(node => {
                 if (node.contains(dropdown)) {
-                    return true;
+                    return true
                 }
 
-                this._collapse(node);
-                return false;
-            });
+                this._collapseSubmenu(node)
+                return false
+            })
         }
     }
 
@@ -150,14 +183,14 @@ class A11yNav {
      *
      * @private
      */
-    _show(dropdown) {
-        this._hide(dropdown);
+    _showDropdown(dropdown) {
+        this._hideDropdown(dropdown)
 
-        dropdown.classList.add(this.options.classes.expand);
-        this._updateAriaState(dropdown, true);
+        dropdown.classList.add(this.options.classes.expand)
+        this._updateAriaState(dropdown, true)
 
         if (!this.active.includes(dropdown)) {
-            this.active.push(dropdown);
+            this.active.push(dropdown)
         }
     }
 
@@ -166,8 +199,8 @@ class A11yNav {
      *
      * @private
      */
-    _toggle(dropdown, show) {
-        show ? this._show(dropdown) : this._hide(dropdown);
+    _toggleDropdownState(dropdown, show) {
+        show ? this._showDropdown(dropdown) : this._hideDropdown(dropdown)
     }
 
     /**
@@ -177,19 +210,19 @@ class A11yNav {
      */
     _addSubMenuButton(dropdown) {
         const item = dropdown.firstElementChild,
-              btn = this.btn.cloneNode();
+              btn = this.btn.cloneNode()
 
-        dropdown.btn = btn;
+        dropdown.btn = btn
 
-        btn.dataset.label = item.textContent;
-        btn.ariaLabel = this.options.ariaLabels.expand + item.textContent;
+        btn.dataset.label = item.textContent
+        btn.ariaLabel = this.options.ariaLabels.expand + item.textContent
 
         btn.addEventListener('click', () => {
-            const show = btn.ariaExpanded === 'false' ?? true;
-            this._toggle(dropdown, show);
-        });
+            const show = btn.ariaExpanded === 'false' ?? true
+            this._toggleDropdownState(dropdown, show)
+        })
 
-        item.after(btn);
+        item.after(btn)
     }
 
     /**
@@ -198,7 +231,7 @@ class A11yNav {
      * @private
      */
     _mouseEnter(e, dropdown) {
-        this._toggle(dropdown, true);
+        this._toggleDropdownState(dropdown, true)
     }
 
     /**
@@ -207,7 +240,7 @@ class A11yNav {
      * @private
      */
     _mouseLeave(e, dropdown) {
-        this._hide(dropdown);
+        this._hideDropdown(dropdown)
     }
 
     /**
@@ -217,8 +250,18 @@ class A11yNav {
      */
     _focusOut(e, dropdown) {
         if (e.relatedTarget && this.active.length > 0 && !dropdown.contains(e.relatedTarget)) {
-            this._hide(dropdown);
+            this._hideDropdown(dropdown)
         }
+    }
+
+    _initMobileToggleEvents() {
+        this._initFocusTrapTargets()
+        this._focusEvent = this._focusEvent.bind(this)
+
+        this.toggle?.addEventListener('click', () => {
+            if (window.innerWidth < this.options.minWidth)
+                this._focusMenu()
+        })
     }
 
     /**
@@ -229,10 +272,10 @@ class A11yNav {
     _initDropdown(dropdown) {
         this._addSubMenuButton(dropdown)
 
-        const minWidth = window.innerWidth >= this.options.minWidth;
+        const minWidth = window.innerWidth >= this.options.minWidth
 
-        dropdown.addEventListener('mouseenter', e => { minWidth && this._mouseEnter(e, dropdown) });
-        dropdown.addEventListener('mouseleave', e => { minWidth && this._mouseLeave(e, dropdown) });
-        dropdown.addEventListener('focusout', e => { minWidth && this._focusOut(e, dropdown) });
+        dropdown.addEventListener('mouseenter', e => { minWidth && this._mouseEnter(e, dropdown) })
+        dropdown.addEventListener('mouseleave', e => { minWidth && this._mouseLeave(e, dropdown) })
+        dropdown.addEventListener('focusout', e => { minWidth && this._focusOut(e, dropdown) })
     }
 }
