@@ -7,36 +7,20 @@ const showNavMobile = 'show-nav-mobile';
 const isActive = 'is-active';
 const preventBodyScrolling = "prevent-scrolling";
 
-if (toggleNavMain) {
-  toggleNavMain.addEventListener('click', navStatus);
+function toggleNavigationState(open) {
+    if (open) {
+        document.body.classList.add(showNavMobile, preventBodyScrolling);
+        navMobile.setAttribute('style', 'top:' + header.offsetHeight + 'px;');
+    } else {
+        document.body.classList.remove(showNavMobile, preventBodyScrolling);
+    }
+
+    toggleNavMain.classList.toggle(isActive, open);
+    toggleNavMain.ariaExpanded = open ? 'true' : 'false';
+
+    navMobile.classList.toggle(isActive, open);
 }
-
-function navStatus() {
-
-  if (document.body.classList.contains(showNavMobile)) {
-    navClose();
-  } else {
-    navOpen();
-  }
-}
-
-function navClose() {
-  document.body.classList.remove(showNavMobile, preventBodyScrolling);
-  toggleNavMain.classList.remove(isActive);
-  toggleNavMain.ariaExpanded = 'false';
-  navMobile.classList.remove(isActive);
-}
-
-function navOpen() {
-  document.body.classList.add(showNavMobile, preventBodyScrolling);
-  toggleNavMain.classList.add(isActive);
-  toggleNavMain.ariaExpanded = 'true';
-  navMobile.classList.add(isActive);
-
-  let headerHeight = header.offsetHeight;
-  navMobile.setAttribute('style', 'top:' + headerHeight + 'px;');
-}
-
+toggleNavMain?.addEventListener('click', () => toggleNavigationState(!document.body.classList.contains(showNavMobile)));
 
 // insert th text in td as data-attr
 document.addEventListener('DOMContentLoaded', function () {
