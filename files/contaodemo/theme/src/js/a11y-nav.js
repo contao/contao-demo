@@ -56,6 +56,11 @@ class A11yNav {
         this.btn.ariaExpanded = 'false'
     }
 
+    /**
+     * Determines the focus trap targets
+     *
+     * @private
+     */
     _initFocusTrapTargets() {
         const nodes = [this.navigation.parentNode?.querySelector('a[href].logo'), ...this.navigation.querySelectorAll('a[href]:not([disabled]), button:not([disabled])')]
 
@@ -63,7 +68,12 @@ class A11yNav {
         this.lastFocus = nodes[nodes.length - 1] ?? []
     }
 
-    _focusEvent(event) {
+    /**
+     * Handles the focus trap on the open mobile navigation
+     *
+     * @private
+     */
+    _focusTrapEvent(event) {
         if (!(event.key === 'Tab' || event.keyCode === 9))
             return
 
@@ -78,14 +88,19 @@ class A11yNav {
         }
     }
 
+    /**
+     * Adds and removes the focusTrap based on the mobile navigation state
+     *
+     * @private
+     */
     _focusMenu() {
         // consider the navigation state from scripts.js
         const state = document.body.classList.contains('show-nav-mobile')
 
         if (state)
-            document.addEventListener('keydown', this._focusEvent, false)
+            document.addEventListener('keydown', this._focusTrapEvent, false)
         else
-            document.removeEventListener('keydown', this._focusEvent, false)
+            document.removeEventListener('keydown', this._focusTrapEvent, false)
     }
 
     /**
@@ -256,7 +271,7 @@ class A11yNav {
 
     _initMobileToggleEvents() {
         this._initFocusTrapTargets()
-        this._focusEvent = this._focusEvent.bind(this)
+        this._focusTrapEvent = this._focusTrapEvent.bind(this)
 
         this.toggle?.addEventListener('click', () => {
             if (window.innerWidth < this.options.minWidth)
