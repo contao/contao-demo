@@ -1,0 +1,28 @@
+.module-feed-reader {
+
+  header {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  section {
+    @extend .box--gray-light;
+
+    h1, h2, h3 {
+      @extend .title-3;
+
+      margin-block-end: 1rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    & + section {
+      margin-block-start: 4rem;
+    }
+
+  }
+
+}
