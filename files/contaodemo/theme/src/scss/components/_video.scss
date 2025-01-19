@@ -15,6 +15,18 @@
         width: 100% !important;
         height: 100% !important;
       }
+
+      figcaption {
+        position: absolute;
+        inset: auto 2px 2px;
+        z-index: 5;
+        padding: 2px;
+
+        background: linear-gradient(to top, rgba(0, 0, 0, .7), transparent);
+        color: #fff;
+
+        text-align: center;
+      }
     }
   }
 }
