@@ -7,17 +7,13 @@
   .inside {
     @extend %container-base--inner;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     gap: 2rem 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "logo logo mainbar"
+      "metabar metabar metabar";
 
-    @include breakpoint(xs) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas:
-        "logo logo mainbar"
-        "metabar metabar metabar";
-    }
 
     @include breakpoint(md) {
       grid-template-areas:
@@ -52,7 +48,7 @@
   }
 
   @include breakpoint(xs, max) {
-    display: none;
+    order: 1;
   }
 }
 
