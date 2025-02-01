@@ -57,7 +57,7 @@ command line and Composer and have a functioning PHP and webserver setup.
 
 1. Run the following command to create your project
    ```
-   composer create-project contao/contao-demo:5.4 your-new-website
+   composer create-project contao/contao-demo:5.5 your-new-website
    ```
 2. Connect the database e.g. through `DATABASE_URL` in your `.env.local` file.
    ```env
@@ -90,7 +90,7 @@ our [Slack channel][support].
 The Contao demo website is licensed under the terms of
 the [CreativeCommons Attribution-ShareAlike 4.0 (CC-BY-SA-4.0)][license] license.
 
-**TL;DR**  
+**TL;DR**
 You are free to use the Contao demo website as a base for any website you build, even commercially.
 However, you must give appropriate credit, provide a link to the license, and indicate if changes were made.
 If you remix, transform, or build upon the material, you must distribute your contributions under the same license as
