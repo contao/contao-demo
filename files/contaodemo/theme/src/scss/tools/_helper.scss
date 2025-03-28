@@ -242,6 +242,11 @@ nav {
   ul {
     @extend %nav-list-helper;
   }
+
+  // skip navigation links
+  a.invisible {
+    @include set-invisible-focusable;
+  }
 }
 
 %container-base {
@@ -278,5 +283,13 @@ nav {
   &--full-width {
     max-width: none;
     width: 100%;
+  }
+}
+
+legend,
+label,
+span {
+  &.invisible {
+    @include set-invisible;
   }
 }
