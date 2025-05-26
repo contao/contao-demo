@@ -3,6 +3,8 @@ $slider-breakpoint: lg;
 .swiper {
   $parent: &;
 
+  --swiper-pagination-bottom: 0;
+
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -16,11 +18,10 @@ $slider-breakpoint: lg;
   #{$parent}-pagination {
     position: inherit;
 
-    // Reset default SwiperJS styles
-    bottom: unset;
+    // Reset default Swiper styles
     order: 2;
     width: auto;
-    margin-top: unset;
+    line-height: 0;
 
     span {
       width: 1rem;
@@ -45,7 +46,7 @@ $slider-breakpoint: lg;
 
   #{$parent}-button-prev,
   #{$parent}-button-next {
-    // Reset default SwiperJS styles
+    // Reset default Swiper styles
     position: inherit;
     right: auto;
     left: auto;
@@ -82,7 +83,7 @@ $slider-breakpoint: lg;
     }
 
     &:after {
-      // Unset default SwiperJS styles
+      // Unset default Swiper styles
       all: unset;
     }
 
