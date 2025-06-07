@@ -1,115 +1,128 @@
 $slider-breakpoint: lg;
-.slider {
+
+.swiper {
   $parent: &;
 
-  &-control {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  --swiper-pagination-bottom: 0;
 
-    margin-block-start: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
 
-    height: 3rem;
+  #{$parent}-wrapper {
+    flex-basis: 100%;
+  }
 
-    // fullsize on screens < 1024
-    .header-image & {
-      @include breakpoint(lg, max) {
-        padding-inline: $s-grid-outer-gutter--large;
-      }
-    }
+  #{$parent}-pagination {
+    position: inherit;
 
-    #{$parent}-menu,
-    a {
-      position: static;
-      top: 0;
-    }
+    // Reset default Swiper styles
+    order: 2;
+    width: auto;
+    line-height: 0;
 
-    #{$parent}-menu {
-
-      left: auto;
-
-      display: flex;
-      justify-content: center;
-      gap: .5rem;
-
+    span {
+      width: 1rem;
       height: 1rem;
-      width: auto;
 
-      margin: 0;
-
-      font-size: 0;
-
-      // slider control bubbles
-      b {
-        display: block;
-
-        width: 1rem;
-        height: 1rem;
-
-        background: $c-gray--300;
-        border-radius: 3rem;
-        transition: background ease-in-out $t-animation--fast;
-
-        &:hover,
-        &:focus-visible {
-          background: $c-gray--500;
-        }
-
-        &.active {
-          background: $c-secondary--700;
-        }
-      }
-    }
-
-    #{$parent}-prev,
-    #{$parent}-next {
-      display: flex;
-      gap: 1rem;
-
-      width: 3rem;
-      height: 3rem;
-
-      overflow: hidden;
-
-      &:before {
-        display: block;
-        flex-shrink: 0;
-
-        width: 3rem;
-        height: 3rem;
-
-        border-radius: .25rem;
-        background: $c-secondary--700 url('#{$img-path}/icons/caret-left--white.svg') center center no-repeat;
-        transition: background ease-in-out $t-animation--fast;
-
-        content: '';
-      }
+      transition: background ease-in-out $t-animation--fast;
+      opacity: 1;
+      border-radius: 3rem;
+      background: $c-gray--300;
 
       &:hover,
-      &:focus {
-        &:before {
-          background-color: $c-primary--500;
-        }
+      &:focus-visible {
+        background: $c-gray--500;
+      }
+
+      &[aria-current="true"] {
+        background: $c-secondary--700;
+      }
+
+    }
+  }
+
+  #{$parent}-button-prev,
+  #{$parent}-button-next {
+    // Reset default Swiper styles
+    position: inherit;
+    right: auto;
+    left: auto;
+    width: 3rem;
+    height: 3rem;
+    margin-top: auto;
+
+    border: none;
+    outline: 0;
+    padding-inline: 0;
+
+    gap: 1rem;
+
+    &:before {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      content: '';
+
+      transition: background ease-in-out $t-animation--fast;
+      border-radius: .25rem;
+      background: $c-secondary--700 center center no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        background-color: $c-primary--500;
       }
     }
 
-    #{$parent}-next {
-      &:before {
-        background-image: url('#{$img-path}/icons/caret-right--white.svg');
+    &:focus-visible:before {
+      border: 2px solid #3daee9;
+    }
+
+    &:after {
+      // Unset default Swiper styles
+      all: unset;
+    }
+
+  }
+
+  #{$parent}-button-prev {
+    order: 1;
+
+    &:before {
+      background-image: url('#{$img-path}/icons/caret-left--white.svg');
+    }
+
+    .header-image & {
+      @include breakpoint(lg, max) {
+        margin-left: $s-grid-outer-gutter--large;
+      }
+    }
+
+  }
+
+  #{$parent}-button-next {
+    order: 3;
+
+    &:before {
+      background-image: url('#{$img-path}/icons/caret-right--white.svg');
+    }
+
+    .header-image & {
+      @include breakpoint(lg, max) {
+        margin-right: $s-grid-outer-gutter--large;
       }
     }
   }
 
-  &-wrapper {
+  &-slide {
     display: flex;
-    position: relative;
+    height: auto;
 
     background: $c-gray--100;
-
-    > * {
-      float: none;
-    }
 
     // slider contents
     .content-text {
@@ -119,6 +132,7 @@ $slider-breakpoint: lg;
 
       @include breakpoint(#{$slider-breakpoint}, max) {
         flex-direction: column;
+        justify-content: space-between;
       }
 
       figure,
@@ -129,16 +143,13 @@ $slider-breakpoint: lg;
       }
 
       figure {
-        aspect-ratio: 5/3;
         @include breakpoint(#{$slider-breakpoint}) {
           order: 1;
         }
       }
 
       img {
-
         height: 100%;
-
         object-fit: cover;
         object-position: center center;
       }
@@ -159,9 +170,9 @@ $slider-breakpoint: lg;
 
       .title {
         @extend .display-title-1;
-        margin-block: 0 3rem;
-
         font-weight: 300;
+
+        margin-block: 0 3rem;
       }
     }
 
