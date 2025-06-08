@@ -112,7 +112,7 @@ $s-form-field--check-dot-position: calc(.5 * (#{$s-form-field--check-area-size} 
   &__error {
     padding-right: 3rem;
     border-color: $c-form-field--border-error;
-    background: $c-form-field--bg-error url('#{$img-path}/o-warning-red.svg') no-repeat calc(100% - 1rem) center;
+    background: $c-form-field--bg-error url('#{$img-path}/icons/warning-red.svg') no-repeat calc(100% - 1rem) center;
     color: $c-form-field--text-error;
   }
 }
