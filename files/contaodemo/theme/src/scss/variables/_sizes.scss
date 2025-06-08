@@ -217,11 +217,11 @@ $breakpoints: (
   xxxl: 100rem  // 1600px
 );
 
-// switch modile/desctop view
+// switch modile/desktop view
 $bp--mobile: lg;
 
 
-// workarround instead of adding div to fe_page
+// workaround instead of adding div to fe_page
 $s-container--max-width: calc(#{$s-content--max-width} + (2 * #{$s-grid-outer-gutter--large}));
 
 // alerts
