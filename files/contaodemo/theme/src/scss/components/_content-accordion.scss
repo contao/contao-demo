@@ -1,0 +1,86 @@
+$accordion--icon-size: 2rem;
+$accordion--icon-space: 2rem;
+$accordion--inner-spacer: 1.5rem;
+
+// accordion wrapper
+.content-accordion {
+  border-bottom: .0625rem solid $c-gray--200;
+}
+
+// handorgel accordion
+.handorgel {
+  &__header {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      color: $c-primary--500;
+    }
+
+    &__button {
+      @include set-font-size(text--lg);
+
+      position: relative;
+
+      transition: color ease-in-out $t-animation--fast;
+      padding: $accordion--inner-spacer calc(#{$accordion--icon-size} + #{$accordion--icon-size} + #{$accordion--inner-spacer}) $accordion--inner-spacer $accordion--inner-spacer;
+
+      background: $c-white;
+
+      font-weight: 600;
+
+      &:after,
+      &:before {
+        transition: opacity ease-in-out $t-animation--fast;
+
+        position: absolute;
+        top: $accordion--inner-spacer;
+        right: $accordion--inner-spacer;
+        z-index: 5;
+
+        width: $accordion--icon-size;
+        height: $accordion--icon-size;
+
+        background: transparent url('#{$img-path}/icons/plus-circle.svg') center center no-repeat;
+        content: '';
+      }
+
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        opacity: 0;
+        background: transparent url('#{$img-path}/icons/minus-circle.svg') center center no-repeat;
+      }
+    }
+
+    &--open {
+
+      .handorgel__header__button {
+        &:before {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__content {
+    &__inner {
+      @include set-font-size(text--sm);
+
+      padding: 2rem $accordion--inner-spacer;
+
+      background: $c-gray--100;
+
+      color: $c-gray--600;
+    }
+  }
+}
