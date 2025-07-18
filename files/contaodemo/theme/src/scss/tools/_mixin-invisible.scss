@@ -9,3 +9,9 @@
   width: 1px;
   float: left;
 }
+
+@mixin set-invisible-focusable() {
+  &:not(:focus):not(:focus-within) {
+    @include set-invisible();
+  }
+}
