@@ -300,11 +300,3 @@ nav {
     width: 100%;
   }
 }
-
-legend,
-label,
-span {
-  &.invisible {
-    @include set-invisible;
-  }
-}
