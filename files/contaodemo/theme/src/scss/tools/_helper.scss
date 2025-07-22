@@ -300,3 +300,7 @@ nav {
     width: 100%;
   }
 }
+
+.invisible {
+  @include set-invisible;
+}
