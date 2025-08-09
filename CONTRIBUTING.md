@@ -37,25 +37,43 @@ command line and Composer and have a functioning PHP and webserver setup.
 
 ## Development Workflow
 
-When fixing bugs or adding a feature, prepare your environment
+When fixing bugs or adding a feature, please follow the mentioned workflow
 
-1. Checkout the actual branch
+1. Fork the contao-demo
 
-2. Prepare your environment
+2. Checkout your branch
+
+3. Prepare your environment and update your dependencies
     ```bash
     composer up -o --no-dev
+    ```
+    Restore from the backup
+    ```bash
     php bin/console contao:backup:restore backup__20250101000000.sql
+    ```
+    Run migrations
+    ```bash
     php bin/console contao:migrate --no-backup
     ```
 
-3. Implement your changes
+4. Implement your changes
 
-4. Before pushing your work or opening a pull request, update and clean up your environment:
-    ```
+5. Before pushing your work or opening a pull request, update your dependencies
+    ```bash
     composer up -o --no-dev
+    ```
+    Run the migrations
+    ```bash
     php bin/console contao:migrate --no-backup
+    ```
+    Create the backup
+    ```bash
     php bin/console contao:backup:create backup__20250101000000.sql -i +tl_undo,+tl_cron_job,+tl_version,+tl_message_queue,+rememberme_token,+tl_trusted_device,+altcha_challenges
     ```
+
+6. Commit your changes
+
+7. Open the pull request and target it against the base branch
 
 [forums]: https://community.contao.org
 [support]: https://to.contao.org/support
