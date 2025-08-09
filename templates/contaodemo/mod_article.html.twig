@@ -1,0 +1,11 @@
+{% extends '@Contao/mod_article' %}
+
+{% block content %}
+    {% if not noMarkup %}
+        <div class="mod_article__inner">
+            {{ parent() }}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
