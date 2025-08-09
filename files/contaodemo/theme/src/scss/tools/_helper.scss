@@ -242,6 +242,26 @@ nav {
   ul {
     @extend %nav-list-helper;
   }
+
+  // skip navigation links
+  a.invisible {
+    @include set-invisible-focusable;
+
+    &:focus-visible {
+      all: unset;
+      position: fixed;
+      inset: 0 auto auto 0;
+      padding: 5px 10px;
+      background: $c-secondary--800;
+      color: white;
+      border: 0 none;
+      border-radius: 0;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      transition: none;
+    }
+  }
 }
 
 %container-base {
@@ -279,4 +299,8 @@ nav {
     max-width: none;
     width: 100%;
   }
+}
+
+.invisible {
+  @include set-invisible;
 }

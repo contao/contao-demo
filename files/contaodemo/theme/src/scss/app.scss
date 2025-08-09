@@ -1,4 +1,4 @@
-// ### general variables
+// general variables
 @import 'variables/sizes';
 @import 'variables/colors';
 @import 'variables/fonts';
@@ -12,8 +12,6 @@
 
 // tools & helper
 @import 'vendor/normalizer';
-@import 'vendor/contao-helper';
-
 @import 'tools/helper';
 
 // layouts
@@ -23,7 +21,6 @@
 @import 'layout/page-footer';
 @import 'layout/article';
 
-
 // components - basic
 @import 'components/basic-contents/buttons';
 @import 'components/basic-contents/basic-contents';
@@ -32,7 +29,7 @@
 
 @import 'components/searchbar';
 @import 'components/slider';
-@import 'components/accordion';
+@import 'components/content-accordion';
 @import 'components/downloads';
 @import 'components/gallery';
 @import 'components/video';
@@ -49,7 +46,6 @@
 @import 'components/subscribe_unsubscribe';
 @import 'components/faq';
 @import 'components/lightbox';
-
 
 // components - navigation
 @import 'components/navigation/breadcrumb';
