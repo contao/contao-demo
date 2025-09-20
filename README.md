@@ -47,7 +47,7 @@ Manager or with [Composer][composer] on the command line.
 
 When installing a fresh Contao application, select the desired version and check the
 "Install the Contao demo website" checkbox. Make sure to also import the database backup when the
-Contao Manager asks you to. That's it!
+Contao Manager asks you to, afterward create your user. That's it!
 
 ### Using Composer
 
