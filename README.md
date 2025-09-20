@@ -47,7 +47,7 @@ Manager or with [Composer][composer] on the command line.
 
 When installing a fresh Contao application, select the desired version and check the
 "Install the Contao demo website" checkbox. Make sure to also import the database backup when the
-Contao Manager asks you to. That's it!
+Contao Manager asks you to, afterward create your user. That's it!
 
 ### Using Composer
 
@@ -90,7 +90,7 @@ our [Slack channel][support].
 The Contao demo website is licensed under the terms of
 the [CreativeCommons Attribution-ShareAlike 4.0 (CC-BY-SA-4.0)][license] license.
 
-**TL;DR**  
+**TL;DR**
 You are free to use the Contao demo website as a base for any website you build, even commercially.
 However, you must give appropriate credit, provide a link to the license, and indicate if changes were made.
 If you remix, transform, or build upon the material, you must distribute your contributions under the same license as
