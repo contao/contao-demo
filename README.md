@@ -72,7 +72,7 @@ command line and Composer and have a functioning PHP and webserver setup.
    ```
    php vendor/bin/contao-console contao:migrate
    ```
-5. Create an admin user account and follow the instructions in your CLI
+5. _Optional:_ create a separate back end user account and follow the instructions in your CLI
    ```
    php vendor/bin/contao-console contao:user:create
    ```
