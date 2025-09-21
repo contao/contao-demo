@@ -71,11 +71,9 @@ When fixing bugs or adding a feature, please follow the mentioned workflow
     php bin/console contao:backup:create backup__20250101000000.sql -i +tl_undo,+tl_cron_job,+tl_version,+tl_message_queue,+rememberme_token,+tl_trusted_device,+altcha_challenges
     ```
 
-6. Disable the `k.jones` admin account as an administrator
+6. Commit your changes
 
-7. Commit your changes
-
-8. Open the pull request and target it against the base branch
+7. Open the pull request and target it against the base branch
 
 [forums]: https://community.contao.org
 [support]: https://to.contao.org/support

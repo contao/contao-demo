@@ -47,7 +47,7 @@ Manager or with [Composer][composer] on the command line.
 
 When installing a fresh Contao application, select the desired version and check the
 "Install the Contao demo website" checkbox. Make sure to also import the database backup when the
-Contao Manager asks you to, afterward create your user. That's it!
+Contao Manager asks you to. That's it!
 
 ### Using Composer
 
@@ -76,6 +76,16 @@ command line and Composer and have a functioning PHP and webserver setup.
    ```
    php vendor/bin/contao-console contao:user:create
    ```
+
+## Login
+
+Once the official Contao demo is installed, access the backend with any of the following credentials:
+
+| Role          | User           | Password          |
+|---------------|----------------|-------------------|
+| Administrator | ```k.jones```  | ```kevinjones```  |
+| Editor        | ```h.lewis```  | ```helenlewis```  |
+| Editor        | ```j.wilson``` | ```jameswilson``` |
 
 ## Contributing
 
