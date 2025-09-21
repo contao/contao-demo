@@ -28,7 +28,7 @@ Manager or with [Composer][composer] on the command line.
 
 When installing a fresh Contao application, select the desired version and check the 
 "Install the Contao demo website" checkbox. Make sure to also import the database backup when the
-Contao Manager asks you to, afterward create your user. That's it!
+Contao Manager asks you to. That's it!
 
 ### Using Composer
 
@@ -40,7 +40,6 @@ command line and Composer and have a functioning PHP and webserver setup.
 2. Connect the database e.g. through `DATABASE_URL` in your `.env.local` file.
 3. Import the database backup using `php vendor/bin/contao-console contao:backup:restore`
 4. Finalize the database by running `php vendor/bin/contao-console contao:migrate`
-5. Create your admin user account using `php vendor/bin/contao-console contao:user:create`
 
 
 ## Contributing
