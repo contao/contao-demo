@@ -18,34 +18,34 @@ $s-form-field--max-width: 30rem;
 $s-form--label-spacer: .25rem;
 
 // ## form fieldstate styles
-$c-form-field--border: $c-gray--300;
-$c-form-field--bg: $c-white;
-$c-form-field--text: $c-gray--400;
+$c-form-field--border: var(--gray-300);
+$c-form-field--bg: var(--white);
+$c-form-field--text: var(--gray-400);
 $s-form-field--text-weight: 400;
 
-$c-form-field--hover-border: $c-gray--500;
+$c-form-field--hover-border: var(--gray-500);
 $c-form-field--hover-shadow: none;
 
-$c-form-field--focus-border: $c-primary--500;
-$c-form-field--focus-text: $c-secondary--900;
-$s-form-field--focus-text-weight:400;
+$c-form-field--focus-border: var(--primary-500);
+$c-form-field--focus-text: var(--secondary-900);
+$s-form-field--focus-text-weight: 400;
 
-$c-form-field--active-hover-border: $c-gray--500;
-$c-form-field--active-hover-bg: $c-gray--600;
+$c-form-field--active-hover-border: var(--gray-500);
+$c-form-field--active-hover-bg: var(--gray-600);
 
 
-$c-form-field--border-filled-hover: $c-gray--500;
+$c-form-field--border-filled-hover: var(--gray-500);
 
-$c-form-field--valid-border: $c-gray--300;
-$c-form-field--valid-text: $c-gray--600;
+$c-form-field--valid-border: var(--gray-300);
+$c-form-field--valid-text: var(--gray-600);
 $s-form-field--valid-text-weight: 400;
 
-$c-form-field--border-error: $c-danger--border;
-$c-form-field--bg-error: $c-danger--background-light;
-$c-form-field--text-error: $c-danger--text;
+$c-form-field--border-error: var(--danger--border);
+$c-form-field--bg-error: var(--danger--background-light);
+$c-form-field--text-error: var(--danger--text);
 
-$c-form-field--border-disabled: $c-gray--300;
-$c-form-field--bg-disabled: $c-gray--200;
+$c-form-field--border-disabled: var(--gray-300);
+$c-form-field--bg-disabled: var(--gray-200);
 
 // checkbox & radiobox
 $s-form-field--check-area-size: 1.5rem;
@@ -278,8 +278,8 @@ form {
 
       border: 0;
 
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
 
       opacity: 0;
 
@@ -332,7 +332,7 @@ form {
           }
 
           &:after {
-            background-color: $c-gray--300;
+            background-color: var(--gray-300);
           }
         }
       }
@@ -349,17 +349,17 @@ form {
         }
 
         &:after {
-          background-color: $c-secondary--700;
+          background-color: var(--secondary-700);
         }
 
         &:hover,
         &:focus {
           &:before {
-            border-color: $c-gray--500;
+            border-color: var(--gray-500);
           }
 
           &:after {
-            background-color: $c-secondary--700;
+            background-color: var(--secondary-700);
           }
         }
       }

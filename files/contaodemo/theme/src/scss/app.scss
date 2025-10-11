@@ -1,8 +1,5 @@
 // general variables
-@import 'variables/sizes';
-@import 'variables/colors';
-@import 'variables/fonts';
-@import 'variables/animation';
+@import "variables";
 
 // tools - mixins
 @import 'tools/mixin-set-breakpoints';

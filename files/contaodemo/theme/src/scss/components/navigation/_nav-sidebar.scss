@@ -7,9 +7,9 @@
 
     padding: 1rem 1.5rem;
 
-    background: $c-white;
-    border-bottom: .0625rem solid $c-gray--100;
-    color: $c-secondary--700;
+    background: var(--white);
+    border-bottom: .0625rem solid var(--gray-100);
+    color: var(--secondary-700);
     transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt, border-color $t-animation--fast $s-animation--fkt;
 
     font-weight: 600;
@@ -35,8 +35,8 @@
 
     &:hover,
     &:focus {
-      color: $c-primary--500;
-      border-bottom-color: $c-primary--500;
+      color: var(--primary-500);
+      border-bottom-color: var(--primary-500);
 
       &:after {
         opacity: 1;
@@ -56,11 +56,11 @@
 
   a.trail,
   strong {
-    background: $c-secondary--700;
-    border-bottom-color: $c-secondary--700;
-    color: $c-white;
+    background: var(--secondary-700);
+    border-bottom-color: var(--secondary-700);
+    color: var(--white);
 
-    text-decoration: underline $c-primary--500 .0625rem;
+    text-decoration: underline var(--primary-500) .0625rem;
     text-decoration-thickness: 0.125em;
     text-underline-offset: .4em;
   }

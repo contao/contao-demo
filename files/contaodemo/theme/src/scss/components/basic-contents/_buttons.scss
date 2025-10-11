@@ -1,17 +1,5 @@
 // sizes
 
-/** TODO: remove outdated
-$s-button--text--lg: 1.25rem;
-$s-button--line-heigt--lg: 1.2;
-
-$s-button--text--md: 1rem;
-$s-button--line-heigt--md: 1.25;
-
-$s-button--text--sm: 1.25rem;
-$s-button--line-heigt--sm: 1.14285;
-*/
-
-
 $s-button--border-size: .0625rem;
 
 $s-button--border-radius-lg: .5rem;
@@ -23,44 +11,45 @@ $s-btn-space--inner-lg: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - 
 $s-btn-space--inner-md: calc(1rem - #{$s-button--border-size}) calc(1.25rem - #{$s-button--border-size});
 $s-btn-space--inner-sm: calc(.75rem - #{$s-button--border-size}) calc(1rem - #{$s-button--border-size});
 
-  // btn primary colors
-$c-btn-primary--text: $c-white;
-$c-btn-primary--text-hover: $c-white;
-$c-btn-primary--text-active: $c-white;
+// btn primary colors
+$c-btn-primary--text: var(--white);
+$c-btn-primary--text-hover: var(--white);
+$c-btn-primary--text-active: var(--white);
 
-$c-btn-primary--background: $c-primary--500;
-$c-btn-primary--background-hover: $c-primary--600;
-$c-btn-primary--background-active: $c-primary--500;
+$c-btn-primary--background: var(--primary-500);
+$c-btn-primary--background-hover: var(--primary-600);
+$c-btn-primary--background-active: var(--primary-500);
 
-$c-btn-primary--text-disabled: $c-gray--500;
-$c-btn-primary--background-disabled: $c-gray--200;
+$c-btn-primary--text-disabled: var(--gray-500);
+;
+$c-btn-primary--background-disabled: var(--gray-200);
 
 $c-btn-primary--border: transparent;
 $c-btn-primary--border-hover: transparent;
 $c-btn-primary--border-active: transparent;
 
-$c-btn-primary--text-disabled: $c-gray--400;
-$c-btn-primary--background-disabled: $c-gray--100;
-$c-btn-primary--border-disabled: $c-gray--300;
+$c-btn-primary--text-disabled: var(--gray-400);
+$c-btn-primary--background-disabled: var(--gray-100);
+$c-btn-primary--border-disabled: var(--gray-300);
 
 // btn secondary colors
-$c-btn-secondary--text: $c-secondary--700;
-$c-btn-secondary--text-hover: $c-primary--500;
-$c-btn-secondary--text-active: $c-primary--500;
-$c-btn-secondary--text-disabled: $c-gray--400;
+$c-btn-secondary--text: var(--secondary-700);
+$c-btn-secondary--text-hover: var(--primary-500);
+$c-btn-secondary--text-active: var(--primary-500);
+$c-btn-secondary--text-disabled: var(--gray-400);
 
-$c-btn-secondary--background: $c-white;
-$c-btn-secondary--background-hover: $c-white;
-$c-btn-secondary--background-active: $c-white;
-$c-btn-secondary--background-disabled: $c-gray--100;
+$c-btn-secondary--background: var(--white);
+$c-btn-secondary--background-hover: var(--white);
+$c-btn-secondary--background-active: var(--white);
+$c-btn-secondary--background-disabled: var(--gray-100);
 
-$c-btn-secondary--border: $c-gray--200;
-$c-btn-secondary--border-hover: $c-primary--500;
-$c-btn-secondary--border-active: $c-primary--500;
+$c-btn-secondary--border: var(--gray-200);
+$c-btn-secondary--border-hover: var(--primary-500);
+$c-btn-secondary--border-active: var(--primary-500);
 
-$c-btn-secondary--text-disabled: $c-gray--400;
-$c-btn-secondary--background-disabled: $c-gray--100;
-$c-btn-secondary--border-disabled: $c-gray--300;
+$c-btn-secondary--text-disabled: var(--gray-400);
+$c-btn-secondary--background-disabled: var(--gray-100);
+$c-btn-secondary--border-disabled: var(--gray-300);
 
 
 %button {
@@ -74,7 +63,6 @@ $c-btn-secondary--border-disabled: $c-gray--300;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
-  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -82,7 +70,8 @@ $c-btn-secondary--border-disabled: $c-gray--300;
     text-decoration: none;
   }
 
-  &:active {}
+  &:active {
+  }
 
   &:disabled,
   &[disabled] {
@@ -108,7 +97,7 @@ $c-btn-secondary--border-disabled: $c-gray--300;
 
     &:disabled,
     &[disabled] {
-      background: $c-gray--200;
+      background: var(--gray-200);
 
       color: $c-btn-primary--text-disabled;
     }
@@ -119,7 +108,7 @@ $c-btn-secondary--border-disabled: $c-gray--300;
 
     background: $c-btn-secondary--background;
     transition: background $t-animation--fast $s-animation--fkt, border-color $t-animation--fast $s-animation--fkt, color $t-animation--fast $s-animation--fkt;
-    border: $s-button--border-size solid $c-gray--200;
+    border: $s-button--border-size solid var(--gray-200);
 
     color: $c-btn-secondary--text;
 
@@ -134,7 +123,7 @@ $c-btn-secondary--border-disabled: $c-gray--300;
 
     &:disabled,
     &[disabled] {
-      background: $c-gray--200;
+      background: var(--gray-200);
 
       color: $c-btn-secondary--text-disabled;
     }
@@ -148,7 +137,7 @@ $c-btn-secondary--border-disabled: $c-gray--300;
     border-radius: $s-button--border-radius-lg;
 
     font-size: 1rem;
-    line-height:1.25rem;
+    line-height: 1.25rem;
 
     @include breakpoint(md) {
       padding: calc(1rem - #{$s-button--border-size}) calc(1.25rem - #{$s-button--border-size});
@@ -158,7 +147,7 @@ $c-btn-secondary--border-disabled: $c-gray--300;
       padding: calc(1.25rem - #{$s-button--border-size}) calc(1.5rem - #{$s-button--border-size});
 
       font-size: 1.25rem;
-      line-height:1.5rem;
+      line-height: 1.5rem;
     }
   }
 

@@ -1,10 +1,10 @@
-$c-toggle--text: $c-secondary--700;
+$c-toggle--text: var(--secondary-700);
 $s-toggle--text-size: text--lg;
 $s-toggle--text-size-mobile: text--md;
 $s-toggle--text-gap: .5rem;
 
 $s-toggle--icon-size: 3rem;
-$c-toggle--icon: $c-primary--500;
+$c-toggle--icon: var(--primary-500);
 
 $s-toggle--line-width: 2.25rem;
 $s-toggle--line-size: .25rem;

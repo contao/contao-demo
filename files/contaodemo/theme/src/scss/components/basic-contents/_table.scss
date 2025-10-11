@@ -5,7 +5,7 @@ $table--inline-attr-length: 12ch;
 $s-table--border-size: $s-border--size;
 $s-table--padding: 1rem 1.25rem;
 
-$c-table--border: $c-gray--200;
+$c-table--border: var(--gray-200);
 
 .content-table {
 
@@ -37,12 +37,11 @@ th, td {
 }
 
 th {
-
-  border-bottom-color: $c-gray--500;
-  background: $c-gray--100;
+  border-bottom-color: var(--gray-500);
+  background: var(--gray-100);
 
   font-weight: 600;
-  color: $c-secondary--700;
+  color: var(--secondary-700);
 
   @include breakpoint(#{$table--switch-mobile}, max) {
     display: none;
@@ -50,7 +49,7 @@ th {
 }
 
 td {
-  background: $c-white;
+  background: var(--white);
 
   @include breakpoint(#{$table--switch-mobile}, max) {
     display: grid;
@@ -94,7 +93,7 @@ td {
 tr {
   &:nth-child(even):not([class*="week_"]) {
     td {
-      background: $c-gray--50;
+      background: var(--gray-50);
     }
   }
 }

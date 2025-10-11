@@ -3,9 +3,9 @@
 
   padding-block: 5rem;
 
-  background: $gradient--1;
+  background: var(--gradient-1);
 
-  color: $c-gray--300;
+  color: var(--gray-300);
 
   .inside {
     @extend %container-base--inner;
@@ -17,11 +17,11 @@
   }
 
   a:not([class]) {
-    color: $c-white;
+    color: var(--white);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: $c-white;
+    color: var(--white);
   }
 }
 
@@ -95,7 +95,7 @@
 
   padding-block: .5rem;
 
-  border-top: $s-border--size solid $c-gray--200;
+  border-top: $s-border--size solid var(--gray-200);
 
   .mod_newslist,
   .mod_eventlist {
@@ -111,7 +111,7 @@
 
   margin-block-start: 2.5rem;
 
-  color: $c-gray--200;
+  color: var(--gray-200);
   text-align: center;
 
   a {

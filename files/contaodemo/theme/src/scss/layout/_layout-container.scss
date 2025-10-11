@@ -17,19 +17,19 @@ html {
 }
 
 ::selection {
-  background: $c-primary--500;
-  color: $c-white;
+  background: var(--primary-500);
+  color: var(--white);
   text-shadow: none;
 }
 
 body {
   @include set-font-size(text--md);
 
-  background: $c-body--bg;
+  background: var(--body-bg);
 
-  font-family: $ff-body;
+  font-family: var(--font-family);
 
-  color: $c-font--base;
+  color: var(--body-color);
   letter-spacing: $s-text--letter-spacing;
   font-weight: 400;
 

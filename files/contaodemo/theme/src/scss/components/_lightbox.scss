@@ -2,8 +2,8 @@ $control--size-sm: 2.25rem;
 $control--size-lg: 3rem;
 $control--border-radius: .25rem;
 
-$c-lightbox--bg: $c-gray--900;
-$c-lightbox--txt: $c-gray--300;
+$c-lightbox--bg: var(--gray-900);
+$c-lightbox--txt: var(--gray-300);
 
 #cboxOverlay {
   background: $c-lightbox--bg;
@@ -42,7 +42,7 @@ $c-lightbox--txt: $c-gray--300;
 
     &:hover,
     &:focus-visible {
-      background-color: $c-primary--500;
+      background-color: var(--primary-500);
     }
 
     @include breakpoint(lg) {
@@ -61,13 +61,13 @@ $c-lightbox--txt: $c-gray--300;
     top: 0;
     right: 0;
 
-    background: $c-secondary--900 url('#{$img-path}/icons/close-x.svg') center center no-repeat;
+    background: var(--secondary-900) url('#{$img-path}/icons/close-x.svg') center center no-repeat;
   }
 
   [id="cboxPrevious"] {
     left: 0;
 
-    background: $c-secondary--900 url('#{$img-path}/icons/caret-left--white.svg') center center no-repeat;
+    background: var(--secondary-900) url('#{$img-path}/icons/caret-left--white.svg') center center no-repeat;
     border-top-right-radius: $control--border-radius;
     border-bottom-right-radius: $control--border-radius;
   }
@@ -75,7 +75,7 @@ $c-lightbox--txt: $c-gray--300;
   [id="cboxNext"] {
     right: 0;
 
-    background: $c-secondary--900 url('#{$img-path}/icons/caret-right--white.svg') center center no-repeat;
+    background: var(--secondary-900) url('#{$img-path}/icons/caret-right--white.svg') center center no-repeat;
     border-top-left-radius: $control--border-radius;
     border-bottom-left-radius: $control--border-radius;
   }

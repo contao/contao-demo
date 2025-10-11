@@ -1,8 +1,8 @@
 [id="header"] {
   @extend %container-base;
 
-  background: $c-white;
-  border-bottom: .0625rem solid $c-gray--200;
+  background: var(--white);
+  border-bottom: .0625rem solid var(--gray-200);
 
   .inside {
     @extend %container-base--inner;

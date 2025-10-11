@@ -30,15 +30,15 @@ $slider-breakpoint: lg;
       transition: background ease-in-out $t-animation--fast;
       opacity: 1;
       border-radius: 3rem;
-      background: $c-gray--300;
+      background: var(--gray-300);
 
       &:hover,
       &:focus-visible {
-        background: $c-gray--500;
+        background: var(--gray-500);
       }
 
       &[aria-current="true"] {
-        background: $c-secondary--700;
+        background: var(--secondary-800);
       }
 
     }
@@ -68,13 +68,13 @@ $slider-breakpoint: lg;
 
       transition: background ease-in-out $t-animation--fast;
       border-radius: .25rem;
-      background: $c-secondary--700 center center no-repeat;
+      background: var(--secondary-700) center center no-repeat;
     }
 
     &:hover,
     &:focus {
       &:before {
-        background-color: $c-primary--500;
+        background-color: var(--primary-500);
       }
     }
 
@@ -122,7 +122,7 @@ $slider-breakpoint: lg;
     display: flex;
     height: auto;
 
-    background: $c-gray--100;
+    background: var(--gray-100);
 
     // slider contents
     .content-text {
