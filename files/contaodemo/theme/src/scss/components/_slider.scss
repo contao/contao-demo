@@ -40,7 +40,6 @@ $slider-breakpoint: lg;
       &[aria-current="true"] {
         background: $c-secondary--700;
       }
-
     }
   }
 
@@ -59,6 +58,10 @@ $slider-breakpoint: lg;
     padding-inline: 0;
 
     gap: 1rem;
+
+    > svg {
+      display: none;
+    }
 
     &:before {
       display: block;
@@ -86,7 +89,6 @@ $slider-breakpoint: lg;
       // Unset default Swiper styles
       all: unset;
     }
-
   }
 
   #{$parent}-button-prev {
@@ -101,7 +103,6 @@ $slider-breakpoint: lg;
         margin-left: $s-grid-outer-gutter--large;
       }
     }
-
   }
 
   #{$parent}-button-next {
