@@ -34,7 +34,8 @@
         "contao/listing-bundle": "5.3.*",
         "contao/manager-bundle": "5.3.*",
         "contao/news-bundle": "5.3.*",
-        "contao/newsletter-bundle": "5.3.*"
+        "contao/newsletter-bundle": "5.3.*",
+        "contao-components/swiper": "^12"
     },
     "extra": {
         "contao-component-dir": "assets"
