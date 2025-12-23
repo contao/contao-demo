@@ -68,7 +68,7 @@ When fixing bugs or adding a feature, please follow the mentioned workflow
     ```
     Create the backup
     ```bash
-    php bin/console contao:backup:create backup__20250101000000.sql -i +tl_undo,+tl_cron_job,+tl_version,+tl_message_queue,+rememberme_token,+tl_trusted_device,+altcha_challenges
+    php bin/console contao:backup:create backup__20260101000000.sql -i +tl_undo,+tl_cron_job,+tl_version,+tl_message_queue,+rememberme_token,+tl_trusted_device,+altcha_challenges
     ```
 
 6. Commit your changes
