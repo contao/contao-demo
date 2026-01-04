@@ -397,4 +397,9 @@ form {
       order: 10
     }
   }
+
+  p.help {
+    @include set-font-size(text--xs);
+    margin-top: 0;
+  }
 }
