@@ -298,7 +298,7 @@ a {
 .link,
 .hyperlink_txt,
 .external-link,
-a:not([class]) {
+a:not([class], figure > a) {
   display: inline-flex;
 
   color: $c-secondary--700;
