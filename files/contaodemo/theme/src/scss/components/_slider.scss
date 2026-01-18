@@ -1,183 +1,143 @@
 $slider-breakpoint: lg;
 
-.swiper {
-  $parent: &;
-
+:root {
+  --swiper-theme-color: #{$c-secondary--700};
+  --swiper-button-color: white;
+  --swiper-navigation-size: 3rem;
+  --swiper-navigation-sides-offset: 0;
   --swiper-pagination-bottom: 0;
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-color: #{$c-secondary--700};
+  --swiper-pagination-bullet-inactive-color: #{$c-gray--500};
+  --swiper-pagination-bullet-inactive-opacity: 0.54;
+}
 
+/** Reset for the button */
+.swiper-horizontal {
+  .swiper-button-next,
+  .swiper-button-prev,
+  ~ .swiper-button-next,
+  ~ .swiper-button-prev {
+    margin-top: 0;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: var(--swiper-theme-color);
+  color: var(--swiper-button-color);
+  position: relative;
+  border: none;
+  outline: 0;
+  padding: 14px;
+  transition: background ease-in-out $t-animation--fast;
+  border-radius: .25rem;
+
+  &:is(:hover, :focus-visible) {
+    --swiper-theme-color: #{$c-primary--500};
+  }
+
+  &:focus-visible {
+    border: 2px solid #3daee9;
+  }
+}
+
+.swiper-button-prev {
+  order: 1;
+}
+
+.swiper-button-next {
+  order: 3;
+}
+
+.swiper {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
 
-  #{$parent}-wrapper {
-    flex-basis: 100%;
-  }
-
-  #{$parent}-pagination {
-    position: inherit;
-
-    // Reset default Swiper styles
+  > .swiper-pagination-bullets {
     order: 2;
     width: auto;
     line-height: 0;
-
-    span {
-      width: 1rem;
-      height: 1rem;
-
-      transition: background ease-in-out $t-animation--fast;
-      opacity: 1;
-      border-radius: 3rem;
-      background: var(--gray-300);
-
-      &:hover,
-      &:focus-visible {
-        background: var(--gray-500);
-      }
-
-      &[aria-current="true"] {
-        background: var(--secondary-800);
-      }
-
-    }
+    position: relative;
   }
+}
 
-  #{$parent}-button-prev,
-  #{$parent}-button-next {
-    // Reset default Swiper styles
-    position: inherit;
-    right: auto;
-    left: auto;
-    width: 3rem;
-    height: 3rem;
-    margin-top: auto;
+.swiper-pagination-bullet {
+  transition: background ease-in-out $t-animation--fast;
 
-    border: none;
-    outline: 0;
-    padding-inline: 0;
-
-    gap: 1rem;
-
-    &:before {
-      display: block;
-      width: 3rem;
-      height: 3rem;
-      content: '';
-
-      transition: background ease-in-out $t-animation--fast;
-      border-radius: .25rem;
-      background: var(--secondary-700) center center no-repeat;
-    }
-
-    &:hover,
-    &:focus {
-      &:before {
-        background-color: var(--primary-500);
-      }
-    }
-
-    &:focus-visible:before {
-      border: 2px solid #3daee9;
-    }
-
-    &:after {
-      // Unset default Swiper styles
-      all: unset;
-    }
-
+  &:is(:hover, :focus-visible) {
+    --swiper-pagination-bullet-inactive-opacity: 1;
   }
+}
 
-  #{$parent}-button-prev {
-    order: 1;
+.swiper-slide {
+  display: flex;
+  height: auto;
 
-    &:before {
-      background-image: url('#{$img-path}/icons/caret-left--white.svg');
-    }
+  background: $c-gray--100;
 
-    .header-image & {
-      @include breakpoint(lg, max) {
-        margin-left: $s-grid-outer-gutter--large;
-      }
-    }
-
-  }
-
-  #{$parent}-button-next {
-    order: 3;
-
-    &:before {
-      background-image: url('#{$img-path}/icons/caret-right--white.svg');
-    }
-
-    .header-image & {
-      @include breakpoint(lg, max) {
-        margin-right: $s-grid-outer-gutter--large;
-      }
-    }
-  }
-
-  &-slide {
+  // slider contents
+  .content-text {
     display: flex;
-    height: auto;
 
-    background: var(--gray-100);
+    overflow: hidden;
 
-    // slider contents
-    .content-text {
-      display: flex;
+    @include breakpoint(#{$slider-breakpoint}, max) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-      overflow: hidden;
-
-      @include breakpoint(#{$slider-breakpoint}, max) {
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      figure,
-      .text-wrapper {
-        @include breakpoint(#{$slider-breakpoint}) {
-          flex: 1 1 50%;
-        }
-      }
-
-      figure {
-        @include breakpoint(#{$slider-breakpoint}) {
-          order: 1;
-        }
-      }
-
-      img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-      }
-
-      .text-wrapper {
-        @include set-font-size(text--md);
-
-        padding: 2rem;
-
-        @include breakpoint(md) {
-          @include set-font-size(text--lg);
-
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-      }
-
-      .title {
-        @extend .display-title-1;
-        font-weight: 300;
-
-        margin-block: 0 3rem;
+    figure,
+    .text-wrapper {
+      @include breakpoint(#{$slider-breakpoint}) {
+        flex: 1 1 50%;
       }
     }
 
     figure {
-      margin: 0;
+      @include breakpoint(#{$slider-breakpoint}) {
+        order: 1;
+      }
     }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .text-wrapper {
+      @include set-font-size(text--md);
+
+      padding: 2rem;
+
+      @include breakpoint(md) {
+        @include set-font-size(text--lg);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .title {
+      @extend .display-title-1;
+      font-weight: 300;
+
+      margin-block: 0 3rem;
+    }
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
+@include breakpoint(lg, max) {
+  :root {
+    --swiper-navigation-sides-offset: #{$s-grid-outer-gutter--large};
   }
 }

@@ -1,7 +1,7 @@
 .mod_subscribe,
 .mod_unsubscribe {
   // error message
-  .error {
+  p.error {
     @extend .message-error;
     @include set-font-size(text--md);
 
