@@ -61,4 +61,15 @@
   --message--background-light: var(--gray-100);
   --message--border: hsla(200, 64%, 64%, 1);
   --message--text: var(--gray-700);
+
+  /* Swiper Slider */
+  --swiper-theme-color: var(--secondary-700);
+  --swiper-button-color: white;
+  --swiper-navigation-size: 3rem;
+  --swiper-navigation-sides-offset: 0;
+  --swiper-pagination-bottom: 0;
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-color: var(--secondary-700);
+  --swiper-pagination-bullet-inactive-color: var(--gray--500);
+  --swiper-pagination-bullet-inactive-opacity: 0.54;
 }

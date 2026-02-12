@@ -231,7 +231,7 @@ $s-underline-size: .125rem;
 
     :is(a:hover, a:focus, a.trail, strong) {
       color: var(--secondary-900);
-      text-decoration-color: var(--primary-500);;
+      text-decoration-color: var(--primary-500);
     }
 
     ul {
@@ -243,7 +243,7 @@ $s-underline-size: .125rem;
         position: absolute;
         padding: 15px 0;
         min-width: 270px;
-        background: #fff;
+        background: var(--white);
         box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
         gap: 1rem;
         z-index: 2; // Higher z-index due to Swiper
