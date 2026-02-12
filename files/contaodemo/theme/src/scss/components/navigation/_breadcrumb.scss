@@ -14,9 +14,8 @@
 
     transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
 
-    color: $c-secondary--700;
+    color: var(--secondary-700);
     font-weight: 400;
-    text-decoration: none;
 
     text-decoration: underline transparent .0625rem;
     text-underline-offset: .4em;
@@ -24,7 +23,7 @@
 
   a:hover,
   a:focus {
-    color: $c-primary--500;
+    color: var(--primary-500);
     text-decoration-color: currentColor;
   }
 
@@ -39,7 +38,7 @@
     padding: .5rem 1rem;
 
     border-radius: 4rem;
-    background: $c-white;
+    background: var(--white);
 
     list-style: none;
   }
@@ -52,7 +51,7 @@
 
     // active element
     font-weight: 600;
-    color: $c-gray--600;
+    color: var(--gray-600);
 
     // divider
     + li {

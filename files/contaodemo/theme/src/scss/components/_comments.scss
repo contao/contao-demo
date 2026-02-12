@@ -6,7 +6,7 @@
   margin-block-start: 0;
   padding-block-start: $c-content-element--spacer;
 
-  border-top: $s-border--size solid $c-gray--200;
+  border-top: $s-border--size solid var(--gray-200);
 
   h2 {
     // module headline
@@ -33,7 +33,7 @@
     padding-inline-start: 3rem;
 
     .comment {
-      background: $c-primary--50;
+      background: var(--primary-50);
     }
   }
 }
@@ -59,7 +59,7 @@
 
     time {
       font-style: italic;
-      color: $c-gray--500;
+      color: var(--gray-500);
     }
 
     + .form,

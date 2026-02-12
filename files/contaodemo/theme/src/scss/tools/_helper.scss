@@ -10,7 +10,7 @@
       right: 0;
       top: calc(-1 * (2.5rem - (.5 * #{$s-divider--size})));
 
-      background: $c-gray--200;
+      background: var(--gray-200);
 
       content: '';
     }
@@ -20,7 +20,7 @@
 // backgrounds
 .background {
   &--gray-light {
-    background: $c-gray--100;
+    background: var(--gray-100);
   }
 }
 
@@ -29,16 +29,16 @@
   &--white {
     padding: 1rem;
 
-    background: $c-white;
-    border: $s-border--size solid $c-gray--200;
+    background: var(--white);
+    border: $s-border--size solid var(--gray-200);
     border-radius:$s-border--radius;
   }
 
   &--gray-light {
     padding: 1.5rem;
 
-    background: $c-gray--100;
-    border: .0625rem solid $c-gray--200;
+    background: var(--gray-100);
+    border: .0625rem solid var(--gray-200);
     border-radius: $s-border--radius;
 
     @include breakpoint(md) {
@@ -56,14 +56,14 @@
   &--blue {
     padding: 2rem;
 
-    background: $c-secondary--700;
-    border: .0625rem solid $c-secondary--700;
+    background: var(--secondary-700);
+    border: .0625rem solid var(--secondary-700);
     border-radius: $s-border--radius;
 
-    color: $c-gray--300;
+    color: var(--gray-300);
 
     h2, h3, h4 {
-      color: $c-white;
+      color: var(--white);
     }
   }
 }
@@ -124,11 +124,11 @@
 
   padding: $s-message--padding;
 
-  background: $c-message--background-light;
-  border: $s-message--border solid $c-info--border;
+  background: var(--message--background-light);
+  border: $s-message--border solid var(--info--border);
   border-radius: $s-message--border-radius;
 
-  color: $c-message--text;
+  color: var(--message--text);
 
   strong:first-child {
     @include set-font-size(text--md);
@@ -142,11 +142,11 @@
 
   padding-inline-start: $s-message--icon-padding;
 
-  background: $c-info--background-light url('#{$img-path}/icons/info--blue.svg') #{$s-message--padding} #{$s-message--padding} no-repeat;
-  border-color: $c-info--border;
+  background: var(--info--background-light) url('#{$img-path}/icons/info--blue.svg') #{$s-message--padding} #{$s-message--padding} no-repeat;
+  border-color: var(--info--border);
 
 
-  color: $c-info--text;
+  color: var(--info-text);
 }
 
 .message-error {
@@ -154,11 +154,11 @@
 
   padding-inline-start: $s-message--icon-padding;
 
-  background: $c-danger--background-light url('#{$img-path}/icons/warning-red.svg') #{$s-message--padding} #{$s-message--padding} no-repeat;
-  border-color: $c-danger--border;
+  background: var(--danger--background-light) url('#{$img-path}/icons/warning-red.svg') #{$s-message--padding} #{$s-message--padding} no-repeat;
+  border-color: var(--danger--border);
 
 
-  color: $c-danger--text;
+  color: var(--danger--text);
 }
 
 
@@ -252,8 +252,8 @@ nav {
       position: fixed;
       inset: 0 auto auto 0;
       padding: 5px 10px;
-      background: $c-secondary--800;
-      color: white;
+      background: var(--secondary-800);
+      color: var(--white);
       border: 0 none;
       border-radius: 0;
       overflow: hidden;

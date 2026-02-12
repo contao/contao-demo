@@ -27,12 +27,12 @@
 
     padding: .25rem;
 
-    background: $c-white;
-    border: 1px solid $c-gray--200;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
 
     &:hover,
     &:focus {
-      border-color: $c-primary--500;
+      border-color: var(--primary-500);
     }
   }
 

@@ -21,7 +21,7 @@ $calendar--switch-mobile: md;
 
     width: calc(100% / 7);
 
-    border-color: $c-gray--300;
+    border-color: var(--gray-300);
 
     text-align: center;
 
@@ -31,25 +31,25 @@ $calendar--switch-mobile: md;
   }
 
   th {
-    background: $c-gray--100;
+    background: var(--gray-100);
   }
 
   // has event
   tr {
     td {
-      background: $c-white;
+      background: var(--white);
 
       &.active {
-        background: $c-secondary--700;
+        background: var(--secondary-700);
 
         font-weight: 700;
-        color: $c-white;
+        color: var(--white);
       }
     }
   }
 
   .empty {
-    background: $c-gray--200;
+    background: var(--gray-200);
   }
 
   .event {

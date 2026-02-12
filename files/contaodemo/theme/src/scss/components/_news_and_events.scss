@@ -104,13 +104,13 @@
 
   &_upcoming {
     & + & {
-      border-top: $s-border--size solid $c-gray--200;
+      border-top: $s-border--size solid var(--gray-200);
     }
   }
 
   &_simple {
     & + & {
-      border-top: $s-border--size solid $c-gray--200;
+      border-top: $s-border--size solid var(--gray-200);
     }
   }
 
@@ -131,7 +131,7 @@
 
         height: $s-border--size;
 
-        background: $c-gray--200;
+        background: var(--gray-200);
 
         content: '';
       }

@@ -50,7 +50,7 @@
     }
 
     font-weight: 600;
-    color: $c-secondary--700;
+    color: var(--secondary-700);
   }
 
 
@@ -258,7 +258,7 @@ figure {
       margin: 0 0 2rem 0;
 
       @include breakpoint(xs, max) {
-        margin-block-sstart: $grid--gap-large;
+        margin-block-start: $grid--gap-large;
       }
     }
 
@@ -301,7 +301,7 @@ a {
 a:not([class], figure > a) {
   display: inline-flex;
 
-  color: $c-secondary--700;
+  color: var(--secondary-700);
   transition: color $t-animation--fast $s-animation--fkt, text-decoration $t-animation--fast $s-animation--fkt;
 
   text-decoration: underline currentColor .0625rem;
@@ -309,7 +309,7 @@ a:not([class], figure > a) {
 
   &:hover,
   &:focus {
-    color: $c-primary--500;
+    color: var(--primary-500);
   }
 }
 
@@ -333,7 +333,7 @@ blockquote {
   margin: 2rem 0;
   padding-inline-start: 1rem;
 
-  border-left: .0625rem solid $c-gray--200;
+  border-left: .0625rem solid var(--gray-200);
 
   font-style: italic;
 }
@@ -346,7 +346,7 @@ dd {
   margin-inline-start: 0;
   padding-inline-start: 1rem;
 
-  border-left: $s-border--size solid $c-gray--200;
+  border-left: $s-border--size solid var(--gray-200);
 }
 
 
@@ -379,13 +379,13 @@ dd {
   padding: 2rem !important;
 
   border-radius: $s-border--radius;
-  background: $c-secondary--700 !important;
+  background: var(--secondary-700) !important;
 
-  color: $c-white !important;
+  color: var(--white) !important;
 
   &-string,
   &-regexp {
     background: transparent !important;
-    color: $c-primary--500 !important;
+    color: var(--primary-500) !important;
   }
 }

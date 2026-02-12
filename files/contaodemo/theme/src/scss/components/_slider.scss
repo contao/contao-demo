@@ -1,17 +1,5 @@
 $slider-breakpoint: lg;
 
-:root {
-  --swiper-theme-color: #{$c-secondary--700};
-  --swiper-button-color: white;
-  --swiper-navigation-size: 3rem;
-  --swiper-navigation-sides-offset: 0;
-  --swiper-pagination-bottom: 0;
-  --swiper-pagination-bullet-size: 1rem;
-  --swiper-pagination-color: #{$c-secondary--700};
-  --swiper-pagination-bullet-inactive-color: #{$c-gray--500};
-  --swiper-pagination-bullet-inactive-opacity: 0.54;
-}
-
 /** Reset for the button */
 .swiper-horizontal {
   .swiper-button-next,
@@ -34,11 +22,11 @@ $slider-breakpoint: lg;
   border-radius: .25rem;
 
   &:is(:hover, :focus-visible) {
-    --swiper-theme-color: #{$c-primary--500};
+    --swiper-theme-color: var(--primary-500);
   }
 
   &:focus-visible {
-    border: 2px solid #3daee9;
+    border: 2px solid var(--swiper-theme-color);
   }
 }
 
@@ -77,7 +65,7 @@ $slider-breakpoint: lg;
   display: flex;
   height: auto;
 
-  background: $c-gray--100;
+  background: var(--gray-100);
 
   // slider contents
   .content-text {
@@ -98,6 +86,8 @@ $slider-breakpoint: lg;
     }
 
     figure {
+      background-color: var(--swiper-theme-color);
+      
       @include breakpoint(#{$slider-breakpoint}) {
         order: 1;
       }
