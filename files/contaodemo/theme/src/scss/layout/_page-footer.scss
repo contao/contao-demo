@@ -23,13 +23,13 @@
   h1, h2, h3, h4, h5, h6 {
     color: $c-white;
   }
-}
 
-.logo--footer {
-  margin-block-end: 2.5rem;
+  .logo {
+    margin-block-end: 2.5rem;
 
-  @include breakpoint(xs, max) {
-    max-width: 11rem;
+    @include breakpoint(xs, max) {
+      max-width: 11rem;
+    }
   }
 }
 
@@ -107,7 +107,6 @@
 
 .footer-claim {
   @include set-font-size(text--lg);
-  display: block;
 
   margin-block-start: 2.5rem;
 
