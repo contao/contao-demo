@@ -17,7 +17,6 @@ projects.
 
 Visit the [project website][contao] to learn more about Contao.
 
-
 ## Table of contents
 
 - [Versions](#versions)
@@ -35,7 +34,7 @@ See the [Contao release plan][releaseplan] for details. Each version has a separ
 Git repository.
 
 We also have _rolling release tags_. This means the latest commit on each branch is tagged
-with the respective Contao minor release. As an example, the branch "5.3.x" has a tag "5.3" on the latest commit.
+with the respective Contao minor release. As an example, the branch "5.7.x" has a tag "5.7" on the latest commit.
 These tags enable you to install the latest demo content for any Contao minor version.
 
 ## Installation
@@ -57,7 +56,7 @@ command line and Composer and have a functioning PHP and webserver setup.
 
 1. Run the following command to create your project
    ```
-   composer create-project contao/contao-demo:5.5 your-new-website
+   composer create-project contao/contao-demo:5.7 your-new-website
    ```
 2. Connect the database e.g. through `DATABASE_URL` in your `.env.local` file.
    ```env
@@ -108,13 +107,12 @@ the original.
 
 ## Credits
 
-The screendesign for the Contao Official Demo was sponsored by the Contao Association and borowiakziehe KG.
+The screen design for the Contao Official Demo was sponsored by the Contao Association and borowiakziehe KG.
 It has been designed by Dennis Weinhardt whom we would like to thank for the great work.
 
 The Contao demo website is maintained by volunteers of the respective [Contao team][team]. It supersedes the
 [Contao Official Demo][old], our previous Contao example website. Many thanks to the Official Demo team for
 their contributions in the past.
-
 
 
 [contao]: https://contao.org

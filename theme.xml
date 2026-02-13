@@ -3,12 +3,12 @@
   <table name="tl_theme">
     <row>
       <field name="id">1</field>
-      <field name="tstamp">1739126070</field>
-      <field name="name">Contao Demo Website</field>
-      <field name="author">Sascha Müller, Contao Community</field>
+      <field name="tstamp">1755787967</field>
+      <field name="name">Contao Official Demo</field>
+      <field name="author">Joe Ray Gregory, Sascha Müller, Felix Pfeiffer, Stefan Melz, Cliff Parnitzky</field>
       <field name="folders">a:2:{i:0;s:22:"files/contaodemo/media";i:1;s:22:"files/contaodemo/theme";}</field>
       <field name="screenshot">files/contaodemo/theme/theme-preview.png</field>
-      <field name="templates">templates/contaodemo</field>
+      <field name="templates"></field>
     </row>
   </table>
   <table name="tl_image_size">
@@ -766,7 +766,7 @@
       <field name="id">39</field>
       <field name="pid">1</field>
       <field name="tstamp">1680183031</field>
-      <field name="name">Calendar - Mini Calendar</field>
+      <field name="name">Calendar - Mini calendar</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h2";s:5:"value";s:24:"Calendar - Mini Calendar";}</field>
       <field name="type">calendar</field>
       <field name="levelOffset">0</field>
@@ -1108,127 +1108,12 @@
       <field name="ariaLabel"></field>
     </row>
     <row>
-      <field name="id">23</field>
+      <field name="id">40</field>
       <field name="pid">1</field>
-      <field name="tstamp">1377460548</field>
-      <field name="name">Header - Included Top Bar</field>
-      <field name="headline"></field>
-      <field name="type">html</field>
-      <field name="levelOffset">0</field>
-      <field name="showLevel">0</field>
-      <field name="hardLimit">0</field>
-      <field name="showProtected">0</field>
-      <field name="defineRoot">0</field>
-      <field name="rootPage">0</field>
-      <field name="navigationTpl"></field>
-      <field name="customTpl"></field>
-      <field name="pages">NULL</field>
-      <field name="showHidden">0</field>
-      <field name="customLabel"></field>
-      <field name="autologin">0</field>
-      <field name="jumpTo">0</field>
-      <field name="overviewPage">0</field>
-      <field name="redirectBack">0</field>
-      <field name="editable">NULL</field>
-      <field name="memberTpl"></field>
-      <field name="form">0</field>
-      <field name="queryType">and</field>
-      <field name="fuzzy">0</field>
-      <field name="contextLength">48</field>
-      <field name="minKeywordLength">4</field>
-      <field name="perPage">0</field>
-      <field name="searchType">simple</field>
-      <field name="searchTpl"></field>
-      <field name="inColumn">main</field>
-      <field name="skipFirst">0</field>
-      <field name="loadFirst">0</field>
-      <field name="singleSRC">NULL</field>
-      <field name="imgSize"></field>
-      <field name="useCaption">0</field>
-      <field name="fullsize">0</field>
-      <field name="multiSRC">NULL</field>
-      <field name="html">&lt;div class="header-top-bar"&gt;&lt;div class="inner"&gt;{{insert_article::30}}&lt;/div&gt;&lt;/div&gt;</field>
-      <field name="rss_cache">3600</field>
-      <field name="rss_feed">NULL</field>
-      <field name="rss_template"></field>
-      <field name="numberOfItems">3</field>
-      <field name="disableCaptcha">0</field>
-      <field name="reg_groups">NULL</field>
-      <field name="reg_allowLogin">0</field>
-      <field name="reg_skipName">0</field>
-      <field name="reg_close"></field>
-      <field name="reg_deleteDir">0</field>
-      <field name="reg_assignDir">0</field>
-      <field name="reg_homeDir">NULL</field>
-      <field name="reg_activate">0</field>
-      <field name="reg_jumpTo">0</field>
-      <field name="reg_text">NULL</field>
-      <field name="reg_password">NULL</field>
-      <field name="data">NULL</field>
-      <field name="protected">0</field>
-      <field name="groups">NULL</field>
-      <field name="cssID"></field>
-      <field name="rootPageDependentModules">NULL</field>
-      <field name="faq_categories">NULL</field>
-      <field name="faq_readerModule">0</field>
-      <field name="com_order">ascending</field>
-      <field name="com_moderate">0</field>
-      <field name="com_bbcode">0</field>
-      <field name="com_requireLogin">0</field>
-      <field name="com_disableCaptcha">0</field>
-      <field name="com_template">com_default</field>
-      <field name="news_archives">NULL</field>
-      <field name="news_featured">all_items</field>
-      <field name="news_jumpToCurrent"></field>
-      <field name="news_readerModule">0</field>
-      <field name="news_template">news_latest</field>
-      <field name="news_format">news_month</field>
-      <field name="news_startDay">0</field>
-      <field name="news_order">descending</field>
-      <field name="news_showQuantity">0</field>
-      <field name="list_table"></field>
-      <field name="list_fields"></field>
-      <field name="list_where"></field>
-      <field name="list_search"></field>
-      <field name="list_sort"></field>
-      <field name="list_info"></field>
-      <field name="list_info_where"></field>
-      <field name="list_layout">list_default</field>
-      <field name="list_info_layout">info_default</field>
-      <field name="cal_calendar">NULL</field>
-      <field name="cal_noSpan">0</field>
-      <field name="cal_hideRunning">0</field>
-      <field name="cal_startDay">0</field>
-      <field name="cal_format">cal_month</field>
-      <field name="cal_ignoreDynamic">0</field>
-      <field name="cal_order">ascending</field>
-      <field name="cal_readerModule">0</field>
-      <field name="cal_limit">0</field>
-      <field name="cal_template">event_full</field>
-      <field name="cal_ctemplate">cal_default</field>
-      <field name="cal_showQuantity">0</field>
-      <field name="cal_featured">all_items</field>
-      <field name="newsletters">NULL</field>
-      <field name="nl_channels">NULL</field>
-      <field name="nl_text">NULL</field>
-      <field name="nl_hideChannels">0</field>
-      <field name="nl_subscribe">NULL</field>
-      <field name="nl_unsubscribe">NULL</field>
-      <field name="nl_template">nl_simple</field>
-      <field name="unfilteredHtml">NULL</field>
-      <field name="pwResetPage">0</field>
-      <field name="news_keepCanonical">0</field>
-      <field name="cal_keepCanonical">0</field>
-      <field name="reqFullAuth">0</field>
-      <field name="ariaLabel"></field>
-    </row>
-    <row>
-      <field name="id">24</field>
-      <field name="pid">1</field>
-      <field name="tstamp">1729270646</field>
-      <field name="name">Header - Logo</field>
+      <field name="tstamp">1737291067</field>
+      <field name="name">Feed Reader</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
-      <field name="type">html</field>
+      <field name="type">feed_reader</field>
       <field name="levelOffset">0</field>
       <field name="showLevel">0</field>
       <field name="hardLimit">0</field>
@@ -1251,7 +1136,7 @@
       <field name="fuzzy">0</field>
       <field name="contextLength">48</field>
       <field name="minKeywordLength">4</field>
-      <field name="perPage">0</field>
+      <field name="perPage">10</field>
       <field name="searchType">simple</field>
       <field name="searchTpl"></field>
       <field name="inColumn">main</field>
@@ -1262,23 +1147,11 @@
       <field name="useCaption">0</field>
       <field name="fullsize">0</field>
       <field name="multiSRC">NULL</field>
-      <field name="html">&lt;a href="{{env::path|urlattr}}" class="logo"&gt;
-  &lt;img src="files/contaodemo/theme/src/img/contao-official-demo.svg" alt="Contao Demo"&gt;
-&lt;/a&gt;
-
-&lt;div class="nav-toggle__box"&gt;
-	&lt;button class="nav-toggle" data-nav-toggle="" aria-haspopup="menu" title="Main menu" aria-expanded="false"&gt;
-		&lt;span class="nav-toggle__icon"&gt;
-			&lt;span class="icon-line"&gt;&lt;/span&gt;
-		&lt;/span&gt;
-
-		Menu
-	&lt;/button&gt;
-&lt;/div&gt;</field>
+      <field name="html">NULL</field>
       <field name="rss_cache">3600</field>
-      <field name="rss_feed">NULL</field>
+      <field name="rss_feed">https://contao.org/share/news-en.xml</field>
       <field name="rss_template"></field>
-      <field name="numberOfItems">3</field>
+      <field name="numberOfItems">0</field>
       <field name="disableCaptcha">0</field>
       <field name="reg_groups">NULL</field>
       <field name="reg_allowLogin">0</field>
@@ -1352,8 +1225,8 @@
     <row>
       <field name="id">38</field>
       <field name="pid">1</field>
-      <field name="tstamp">1680768811</field>
-      <field name="name">layout | footer</field>
+      <field name="tstamp">1767974510</field>
+      <field name="name">Footer</field>
       <field name="headline"></field>
       <field name="type">html</field>
       <field name="levelOffset">0</field>
@@ -1389,16 +1262,12 @@
       <field name="useCaption">0</field>
       <field name="fullsize">0</field>
       <field name="multiSRC">NULL</field>
-      <field name="html">&lt;a href="{{env::path|urlattr}}" class="logo logo--footer"&gt;
-	&lt;img src="files/contaodemo/theme/src/img/contao-official-demo.svg" alt="logo Contao Official Demo"&gt;
-&lt;/a&gt;
-&lt;div id="footer-content-block" class="footer-content"&gt;
+      <field name="html">&lt;div id="footer-content-block" class="footer-content"&gt;
 	{{insert_article::50}}
 &lt;/div&gt;
-&lt;span class="footer-claim"&gt;
+&lt;div class="footer-claim"&gt;
 	Designed with 🧡 &lt;span style="display: inline-block;"&gt;by&amp;nbsp;&lt;a href="https://www.borowiakziehe.de" rel="noopener noreferrer" target="_blank"&gt;borowiakziehe&lt;/a&gt;&lt;/span&gt;
-&lt;/span&gt;
-{{insert_module::64}}</field>
+&lt;/div&gt;</field>
       <field name="rss_cache">3600</field>
       <field name="rss_feed">NULL</field>
       <field name="rss_template">rss_default</field>
@@ -1474,12 +1343,12 @@
       <field name="ariaLabel"></field>
     </row>
     <row>
-      <field name="id">40</field>
+      <field name="id">23</field>
       <field name="pid">1</field>
-      <field name="tstamp">1737291067</field>
-      <field name="name">Misc - Feed Reader</field>
-      <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
-      <field name="type">feed_reader</field>
+      <field name="tstamp">1377460548</field>
+      <field name="name">Header - Included top bar</field>
+      <field name="headline"></field>
+      <field name="type">html</field>
       <field name="levelOffset">0</field>
       <field name="showLevel">0</field>
       <field name="hardLimit">0</field>
@@ -1502,7 +1371,7 @@
       <field name="fuzzy">0</field>
       <field name="contextLength">48</field>
       <field name="minKeywordLength">4</field>
-      <field name="perPage">10</field>
+      <field name="perPage">0</field>
       <field name="searchType">simple</field>
       <field name="searchTpl"></field>
       <field name="inColumn">main</field>
@@ -1513,11 +1382,11 @@
       <field name="useCaption">0</field>
       <field name="fullsize">0</field>
       <field name="multiSRC">NULL</field>
-      <field name="html">NULL</field>
+      <field name="html">&lt;div class="header-top-bar"&gt;&lt;div class="inner"&gt;{{insert_article::30}}&lt;/div&gt;&lt;/div&gt;</field>
       <field name="rss_cache">3600</field>
-      <field name="rss_feed">https://contao.org/share/news-en.xml</field>
+      <field name="rss_feed">NULL</field>
       <field name="rss_template"></field>
-      <field name="numberOfItems">0</field>
+      <field name="numberOfItems">3</field>
       <field name="disableCaptcha">0</field>
       <field name="reg_groups">NULL</field>
       <field name="reg_allowLogin">0</field>
@@ -1533,7 +1402,7 @@
       <field name="data">NULL</field>
       <field name="protected">0</field>
       <field name="groups">NULL</field>
-      <field name="cssID">a:2:{i:0;s:0:"";i:1;s:0:"";}</field>
+      <field name="cssID"></field>
       <field name="rootPageDependentModules">NULL</field>
       <field name="faq_categories">NULL</field>
       <field name="faq_readerModule">0</field>
@@ -1827,7 +1696,7 @@
       <field name="id">59</field>
       <field name="pid">1</field>
       <field name="tstamp">1737291095</field>
-      <field name="name">Miscellaneous - Feed Reader</field>
+      <field name="name">Miscellaneous - Feed reader</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">feed_reader</field>
       <field name="levelOffset">0</field>
@@ -2057,7 +1926,7 @@
       <field name="id">22</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | Article navigation</field>
+      <field name="name">Navigation - Article navigation</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">articlenav</field>
       <field name="levelOffset">0</field>
@@ -2172,7 +2041,7 @@
       <field name="id">34</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | Book navigation - Content Elements</field>
+      <field name="name">Navigation - Book navigation - Content Elements</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">booknav</field>
       <field name="levelOffset">0</field>
@@ -2287,7 +2156,7 @@
       <field name="id">53</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | Book navigation - Modules</field>
+      <field name="name">Navigation - Book navigation - Modules</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">booknav</field>
       <field name="levelOffset">0</field>
@@ -2402,7 +2271,7 @@
       <field name="id">3</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | nav-breadcrumb</field>
+      <field name="name">Navigation - Breadcrumb navigation</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">breadcrumb</field>
       <field name="levelOffset">0</field>
@@ -2517,7 +2386,7 @@
       <field name="id">1</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | nav-main - header</field>
+      <field name="name">Navigation - Main navigation - Header</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">navigation</field>
       <field name="levelOffset">0</field>
@@ -2632,7 +2501,7 @@
       <field name="id">64</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | nav-meta - footer</field>
+      <field name="name">Navigation - Meta navigation - Footer</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h2";s:5:"value";s:0:"";}</field>
       <field name="type">customnav</field>
       <field name="levelOffset">0</field>
@@ -2747,7 +2616,7 @@
       <field name="id">25</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | nav-meta - header</field>
+      <field name="name">Navigation - Meta navigation - Header</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">navigation</field>
       <field name="levelOffset">0</field>
@@ -2862,7 +2731,7 @@
       <field name="id">28</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | nav-sidebar - left</field>
+      <field name="name">Navigation - Sidebar navigation</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">navigation</field>
       <field name="levelOffset">1</field>
@@ -2977,7 +2846,7 @@
       <field name="id">30</field>
       <field name="pid">1</field>
       <field name="tstamp">1680767018</field>
-      <field name="name">nav | Sitemap</field>
+      <field name="name">Navigation - Sitemap</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
       <field name="type">sitemap</field>
       <field name="levelOffset">0</field>
@@ -3017,6 +2886,128 @@
       <field name="rss_cache">3600</field>
       <field name="rss_feed">NULL</field>
       <field name="rss_template">rss_default</field>
+      <field name="numberOfItems">3</field>
+      <field name="disableCaptcha">0</field>
+      <field name="reg_groups">NULL</field>
+      <field name="reg_allowLogin">0</field>
+      <field name="reg_skipName">0</field>
+      <field name="reg_close"></field>
+      <field name="reg_deleteDir">0</field>
+      <field name="reg_assignDir">0</field>
+      <field name="reg_homeDir">NULL</field>
+      <field name="reg_activate">0</field>
+      <field name="reg_jumpTo">0</field>
+      <field name="reg_text">NULL</field>
+      <field name="reg_password">NULL</field>
+      <field name="data">NULL</field>
+      <field name="protected">0</field>
+      <field name="groups">NULL</field>
+      <field name="cssID">a:2:{i:0;s:0:"";i:1;s:0:"";}</field>
+      <field name="rootPageDependentModules">NULL</field>
+      <field name="faq_categories">NULL</field>
+      <field name="faq_readerModule">0</field>
+      <field name="com_order">ascending</field>
+      <field name="com_moderate">0</field>
+      <field name="com_bbcode">0</field>
+      <field name="com_requireLogin">0</field>
+      <field name="com_disableCaptcha">0</field>
+      <field name="com_template">com_default</field>
+      <field name="news_archives">NULL</field>
+      <field name="news_featured">all_items</field>
+      <field name="news_jumpToCurrent"></field>
+      <field name="news_readerModule">0</field>
+      <field name="news_template">news_latest</field>
+      <field name="news_format">news_month</field>
+      <field name="news_startDay">0</field>
+      <field name="news_order">descending</field>
+      <field name="news_showQuantity">0</field>
+      <field name="list_table"></field>
+      <field name="list_fields"></field>
+      <field name="list_where"></field>
+      <field name="list_search"></field>
+      <field name="list_sort"></field>
+      <field name="list_info"></field>
+      <field name="list_info_where"></field>
+      <field name="list_layout">list_default</field>
+      <field name="list_info_layout">info_default</field>
+      <field name="cal_calendar">NULL</field>
+      <field name="cal_noSpan">0</field>
+      <field name="cal_hideRunning">0</field>
+      <field name="cal_startDay">0</field>
+      <field name="cal_format">cal_month</field>
+      <field name="cal_ignoreDynamic">0</field>
+      <field name="cal_order">ascending</field>
+      <field name="cal_readerModule">0</field>
+      <field name="cal_limit">0</field>
+      <field name="cal_template">event_full</field>
+      <field name="cal_ctemplate">cal_default</field>
+      <field name="cal_showQuantity">0</field>
+      <field name="cal_featured">all_items</field>
+      <field name="newsletters">NULL</field>
+      <field name="nl_channels">NULL</field>
+      <field name="nl_text">NULL</field>
+      <field name="nl_hideChannels">0</field>
+      <field name="nl_subscribe">NULL</field>
+      <field name="nl_unsubscribe">NULL</field>
+      <field name="nl_template">nl_simple</field>
+      <field name="unfilteredHtml">NULL</field>
+      <field name="pwResetPage">0</field>
+      <field name="news_keepCanonical">0</field>
+      <field name="cal_keepCanonical">0</field>
+      <field name="reqFullAuth">0</field>
+      <field name="ariaLabel"></field>
+    </row>
+    <row>
+      <field name="id">24</field>
+      <field name="pid">1</field>
+      <field name="tstamp">1767973220</field>
+      <field name="name">Navigation - Toggle</field>
+      <field name="headline">a:2:{s:4:"unit";s:2:"h1";s:5:"value";s:0:"";}</field>
+      <field name="type">html</field>
+      <field name="levelOffset">0</field>
+      <field name="showLevel">0</field>
+      <field name="hardLimit">0</field>
+      <field name="showProtected">0</field>
+      <field name="defineRoot">0</field>
+      <field name="rootPage">0</field>
+      <field name="navigationTpl"></field>
+      <field name="customTpl"></field>
+      <field name="pages">NULL</field>
+      <field name="showHidden">0</field>
+      <field name="customLabel"></field>
+      <field name="autologin">0</field>
+      <field name="jumpTo">0</field>
+      <field name="overviewPage">0</field>
+      <field name="redirectBack">0</field>
+      <field name="editable">NULL</field>
+      <field name="memberTpl"></field>
+      <field name="form">0</field>
+      <field name="queryType">and</field>
+      <field name="fuzzy">0</field>
+      <field name="contextLength">48</field>
+      <field name="minKeywordLength">4</field>
+      <field name="perPage">0</field>
+      <field name="searchType">simple</field>
+      <field name="searchTpl"></field>
+      <field name="inColumn">main</field>
+      <field name="skipFirst">0</field>
+      <field name="loadFirst">0</field>
+      <field name="singleSRC">NULL</field>
+      <field name="imgSize"></field>
+      <field name="useCaption">0</field>
+      <field name="fullsize">0</field>
+      <field name="multiSRC">NULL</field>
+      <field name="html">&lt;div class="nav-toggle__box"&gt;
+	&lt;button class="nav-toggle" data-nav-toggle="" aria-haspopup="menu" title="Main menu" aria-expanded="false"&gt;
+		&lt;span class="nav-toggle__icon"&gt;
+			&lt;span class="icon-line"&gt;&lt;/span&gt;
+		&lt;/span&gt;
+		Menu
+	&lt;/button&gt;
+&lt;/div&gt;</field>
+      <field name="rss_cache">3600</field>
+      <field name="rss_feed">NULL</field>
+      <field name="rss_template"></field>
       <field name="numberOfItems">3</field>
       <field name="disableCaptcha">0</field>
       <field name="reg_groups">NULL</field>
@@ -3552,7 +3543,7 @@
       <field name="id">63</field>
       <field name="pid">1</field>
       <field name="tstamp">1709064385</field>
-      <field name="name">News - Simple List</field>
+      <field name="name">News - Simple list</field>
       <field name="headline">a:2:{s:4:"unit";s:2:"h2";s:5:"value";s:17:"Example news list";}</field>
       <field name="type">newslist</field>
       <field name="levelOffset">0</field>
@@ -4831,7 +4822,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="id">21</field>
       <field name="pid">1</field>
-      <field name="tstamp">1739127802</field>
+      <field name="tstamp">1767980161</field>
       <field name="name">1 column  | 12/12 columns</field>
       <field name="rows">3rw</field>
       <field name="headerHeight">a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}</field>
@@ -4843,7 +4834,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="framework"></field>
       <field name="external">a:1:{i:0;s:40:"files/contaodemo/theme/src/scss/app.scss";}</field>
       <field name="combineScripts">0</field>
-      <field name="modules">a:8:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:2:"28";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
+      <field name="modules">a:11:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:2:"28";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:8;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:9;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:10;a:3:{s:3:"mod";s:2:"64";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
       <field name="template">fe_page</field>
       <field name="minifyMarkup">1</field>
       <field name="lightboxSize">a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}</field>
@@ -4854,9 +4845,9 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="onload"></field>
       <field name="head">NULL</field>
       <field name="addJQuery">1</field>
-      <field name="jquery">a:3:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";i:2;s:11:"j_tablesort";}</field>
+      <field name="jquery">a:2:{i:0;s:10:"j_colorbox";i:1;s:11:"j_tablesort";}</field>
       <field name="addMooTools">0</field>
-      <field name="mootools">NULL</field>
+      <field name="mootools">a:3:{i:0;s:13:"moo_accordion";i:1;s:12:"moo_mediabox";i:2;s:10:"moo_slider";}</field>
       <field name="analytics">NULL</field>
       <field name="externalJs">NULL</field>
       <field name="scripts">a:2:{i:0;s:9:"js_slider";i:1;s:12:"js_autofocus";}</field>
@@ -4878,11 +4869,12 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="align">center</field>
       <field name="newsfeeds">NULL</field>
       <field name="calendarfeeds">NULL</field>
+      <field name="type">default</field>
     </row>
     <row>
       <field name="id">22</field>
       <field name="pid">1</field>
-      <field name="tstamp">1739127802</field>
+      <field name="tstamp">1767980210</field>
       <field name="name">1 column | 8/12 columns centered</field>
       <field name="rows">3rw</field>
       <field name="headerHeight">a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}</field>
@@ -4894,7 +4886,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="framework"></field>
       <field name="external">a:1:{i:0;s:40:"files/contaodemo/theme/src/scss/app.scss";}</field>
       <field name="combineScripts">0</field>
-      <field name="modules">a:6:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
+      <field name="modules">a:9:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:8;a:3:{s:3:"mod";s:2:"64";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
       <field name="template">fe_page</field>
       <field name="minifyMarkup">1</field>
       <field name="lightboxSize">a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}</field>
@@ -4905,9 +4897,9 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="onload"></field>
       <field name="head">NULL</field>
       <field name="addJQuery">1</field>
-      <field name="jquery">a:3:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";i:2;s:11:"j_tablesort";}</field>
+      <field name="jquery">a:2:{i:0;s:10:"j_colorbox";i:1;s:11:"j_tablesort";}</field>
       <field name="addMooTools">0</field>
-      <field name="mootools">NULL</field>
+      <field name="mootools">a:3:{i:0;s:13:"moo_accordion";i:1;s:12:"moo_mediabox";i:2;s:10:"moo_slider";}</field>
       <field name="analytics">NULL</field>
       <field name="externalJs">NULL</field>
       <field name="scripts">a:2:{i:0;s:9:"js_slider";i:1;s:12:"js_autofocus";}</field>
@@ -4929,11 +4921,12 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="align">center</field>
       <field name="newsfeeds">NULL</field>
       <field name="calendarfeeds">NULL</field>
+      <field name="type">default</field>
     </row>
     <row>
       <field name="id">20</field>
       <field name="pid">1</field>
-      <field name="tstamp">1739127802</field>
+      <field name="tstamp">1767974359</field>
       <field name="name">1 column | start - no breadcrumb</field>
       <field name="rows">3rw</field>
       <field name="headerHeight">a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}</field>
@@ -4945,7 +4938,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="framework"></field>
       <field name="external">a:1:{i:0;s:40:"files/contaodemo/theme/src/scss/app.scss";}</field>
       <field name="combineScripts">0</field>
-      <field name="modules">a:8:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:2:"28";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:9:"prefooter";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
+      <field name="modules">a:11:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:2:"28";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:9:"prefooter";s:6:"enable";s:1:"1";}i:8;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:9;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:10;a:3:{s:3:"mod";s:2:"64";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
       <field name="template">fe_page</field>
       <field name="minifyMarkup">1</field>
       <field name="lightboxSize">a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}</field>
@@ -4956,9 +4949,9 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="onload"></field>
       <field name="head">NULL</field>
       <field name="addJQuery">1</field>
-      <field name="jquery">a:3:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";i:2;s:11:"j_tablesort";}</field>
+      <field name="jquery">a:2:{i:0;s:10:"j_colorbox";i:1;s:11:"j_tablesort";}</field>
       <field name="addMooTools">0</field>
-      <field name="mootools">NULL</field>
+      <field name="mootools">a:3:{i:0;s:13:"moo_accordion";i:1;s:12:"moo_mediabox";i:2;s:10:"moo_slider";}</field>
       <field name="analytics">NULL</field>
       <field name="externalJs">NULL</field>
       <field name="scripts">a:2:{i:0;s:9:"js_slider";i:1;s:12:"js_autofocus";}</field>
@@ -4980,11 +4973,12 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="align">center</field>
       <field name="newsfeeds">NULL</field>
       <field name="calendarfeeds">NULL</field>
+      <field name="type">default</field>
     </row>
     <row>
       <field name="id">1</field>
       <field name="pid">1</field>
-      <field name="tstamp">1739127802</field>
+      <field name="tstamp">1767980256</field>
       <field name="name">2 columns - default - Sidebar</field>
       <field name="rows">3rw</field>
       <field name="headerHeight">a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}</field>
@@ -4996,7 +4990,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="framework"></field>
       <field name="external">a:1:{i:0;s:40:"files/contaodemo/theme/src/scss/app.scss";}</field>
       <field name="combineScripts">0</field>
-      <field name="modules">a:8:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:2:"28";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
+      <field name="modules">a:11:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:2:"28";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:8;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:9;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:10;a:3:{s:3:"mod";s:2:"64";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
       <field name="template">fe_page</field>
       <field name="minifyMarkup">1</field>
       <field name="lightboxSize">a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}</field>
@@ -5007,9 +5001,9 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="onload"></field>
       <field name="head">NULL</field>
       <field name="addJQuery">1</field>
-      <field name="jquery">a:3:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";i:2;s:11:"j_tablesort";}</field>
+      <field name="jquery">a:2:{i:0;s:10:"j_colorbox";i:1;s:11:"j_tablesort";}</field>
       <field name="addMooTools">0</field>
-      <field name="mootools">NULL</field>
+      <field name="mootools">a:3:{i:0;s:13:"moo_accordion";i:1;s:12:"moo_mediabox";i:2;s:10:"moo_slider";}</field>
       <field name="analytics">NULL</field>
       <field name="externalJs">NULL</field>
       <field name="scripts">a:2:{i:0;s:9:"js_slider";i:1;s:12:"js_autofocus";}</field>
@@ -5031,11 +5025,12 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="align">center</field>
       <field name="newsfeeds">NULL</field>
       <field name="calendarfeeds">NULL</field>
+      <field name="type">default</field>
     </row>
     <row>
       <field name="id">24</field>
       <field name="pid">1</field>
-      <field name="tstamp">1739127802</field>
+      <field name="tstamp">1767980297</field>
       <field name="name">2 columns - news-details  - Sidebar</field>
       <field name="rows">3rw</field>
       <field name="headerHeight">a:2:{s:4:"unit";s:0:"";s:5:"value";s:0:"";}</field>
@@ -5047,7 +5042,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="framework"></field>
       <field name="external">a:1:{i:0;s:40:"files/contaodemo/theme/src/scss/app.scss";}</field>
       <field name="combineScripts">0</field>
-      <field name="modules">a:7:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:2:"14";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
+      <field name="modules">a:10:{i:0;a:3:{s:3:"mod";s:2:"23";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:1;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:2;a:3:{s:3:"mod";s:2:"24";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:3;a:3:{s:3:"mod";s:1:"1";s:3:"col";s:6:"header";s:6:"enable";s:1:"1";}i:4;a:3:{s:3:"mod";s:1:"3";s:3:"col";s:10:"sub-header";s:6:"enable";s:1:"1";}i:5;a:3:{s:3:"mod";s:2:"14";s:3:"col";s:4:"left";s:6:"enable";s:1:"1";}i:6;a:3:{s:3:"mod";s:1:"0";s:3:"col";s:4:"main";s:6:"enable";s:1:"1";}i:7;a:3:{s:3:"mod";s:11:"content-149";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:8;a:3:{s:3:"mod";s:2:"38";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}i:9;a:3:{s:3:"mod";s:2:"64";s:3:"col";s:6:"footer";s:6:"enable";s:1:"1";}}</field>
       <field name="template">fe_page</field>
       <field name="minifyMarkup">1</field>
       <field name="lightboxSize">a:3:{i:0;s:0:"";i:1;s:0:"";i:2;s:0:"";}</field>
@@ -5058,9 +5053,9 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="onload"></field>
       <field name="head">NULL</field>
       <field name="addJQuery">1</field>
-      <field name="jquery">a:3:{i:0;s:11:"j_accordion";i:1;s:10:"j_colorbox";i:2;s:11:"j_tablesort";}</field>
+      <field name="jquery">a:2:{i:0;s:10:"j_colorbox";i:1;s:11:"j_tablesort";}</field>
       <field name="addMooTools">0</field>
-      <field name="mootools">NULL</field>
+      <field name="mootools">a:3:{i:0;s:13:"moo_accordion";i:1;s:12:"moo_mediabox";i:2;s:10:"moo_slider";}</field>
       <field name="analytics">NULL</field>
       <field name="externalJs">NULL</field>
       <field name="scripts">a:2:{i:0;s:9:"js_slider";i:1;s:12:"js_autofocus";}</field>
@@ -5082,13 +5077,14 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="align">center</field>
       <field name="newsfeeds">NULL</field>
       <field name="calendarfeeds">NULL</field>
+      <field name="type">default</field>
     </row>
   </table>
   <table name="tl_files">
     <row>
       <field name="path">files/contaodemo/media/content-images/DSC_5276.jpg</field>
       <field name="hash">75a22b52379aff794d07647511f688ea</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5100,7 +5096,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/content-images/DSC_5316.jpg</field>
       <field name="hash">127947e9baeca2bc47e89449155bc321</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5112,7 +5108,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/content-images/DSC_5403.jpg</field>
       <field name="hash">3678e5197910bf3a06f31688e07dbdf6</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5122,21 +5118,9 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="textTrackType">NULL</field>
     </row>
     <row>
-      <field name="path">files/contaodemo/media/content-images/adding_images.png</field>
-      <field name="hash">ffeba55a5270c7a3a42bf45c6248c3c2</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
       <field name="path">files/contaodemo/media/demo-images/aaron-burden-GVnUVP8cs1o-unsplash.jpg</field>
       <field name="hash">75c61d0049ab2923ab221bed6f251987</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5148,7 +5132,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/blake-verdoorn-cssvEZacHvQ-unsplash.jpg</field>
       <field name="hash">18964c671fae010c21eded06ccd0e8b6</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5160,7 +5144,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/contao-on-blue.jpg</field>
       <field name="hash">2c54e31b81951ccd1b7cf397928948f7</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5172,7 +5156,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/contao_extensions_edit-recolored.png</field>
       <field name="hash">0c8af3360e08c8386fc2219163e11bec</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5184,7 +5168,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/fabian-quintero-UWQP2mh5YJI-unsplash.jpg</field>
       <field name="hash">47ba14e1d50230754b197bab780c5fd5</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5196,7 +5180,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/henry-be-NLF6hTe4PAg-unsplash.jpg</field>
       <field name="hash">078905cb894438917dc8e74deed6cd2c</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5208,7 +5192,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/ivana-cajina-HDd-NQ_AMNQ-unsplash.jpg</field>
       <field name="hash">7f0139721da83c715405198a48d35d8b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5220,7 +5204,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/laptop.jpg</field>
       <field name="hash">b749bb6e044b6d843d7ac0b3ae4f0ee1</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5232,7 +5216,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/person.jpg</field>
       <field name="hash">7d8543f4809558a7ce9d010fc07f1339</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5244,7 +5228,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/demo-images/themes-preview.jpg</field>
       <field name="hash">5e6296c21254d311d5604c7e323b8b81</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5256,7 +5240,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/documents/contao_fanpage_logo.pdf</field>
       <field name="hash">f097a892e16ae90526faa9f219216ec1</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5268,7 +5252,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/contao-tagcloud_1.jpg</field>
       <field name="hash">e8ff5c582d9ddfa48107d12a51c1eab3</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5280,7 +5264,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/contao-tagcloud_2.jpg</field>
       <field name="hash">be2bf5a113450a339f2e9b0a947d0337</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5292,7 +5276,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/contao_extensions.png</field>
       <field name="hash">0c8af3360e08c8386fc2219163e11bec</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5304,7 +5288,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/contao_extensions_edit-recolored.png</field>
       <field name="hash">0c8af3360e08c8386fc2219163e11bec</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5316,7 +5300,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/slider_big-c.jpg</field>
       <field name="hash">6a08ed5baab5d04fc4fad346bf034bcf</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5328,7 +5312,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/slider_big-c.png</field>
       <field name="hash">2b2e37f2438072024e7650a9531783c6</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5340,7 +5324,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/media/slider/templates.jpg</field>
       <field name="hash">828be0a1817843e01b4be4d619eabf67</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5352,7 +5336,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-300.woff</field>
       <field name="hash">6b8abe90adc99a526ea5ab4d50ecf9a3</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5364,7 +5348,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-300.woff2</field>
       <field name="hash">62d24b94de2fd801742f49d8c6306ba2</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5376,7 +5360,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-300italic.woff</field>
       <field name="hash">4df2de1884a26d54b11cba1548b824fb</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5388,7 +5372,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-300italic.woff2</field>
       <field name="hash">3e0274defdd8ec90c011bb8f28b73025</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5400,7 +5384,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-600.woff</field>
       <field name="hash">3e8ff77026941a63b5e7b52147dd435c</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5412,7 +5396,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-600.woff2</field>
       <field name="hash">603c99275486a11982874425a0bc0dd1</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5424,7 +5408,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-600italic.woff</field>
       <field name="hash">0634db0f3a39cb1236d3148a7c9c6678</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5436,7 +5420,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-600italic.woff2</field>
       <field name="hash">00301d2c37d457bdc99ddce70b49c675</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5448,7 +5432,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-700.woff</field>
       <field name="hash">dce81ef083f18473a89ab8626b4916cc</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5460,7 +5444,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-700.woff2</field>
       <field name="hash">e45478d4d6f15dafda1f25d9e0fb5fa1</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5472,7 +5456,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-700italic.woff</field>
       <field name="hash">69e7f7f2a5ea5adafc6abc2a574ebd46</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5484,7 +5468,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-700italic.woff2</field>
       <field name="hash">cbf527409eb6cd838167e355547e5282</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5496,7 +5480,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-italic.woff</field>
       <field name="hash">f1e23d3623fc049c4fa0d92d65c290d1</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5508,7 +5492,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-italic.woff2</field>
       <field name="hash">3d5107abaf7bf4df5478bd04625c0929</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5520,7 +5504,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-regular.woff</field>
       <field name="hash">600270a4cedf2a102a1d49e5148e6622</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5532,7 +5516,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/src/fonts/open-sans/open-sans-v34-latin-regular.woff2</field>
       <field name="hash">e43b535855a4ae53bd5b07a6eeb3bf67</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5543,356 +5527,20 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/contao-official-demo.svg</field>
-      <field name="hash">b580224d27f44048059dd37fde45e783</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">1c1fc4619a04261194e4679ae051361e</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
       <field name="importantPartHeight">0</field>
-      <field name="meta">a:1:{s:2:"en";a:5:{s:5:"title";s:0:"";s:3:"alt";s:0:"";s:4:"link";s:0:"";s:7:"caption";s:0:"";s:7:"license";s:0:"";}}</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/android-chrome-144x144.png</field>
-      <field name="hash">94a9a58889327b5df7b66da193789750</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/android-chrome-192x192.png</field>
-      <field name="hash">b055d911a1e72015962c28f2d82cdaa0</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/android-chrome-36x36.png</field>
-      <field name="hash">f015cd243f1dd7ca87dbbb3911699dee</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/android-chrome-48x48.png</field>
-      <field name="hash">62b55a62689eb882b283b87dabcb5db4</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/android-chrome-72x72.png</field>
-      <field name="hash">65e6cecb30ecd3d455236954f4798bd4</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/android-chrome-96x96.png</field>
-      <field name="hash">cd58f13a2bae70155394b19512ac64b4</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-114x114.png</field>
-      <field name="hash">49e3a8eda34d99dc2eabdbf66cebb45a</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-120x120.png</field>
-      <field name="hash">eb1b78a56d9b265ec87caa88042917a5</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-144x144.png</field>
-      <field name="hash">89ca26f3eea426d988e861627cbde2fb</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-152x152.png</field>
-      <field name="hash">52e4b53c61c3535b6dfa142c30d97676</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-180x180.png</field>
-      <field name="hash">7f40e24e6603748821f1b8ff09f466a5</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-57x57.png</field>
-      <field name="hash">e0497aa16230a0a2b222a93109761711</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-60x60.png</field>
-      <field name="hash">1fb65fcf46c0855af4b561566d379b37</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-72x72.png</field>
-      <field name="hash">58598a4bd348bed8f9e9b9b7f0676aaa</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-76x76.png</field>
-      <field name="hash">60be0e39d1813ae97a458df345e110e8</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon-precomposed.png</field>
-      <field name="hash">a72c3c02d62df7ad98871f7d8a677485</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/apple-touch-icon.png</field>
-      <field name="hash">7f40e24e6603748821f1b8ff09f466a5</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/browserconfig.xml</field>
-      <field name="hash">57ed6e2c5f07348097a41008f5564c93</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/favicon-16x16.png</field>
-      <field name="hash">047862595e8e28b6bcbaf1b2b6b7c5ac</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/favicon-32x32.png</field>
-      <field name="hash">99b144a07fc410631342ae2c9618447c</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/favicon-96x96.png</field>
-      <field name="hash">cd58f13a2bae70155394b19512ac64b4</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/favicon.ico</field>
-      <field name="hash">d96dc3bd136550c6b96b92d98ead7354</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/manifest.json</field>
-      <field name="hash">a50c9636b56ba39eba2d6eca7d6bb7ce</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/mstile-144x144.png</field>
-      <field name="hash">5ef797da473df7b8a4eb97ec00b02808</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/mstile-150x150.png</field>
-      <field name="hash">3aa14952a577634e26636cdf0d6ec55f</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/mstile-310x150.png</field>
-      <field name="hash">76f703abf8dcf9fe51404680d8b6c582</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/mstile-310x310.png</field>
-      <field name="hash">fa6e15844b6577483e9d77683c4341e8</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/img/favicon/mstile-70x70.png</field>
-      <field name="hash">24638698a5e90fd120b783ff125e5101</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
+      <field name="meta">a:1:{s:2:"en";a:5:{s:5:"title";s:20:"Contao Official Demo";s:3:"alt";s:25:"Contao Official Demo Logo";s:4:"link";s:0:"";s:7:"caption";s:0:"";s:7:"license";s:0:"";}}</field>
       <field name="textTrackLanguage"></field>
       <field name="textTrackType">NULL</field>
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/favicon.ico</field>
       <field name="hash">0fe1dbfe9cd5e239d643e5c52f01c5e4</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5903,8 +5551,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/arrow-right--orange.svg</field>
-      <field name="hash">6aaafa595c503f6e4dff8ab04badea75</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">1fc8d4fc06829a6e333602cd803dc8d1</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5915,8 +5563,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/caret-left--white.svg</field>
-      <field name="hash">5b36dcec2beefff3337b835d1bdf78dd</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">ab8b574e9494edf5c0d69a0255a268d6</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5927,8 +5575,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/caret-right--gray.svg</field>
-      <field name="hash">09f26cab6c6990b57fe42904b93b6276</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">05585d4663e367892a6f56f80c362a8e</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5939,8 +5587,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/caret-right--white.svg</field>
-      <field name="hash">f861b281e1c3a149e280b4a14d9e46a6</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">0598e4187622643358b47e663d2a76fe</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5951,8 +5599,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/chevron-down.svg</field>
-      <field name="hash">c255c1d55cec1567cf29698f90cfff6b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">8d6c20b7913877df6d829752358612cf</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5963,8 +5611,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/close-x.svg</field>
-      <field name="hash">359992c5d580d39180f096d91e49ab3b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">cee70dba5fb97926873bcc32e68823cb</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5975,8 +5623,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/facebook.svg</field>
-      <field name="hash">cf0cce20d69de88963f9f6648641c4af</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">18076fd846c012ec4e4ac484b86ef2b8</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5987,8 +5635,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/file-arrow-down.svg</field>
-      <field name="hash">558fa3387b134f307d9e5b1d1cff1d87</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">38486b7be47a2ee7e4bb72c83d500404</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -5999,8 +5647,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/github--white.svg</field>
-      <field name="hash">d3099e4bd107f3d9593cf10d4115acf5</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">a778ce4bd11877b4965a7bce38199ab4</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6011,8 +5659,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/info--blue.svg</field>
-      <field name="hash">e3bd9d7239ee143b8fc34dd2ccf40b9c</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">ed8224470d8c22a95b619c040de87113</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6023,8 +5671,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/minus-circle.svg</field>
-      <field name="hash">74553157ddeea3709dff9bf03432698a</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">ef3230d53a274b9cbad73bae552b4877</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6035,8 +5683,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/plus-circle.svg</field>
-      <field name="hash">111231d770da322c519866e2763ffc60</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">17233f2c983b5be8ebe8926e9eba242c</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6047,8 +5695,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/printer.svg</field>
-      <field name="hash">69461cc96bfd245f06775490598dcdd6</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">7e44ae38c60158126ec17f76bbc5b92c</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6059,8 +5707,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/rss.svg</field>
-      <field name="hash">09ad1237a8fe47506b776aec86e9840d</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">3ac68bfb874b9258789454c399ebdf03</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6071,8 +5719,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/search.svg</field>
-      <field name="hash">f67175bc288fa023a14cc50182f5687c</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">8bafb16ec1ca26b3944e419de35de028</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6083,8 +5731,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/twitter-circle.svg</field>
-      <field name="hash">f72048ce2f8ad320a305b28ee09b8993</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">511916afef08ac434e31efffa81ef4d2</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6095,8 +5743,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/img/icons/warning-red.svg</field>
-      <field name="hash">91a3121b969610aaaf1f49689d9ad40b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">73593030d2da742300023d14eed48020</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6107,12 +5755,20 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/js/a11y-nav.js</field>
-      <field name="hash">a365842813350ee8e9a3085c93f8c1b8</field>
+      <field name="hash">ff54c958567521a09230e7eb27800463</field>
+      <field name="lastModified">1754727013</field>
+      <field name="importantPartX">0</field>
+      <field name="importantPartY">0</field>
+      <field name="importantPartWidth">0</field>
+      <field name="importantPartHeight">0</field>
+      <field name="meta">NULL</field>
+      <field name="textTrackLanguage"></field>
+      <field name="textTrackType">NULL</field>
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/js/scripts.js</field>
-      <field name="hash">740cc59314e1fb2b36cd93c86fb83983</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">2e566cfde5c44b0d24fdf95fc6a2943a</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6123,20 +5779,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/app.scss</field>
-      <field name="hash">5617014d570861712af8551f22afac7e</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/scss/components/_accordion.scss</field>
-      <field name="hash">f15932378c5ad98d8aaf95cd90ae76d3</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">5cbcabdd6901c72066b73043f23b5ffc</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6147,8 +5791,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_calendar.scss</field>
-      <field name="hash">988a8ad4261e1847705bec50c1bed549</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">2d186c9be5cb8f2900c7b0a3a9d8d8cd</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6159,8 +5803,20 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_comments.scss</field>
-      <field name="hash">12da20879b0937c37c2ad47457968981</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">aa63ced78943b45dc662ce700a912b26</field>
+      <field name="lastModified">1729180954</field>
+      <field name="importantPartX">0</field>
+      <field name="importantPartY">0</field>
+      <field name="importantPartWidth">0</field>
+      <field name="importantPartHeight">0</field>
+      <field name="meta">NULL</field>
+      <field name="textTrackLanguage"></field>
+      <field name="textTrackType">NULL</field>
+    </row>
+    <row>
+      <field name="path">files/contaodemo/theme/src/scss/components/_content-accordion.scss</field>
+      <field name="hash">7192478857a1e55ccaf092fa81116408</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6171,8 +5827,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_downloads.scss</field>
-      <field name="hash">11ac44dd9c40daa7041daaaa2056ebaa</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">bfde5d396e474fd5dec6759c03772f94</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6183,8 +5839,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_faq.scss</field>
-      <field name="hash">bb2d099ae209f6fd351a98a9ad2348c1</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">921644704af648cf9eb217242ab475fd</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6195,12 +5851,20 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_feed-reader.scss</field>
-      <field name="hash">ed9ef499a9a7f2396b364a2b2184a8ca</field>
+      <field name="hash">95b2884adad5da7c7e69db490ea3fc64</field>
+      <field name="lastModified">1754727013</field>
+      <field name="importantPartX">0</field>
+      <field name="importantPartY">0</field>
+      <field name="importantPartWidth">0</field>
+      <field name="importantPartHeight">0</field>
+      <field name="meta">NULL</field>
+      <field name="textTrackLanguage"></field>
+      <field name="textTrackType">NULL</field>
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_gallery.scss</field>
-      <field name="hash">de32a8ccc5c76bbc15974151e80da0a3</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">31d7a7739b4bd2bb9aeed090cd81521f</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6211,8 +5875,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_lightbox.scss</field>
-      <field name="hash">b56662348cad001ae75ac45732ba1746</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">3dc7a5b0ac123b2883b7297e57dfe18b</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6223,8 +5887,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_listing.scss</field>
-      <field name="hash">549394fb4d5957b0379b8a0f5196405d</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">22735840701add66920b07fc821712f0</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6235,8 +5899,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_login.scss</field>
-      <field name="hash">a5f8de6a070ce191954cd33b20b751e3</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">004d9ee51850527041e1bf778d78a2bc</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6247,8 +5911,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_misc.scss</field>
-      <field name="hash">afd66b164bfc68e20210a578a01e4aba</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">f5ecb8991e66eb09bb1d21343ad6050a</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6259,8 +5923,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_news_and_events.scss</field>
-      <field name="hash">19829388c09cb6df65ab944edd296d88</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">7bd27f2b34de160f7e7689f37cae8f89</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6271,8 +5935,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_rss-reader.scss</field>
-      <field name="hash">d37100c7bff6b8195a2dc967796aa0ac</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">cd69eab1d945ed2e65de636f4b6f4228</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6283,8 +5947,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_searchbar.scss</field>
-      <field name="hash">bf8cc2af5b560186538e77a904c7e5d2</field>
-      <field name="lastModified">1711361116</field>
+      <field name="hash">1dfcfeea76f38f3f92f2cb15d98b93dc</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6295,8 +5959,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_slider.scss</field>
-      <field name="hash">6cc0c6d80e04265cf9e2195cce720f46</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">42932af8d50a3e15a33535a16b56a46a</field>
+      <field name="lastModified">1763825601</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6307,8 +5971,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_subscribe_unsubscribe.scss</field>
-      <field name="hash">25abe629cf1fd7ab204dc8321c5f08a8</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">0953881cde164fd446975c1a018bf566</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6319,8 +5983,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_syndication.scss</field>
-      <field name="hash">42bf8ab7fea4054f47c57d5c24ea72da</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">454d5cd41db1264b9d511ac29f7b4cd9</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6331,8 +5995,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/_video.scss</field>
-      <field name="hash">755359dce3842409b55b489ab424d120</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">b579444de9bdd13b4582005ccb0c46d2</field>
+      <field name="lastModified">1754729106</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6343,8 +6007,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/basic-contents/_basic-contents.scss</field>
-      <field name="hash">70b9115a6357d26cba4d977d0e30ffac</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">4381e9e481b041a45e064f059ffe7b4a</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6355,8 +6019,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/basic-contents/_buttons.scss</field>
-      <field name="hash">dd07cb7250d50d5c5e9c3563760606b6</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">b735904151228cb70e3903502487e68e</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6367,8 +6031,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/basic-contents/_form.scss</field>
-      <field name="hash">9574c70a2384be0095262927e2bfdb9b</field>
-      <field name="lastModified">1711361116</field>
+      <field name="hash">93a7d4166d7444345223fed4606b66da</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6379,8 +6043,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/basic-contents/_table.scss</field>
-      <field name="hash">0dbbba516ad29f2cb0357f330a4525bb</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">eb9ca061b8edf1c91866cb4bf356ddcb</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6391,8 +6055,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_article-list.scss</field>
-      <field name="hash">6abb2889f047c40fb973243e1b007b8e</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">a5668a4436380abec5671cf042848ad2</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6403,8 +6067,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_booknav.scss</field>
-      <field name="hash">8ef6d8c46c9f2b61255be6eb3e840fea</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">90b9a40f85b3eedefe1425dae33e4178</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6415,8 +6079,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_breadcrumb.scss</field>
-      <field name="hash">275cfa17bb88628ff96cd097ead0a947</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">1dcd8ccd2f4b69b52e61ff267c332f52</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6427,8 +6091,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_nav-main.scss</field>
-      <field name="hash">6dc5f22196cadbc83b7c0903ec749011</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">a5cf97feaaf75af5192f73dd74a36d39</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6439,8 +6103,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_nav-meta.scss</field>
-      <field name="hash">e88c9d3d3dec195f13a88e7e037af074</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">fd56ed2886aab8786beaabf3339230f0</field>
+      <field name="lastModified">1729240741</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6451,8 +6115,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_nav-sidebar.scss</field>
-      <field name="hash">7564f74d0183539aafb38a4b7bf1d9cb</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">a2c414f2597ad0804d9e1720abfedac7</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6463,8 +6127,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_nav-toggle.scss</field>
-      <field name="hash">437d7321806778bbf0503064a309b8f4</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">2f64216df4a291a9778dce7d4245caa3</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6475,8 +6139,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_newsmenu.scss</field>
-      <field name="hash">ef4aad0288427469b503195642ef739c</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">a316e2ac8be607a3015eaa1ab55581a0</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6487,8 +6151,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_pagination.scss</field>
-      <field name="hash">5319d768ba38348793a0333c33101a3b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">33ecf58e4e398fc291b2a84c354c26eb</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6499,8 +6163,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/components/navigation/_sitemap.scss</field>
-      <field name="hash">37424afc5d566997332551b9d76f877c</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">24c2cd2765c49a4392e65ba884d139af</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6511,8 +6175,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/layout/_article.scss</field>
-      <field name="hash">13a0db15f463b8f1091ecf16ecc90115</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">24dcaa10d04cb1dd4fd9aef2d28c8547</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6523,8 +6187,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/layout/_grid.scss</field>
-      <field name="hash">bb6a57706d235ebfef1f710fe8b400a2</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">3a5d3f7924d1284720651515b4467b43</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6535,8 +6199,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/layout/_layout-container.scss</field>
-      <field name="hash">8bcb1527e9f9fe190d7c1099a8bfa417</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">095bd3ce964e9cf873f91bd982b7ebf1</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6547,8 +6211,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/layout/_page-footer.scss</field>
-      <field name="hash">66f002b06288b2291fc5f08561a506f7</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">a5d98e076702aff5d31f77f58d4b57e5</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6559,8 +6223,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/layout/_page-header.scss</field>
-      <field name="hash">1a5f51f7ba1370837a5bffa939c3a9f9</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">0e2a4ee2f098aaad285cb836b53b878a</field>
+      <field name="lastModified">1738370739</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6571,8 +6235,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/tools/_helper.scss</field>
-      <field name="hash">ccda4c86ee3e10f54866ea1ee8c011cf</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">fc242e8459df4526351670fab034c3f5</field>
+      <field name="lastModified">1754727029</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6583,8 +6247,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/tools/_mixin-grid-generator.scss</field>
-      <field name="hash">3fb6123f4629ce6a12d5421e463a22d0</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">76de961d4dd72fb8089fa00063b1ea89</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6595,12 +6259,20 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/tools/_mixin-invisible.scss</field>
-      <field name="hash">8370a3cab27ffc96282bc9627dc4b30f</field>
+      <field name="hash">3c1d60ec6f2b99fd7178e7b35ce3c466</field>
+      <field name="lastModified">1754727013</field>
+      <field name="importantPartX">0</field>
+      <field name="importantPartY">0</field>
+      <field name="importantPartWidth">0</field>
+      <field name="importantPartHeight">0</field>
+      <field name="meta">NULL</field>
+      <field name="textTrackLanguage"></field>
+      <field name="textTrackType">NULL</field>
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/tools/_mixin-set-breakpoints.scss</field>
-      <field name="hash">670c5d666e8a324864dc9ba875d13ef2</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">6045cdc5d72cff92833d3b09a9c627a9</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6611,8 +6283,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/tools/_mixin-set-font-size.scss</field>
-      <field name="hash">7cc61c9ca32820f369a8445b1fc7be34</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">40c706fc0f3d340e0f448cbd9a67411a</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6623,20 +6295,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/variables/_animation.scss</field>
-      <field name="hash">06be05e05d0a7f26e4bcd6909aec7b8c</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
-    </row>
-    <row>
-      <field name="path">files/contaodemo/theme/src/scss/variables/_colors.scss</field>
-      <field name="hash">f269aea98a9f12fb9fffb129645710ee</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">46d9a84dbf335dc602bcbadeee9b7b7c</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6647,8 +6307,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/variables/_fonts.scss</field>
-      <field name="hash">0b45edc97d1187195cb9a4de9eaa46ac</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">17af19b7f8d1a6fe473cbbf37cc85154</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6659,8 +6319,8 @@ Please click ##link## to set the new password. If you did not request this e-mai
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/variables/_sizes.scss</field>
-      <field name="hash">a763dda79e6f800855aa7b2e72ac4b41</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">306fc12040891c96d4ee9f8ce6a124fe</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6670,21 +6330,13 @@ Please click ##link## to set the new password. If you did not request this e-mai
       <field name="textTrackType">NULL</field>
     </row>
     <row>
-      <field name="path">files/contaodemo/theme/src/scss/vendor/_contao-helper.scss</field>
-      <field name="hash">e17f8319991f4704e676f391b8f8e25d</field>
-      <field name="lastModified">1699637914</field>
-      <field name="importantPartX">0</field>
-      <field name="importantPartY">0</field>
-      <field name="importantPartWidth">0</field>
-      <field name="importantPartHeight">0</field>
-      <field name="meta">NULL</field>
-      <field name="textTrackLanguage"></field>
-      <field name="textTrackType">NULL</field>
+      <field name="path">files/contaodemo/theme/src/scss/variables.scss</field>
+      <field name="hash">ce2a971706046ccbff576f010be87da4</field>
     </row>
     <row>
       <field name="path">files/contaodemo/theme/src/scss/vendor/_normalizer.scss</field>
-      <field name="hash">3ef0b2f03dc094502c7a558094f24b4b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="hash">aa072d514cba810e093c6e2726a81ce4</field>
+      <field name="lastModified">1754727013</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>
@@ -6696,7 +6348,7 @@ Please click ##link## to set the new password. If you did not request this e-mai
     <row>
       <field name="path">files/contaodemo/theme/theme-preview.png</field>
       <field name="hash">4d828b6489fc18d193b39e2051f1882b</field>
-      <field name="lastModified">1699637914</field>
+      <field name="lastModified">1729180954</field>
       <field name="importantPartX">0</field>
       <field name="importantPartY">0</field>
       <field name="importantPartWidth">0</field>

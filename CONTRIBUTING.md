@@ -15,7 +15,7 @@ command line and Composer and have a functioning PHP and webserver setup.
 
 1. Run the following command to create your project
     ```bash
-    composer create-project contao/contao-demo:5.3 your-new-website
+    composer create-project contao/contao-demo:5.7 your-new-website
     ```
 2. Connect the database e.g. through `DATABASE_URL` in your `.env.local` file.
     ```env
@@ -49,7 +49,7 @@ When fixing bugs or adding a feature, please follow the mentioned workflow
     ```
     Restore from the backup
     ```bash
-    php bin/console contao:backup:restore backup__20250101000000.sql
+    php bin/console contao:backup:restore backup__20260101000000.sql
     ```
     Run migrations
     ```bash
