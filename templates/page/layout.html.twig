@@ -1,0 +1,59 @@
+{% extends "@Contao/page/layout.html.twig" %}
+
+    {# Appends the app stylesheet and styles #}
+{% block head %}
+    {{ parent() }}
+    <script src="files/contaodemo/theme/src/js/scripts.js" defer></script>
+    <script src="files/contaodemo/theme/src/js/a11y-nav.js" defer></script>
+    <script>
+        window.addEventListener('load', () => {
+            new A11yNav({
+                ariaLabels: {
+                    'main': 'Main menu',
+                    'expand': 'Expand menu: ',
+                    'collapse': 'Collapse menu: '
+                }
+            });
+        })
+    </script>
+    <link rel="stylesheet" href="/files/contaodemo/theme/dist/css/app.css"/>
+{% endblock %}
+
+    {% block body_content %}
+    <div id="wrapper">
+        {% slot header %}
+            <header id="header"><div class="inside">{{ slot() }}</div></header>
+        {% endslot %}
+
+        {% slot subheader %}
+            <div id="sub-header">
+                <div class="inside">{{ slot() }}</div>
+            </div>
+        {% endslot %}
+
+        {% slot main %}
+            <div id="container">
+                <main>
+                    <div class="inside">{{ slot() }}</div>
+                </main>
+                {% slot left %}
+                <aside id="left">
+                    <div class="inside">
+                        {{ slot() }}
+                    </div>
+                </aside>
+                {% endslot %}
+            </div>
+        {% endslot %}
+
+        {% slot prefooter %}
+            <div id="prefooter">
+                <div class="inside">{{ slot() }}</div>
+            </div>
+        {% endslot %}
+
+        {% slot footer %}
+            <footer><div class="inside">{{ slot() }}</div></footer>
+        {% endslot %}
+    </div>
+    {% endblock %}

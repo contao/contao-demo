@@ -61,7 +61,7 @@ body {
 }
 
 
-.layout--1-column {
+body:not(:has(#left))  {
   .mod_article {
     @extend %container-base;
 
@@ -103,7 +103,7 @@ body {
   }
 }
 
-.layout--2-column {
+body:has(#left) {
 
   [id="container"] {
     @extend %container-base;
