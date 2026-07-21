@@ -37,6 +37,15 @@
         "contao/newsletter-bundle": "5.7.*",
         "contao-components/swiper": "^12"
     },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "contao-community-alliance/composer-plugin": true,
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "php-http/discovery": false
+        }
+    },
     "extra": {
         "contao-component-dir": "assets"
     },
