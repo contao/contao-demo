@@ -26,7 +26,7 @@ toggleNavMain?.addEventListener('click', () => toggleNavigationState(!document.b
 document.addEventListener('DOMContentLoaded', function () {
 
   // table auto data-attr setter
-  const collTables = document.querySelectorAll('.ce_table table');
+  const collTables = document.querySelectorAll('.content-table table, .ce_table table');
   let arrHeaderTexts = [];
 
   //iteration through tables
