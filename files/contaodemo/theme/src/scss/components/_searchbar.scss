@@ -65,10 +65,6 @@
   // searchfield inside header
   &--simple {
 
-    @include breakpoint(xs, max) {
-      display: none;
-    }
-
     &,
     .widget-text {
 
